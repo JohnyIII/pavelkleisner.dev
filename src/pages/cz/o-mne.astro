@@ -1,0 +1,101 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="O mně – Pavel Kleisner">
+    <!-- Hero -->
+    <section class="mb-24 max-w-4xl">
+        <h1 class="text-5xl font-bold mb-6">
+            O <span class="text-blue-500">mně</span>
+        </h1>
+
+        <p class="text-xl text-slate-400 leading-relaxed">
+            Jsem backend-heavy full-stack developer se zaměřením na architekturu,
+            dlouhodobě udržitelná řešení a vývoj vlastních micro-SaaS produktů.
+            Baví mě hledat jednoduchá řešení složitých problémů a stavět software,
+            který obstojí i po letech.
+        </p>
+    </section>
+
+    <!-- Main grid -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main text -->
+        <div class="lg:col-span-2 space-y-12">
+            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
+                <h2 class="text-2xl font-semibold">Jak přemýšlím o vývoji</h2>
+
+                <p class="text-slate-300 leading-relaxed">
+                    Věřím v pragmatický přístup k vývoji softwaru. Architektura by měla
+                    být čitelná, rozhodnutí obhajitelná a kód srozumitelný nejen pro autora,
+                    ale i pro další lidi, kteří s ním budou pracovat za rok nebo dva.
+                </p>
+
+                <p class="text-slate-300 leading-relaxed">
+                    Při návrhu systémů se dívám na celek – databázi, backend,
+                    integrace i způsob, jakým aplikaci používají lidé.
+                    Technologie jsou pro mě prostředek, ne cíl.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
+                <h2 class="text-2xl font-semibold">Zkušenosti a role</h2>
+
+                <p class="text-slate-300 leading-relaxed">
+                    Mám zkušenosti s vývojem rozsáhlých webových aplikací,
+                    návrhem backendových systémů i technickým vedením vývojového týmu.
+                    Kromě samotného kódování se věnuji také mentoringu
+                    a technickému rozhodování.
+                </p>
+
+                <p class="text-slate-300 leading-relaxed">
+                    Nejčastěji pracuji na backendu, ale full-stack přesah mi umožňuje
+                    lépe chápat potřeby produktu jako celku.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
+                <h2 class="text-2xl font-semibold">Mimo práci</h2>
+
+                <p class="text-slate-300 leading-relaxed">
+                    Ve volném čase mám rád hudbu (hlavně rock a metal),
+                    sci-fi, fantasy a anime. Baví mě experimentovat
+                    s vlastními nápady a malé projekty postupně posouvat
+                    směrem k použitelným produktům.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-10">
+            <div class="bg-slate-900 rounded-2xl p-8">
+                <h3 class="font-semibold mb-4">Technologie</h3>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li>Java / Kotlin / Spring</li>
+                    <li>PostgreSQL / Oracle</li>
+                    <li>Angular / TypeScript</li>
+                    <li>Docker / CI/CD</li>
+                    <li>Architektura & návrh API</li>
+                </ul>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8">
+                <h3 class="text-lg font-semibold mb-4">
+                    Spolupráce
+                </h3>
+
+                <p class="text-blue-100 mb-6">
+                    Pokud hledáš zkušeného backendového vývojáře
+                    nebo technického partnera pro svůj projekt,
+                    rád se ozvu.
+                </p>
+
+                <a
+                        href="/contact"
+                        class="inline-block bg-white text-blue-700 px-5 py-3 rounded-lg font-medium hover:bg-slate-100"
+                >
+                    Kontakt
+                </a>
+            </div>
+        </aside>
+    </section>
+</Layout>

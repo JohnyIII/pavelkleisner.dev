@@ -1,0 +1,11 @@
+---
+const { lang = "en" } = Astro.props;
+---
+
+<div class="text-xs text-slate-400">
+    {lang === "en" ? (
+            <a href="/cz" class="hover:text-blue-400">CZ</a>
+    ) : (
+            <a href="/" class="hover:text-blue-400">EN</a>
+    )}
+</div>

@@ -1,0 +1,29 @@
+---
+import en from "@/i18n/en";
+import cz from "@/i18n/cz";
+import LanguageSwitch from "@/components/LanguageSwitch.astro";
+
+const { lang = "en" } = Astro.props;
+const t = lang === "cz" ? cz : en;
+---
+
+
+
+<div class="flex items-center gap-8">
+    <nav class="space-x-6 text-sm text-slate-300">
+        <a href={t.routes.home} class="hover:text-blue-400">
+            {t.nav.home}
+        </a>
+        <a href={t.routes.about} class="hover:text-blue-400">
+            {t.nav.about}
+        </a>
+        <a href={t.routes.projects} class="hover:text-blue-400">
+            {t.nav.projects}
+        </a>
+        <a href={t.routes.contact} class="hover:text-blue-400">
+            {t.nav.contact}
+        </a>
+    </nav>
+
+    <LanguageSwitch lang={lang} />
+</div>
