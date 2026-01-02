@@ -15,6 +15,29 @@ const lang = pathname.startsWith("/cz") ? "cz" : "en";
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>{title}</title>
+	<meta
+		name="description"
+		content="Senior backend-heavy full-stack developer focused on architecture, micro-SaaS and long-term maintainable systems."
+	/>
+
+	<!-- Open Graph / LinkedIn -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content={title} />
+	<meta
+		property="og:description"
+		content="Senior backend-heavy full-stack developer focused on architecture, micro-SaaS and long-term maintainable systems."
+	/>
+	<meta property="og:url" content={Astro.url.href} />
+	<meta property="og:image" content="/og-image.png" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta
+		name="twitter:description"
+		content="Senior backend-heavy full-stack developer focused on architecture, micro-SaaS and long-term maintainable systems."
+	/>
+	<meta name="twitter:image" content="/og-image.png" />
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen">
 <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur">

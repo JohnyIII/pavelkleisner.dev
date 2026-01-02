@@ -1,0 +1,100 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Projekty & Micro-SaaS – Pavel Kleisner">
+
+    <!-- HERO -->
+    <section class="max-w-4xl mb-24">
+        <h1 class="text-5xl font-bold mb-6">
+            Projekty & <span class="text-blue-500">Micro-SaaS</span>
+        </h1>
+
+        <p class="text-xl text-slate-400 leading-relaxed">
+            Výběr projektů, na kterých pracuji — od menších experimentů
+            až po dlouhodobé micro-SaaS nápady.
+            Zaměřuji se na jednoduché nástroje řešící konkrétní problémy.
+        </p>
+    </section>
+
+    <!-- PROJECTS GRID -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-32">
+
+        <!-- Project card -->
+        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
+                transition transform-gpu duration-300
+                hover:-translate-y-1
+                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xl font-semibold">Micro-SaaS nápad #1</h3>
+                <span class="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300">
+          Nápad
+        </span>
+            </div>
+
+            <p class="text-slate-400 leading-relaxed">
+                Malý zaměřený SaaS řešící konkrétní problém.
+                Aktuálně ve fázi nápadu a validace.
+            </p>
+
+            <p class="text-sm text-slate-500">
+                Stack: Kotlin, Spring, PostgreSQL
+            </p>
+        </div>
+
+        <!-- Project card -->
+        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
+                transition transform-gpu duration-300
+                hover:-translate-y-1
+                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <div class="flex items-center justify-between">
+                <h3 class="text-xl font-semibold">Interní nástroj</h3>
+                <span class="text-xs px-3 py-1 rounded-full bg-blue-600/20 text-blue-400">
+          MVP
+        </span>
+            </div>
+
+            <p class="text-slate-400 leading-relaxed">
+                Interní nástroj zaměřený na zefektivnění práce
+                a omezení manuálních činností při vývoji.
+            </p>
+
+            <p class="text-sm text-slate-500">
+                Stack: Java, Spring, Angular
+            </p>
+        </div>
+
+        <!-- Placeholder -->
+        <div class="bg-slate-900/60 border border-dashed border-slate-700
+                rounded-2xl p-8 flex items-center justify-center text-slate-500">
+            Další projekty brzy přibudou
+        </div>
+
+    </section>
+
+    <!-- FILOZOFIE -->
+    <section class="max-w-5xl mb-32">
+        <h2 class="text-4xl font-bold mb-10">
+            Přístup k projektům
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
+                <p class="text-slate-300 leading-relaxed">
+                    Preferuji menší, jasně zaměřené projekty
+                    před velkými a nejasnými platformami.
+                    Micro-SaaS umožňuje rychlou iteraci a přímou zpětnou vazbu.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
+                <p class="text-slate-300 leading-relaxed">
+                    I nedokončené nápady mají hodnotu.
+                    Často slouží jako základ pro další,
+                    lépe zpracovaná řešení.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</Layout>

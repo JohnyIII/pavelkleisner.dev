@@ -11,8 +11,12 @@ const t = lang === "cz" ? cz : en;
 
 <div class="flex items-center gap-8">
     <nav class="space-x-6 text-sm text-slate-300">
-        <a href={t.routes.home} class="hover:text-blue-400">
-            {t.nav.home}
+        <a
+                href={t.routes.home}
+                class="relative hover:text-blue-400 transition-colors duration-200
+         after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0
+         after:bg-blue-400 after:transition-all after:duration-300
+         hover:after:w-full">            {t.nav.home}
         </a>
         <a href={t.routes.about} class="hover:text-blue-400">
             {t.nav.about}

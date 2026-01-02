@@ -1,0 +1,102 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Contact – Pavel Kleisner">
+
+    <!-- HERO -->
+    <section class="max-w-4xl mb-24">
+        <h1 class="text-5xl font-bold mb-6">
+            Let’s <span class="text-blue-500">talk</span>
+        </h1>
+
+        <p class="text-xl text-slate-400 leading-relaxed">
+            If you’re looking for a senior backend developer,
+            technical partner or someone to help shape
+            the architecture of your product, feel free to reach out.
+        </p>
+    </section>
+
+    <!-- CONTACT OPTIONS -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
+
+        <!-- Email -->
+        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
+                transition transform-gpu duration-300
+                hover:-translate-y-1
+                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <h3 class="text-xl font-semibold">Email</h3>
+            <p class="text-slate-400">
+                The fastest way to reach me.
+            </p>
+            <a
+                    href="mailto:pavel.kleisner@datalite.cz"
+                    class="inline-block text-blue-400 hover:text-blue-300 font-medium"
+            >
+                pavel.kleisner@datalite.cz
+            </a>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
+                transition transform-gpu duration-300
+                hover:-translate-y-1
+                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <h3 class="text-xl font-semibold">LinkedIn</h3>
+            <p class="text-slate-400">
+                Professional background & experience.
+            </p>
+            <a
+                    href="https://www.linkedin.com/in/pavel-kleisner-895989129/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-block text-blue-400 hover:text-blue-300 font-medium"
+            >
+                View LinkedIn profile
+            </a>
+        </div>
+
+        <!-- GitHub -->
+        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
+                transition transform-gpu duration-300
+                hover:-translate-y-1
+                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <h3 class="text-xl font-semibold">GitHub</h3>
+            <p class="text-slate-400">
+                Code, experiments and side projects.
+            </p>
+            <a
+                    href="https://github.com/JohnyIII"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-block text-blue-400 hover:text-blue-300 font-medium"
+            >
+                github.com/JohnyIII
+            </a>
+        </div>
+
+    </section>
+
+    <!-- CTA BLOCK -->
+    <section class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-12 max-w-5xl">
+        <h2 class="text-3xl font-bold mb-6">
+            Open to collaboration
+        </h2>
+
+        <p class="text-blue-100 text-lg leading-relaxed mb-8 max-w-3xl">
+            I’m open to interesting projects, long-term cooperation
+            or building something meaningful together.
+            Let’s see if we’re a good fit.
+        </p>
+
+        <a
+                href="mailto:pavel.kleisner@datalite.cz"
+                class="inline-block bg-white text-blue-700 px-8 py-4 rounded-xl font-medium
+             transition transform-gpu duration-200
+             hover:-translate-y-0.5 hover:bg-slate-100"
+        >
+            Send me an email
+        </a>
+    </section>
+
+</Layout>

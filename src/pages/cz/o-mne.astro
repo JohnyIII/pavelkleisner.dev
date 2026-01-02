@@ -3,99 +3,210 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="O mně – Pavel Kleisner">
-    <!-- Hero -->
-    <section class="mb-24 max-w-4xl">
-        <h1 class="text-5xl font-bold mb-6">
-            O <span class="text-blue-500">mně</span>
-        </h1>
 
-        <p class="text-xl text-slate-400 leading-relaxed">
-            Jsem backend-heavy full-stack developer se zaměřením na architekturu,
-            dlouhodobě udržitelná řešení a vývoj vlastních micro-SaaS produktů.
-            Baví mě hledat jednoduchá řešení složitých problémů a stavět software,
-            který obstojí i po letech.
+    <!-- ÚVOD -->
+    <section class="max-w-4xl mb-40 motion-safe:animate-[fadeUp_600ms_ease-out_1]">
+        <h1 class="text-5xl font-bold mb-10">O mně</h1>
+
+        <p class="text-2xl text-slate-400 leading-relaxed">
+            Jsem backendově orientovaný full-stack vývojář a tech lead,
+            který se dlouhodobě zaměřuje na architekturu,
+            udržitelnost a smysluplný vývoj softwaru.
         </p>
     </section>
 
-    <!-- Main grid -->
-    <section class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <!-- Main text -->
-        <div class="lg:col-span-2 space-y-12">
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <h2 class="text-2xl font-semibold">Jak přemýšlím o vývoji</h2>
+    <!-- PŘÍBĚH -->
+    <section class="max-w-5xl mb-40 space-y-10">
+        <h2 class="text-4xl font-bold">Moje cesta</h2>
 
-                <p class="text-slate-300 leading-relaxed">
-                    Věřím v pragmatický přístup k vývoji softwaru. Architektura by měla
-                    být čitelná, rozhodnutí obhajitelná a kód srozumitelný nejen pro autora,
-                    ale i pro další lidi, kteří s ním budou pracovat za rok nebo dva.
-                </p>
+        <p class="text-slate-300 leading-relaxed">
+            Během své kariéry jsem pracoval na různorodých projektech —
+            od interních nástrojů až po rozsáhlé systémy,
+            které jsou v každodenním provozu.
+        </p>
 
-                <p class="text-slate-300 leading-relaxed">
-                    Při návrhu systémů se dívám na celek – databázi, backend,
-                    integrace i způsob, jakým aplikaci používají lidé.
-                    Technologie jsou pro mě prostředek, ne cíl.
-                </p>
-            </div>
+        <p class="text-slate-300 leading-relaxed">
+            Zpočátku jsem se soustředil především na psaní kódu
+            a dodávání funkcionality.
+            Postupem času jsem si ale uvědomil,
+            že skutečné problémy často přicházejí později.
+        </p>
 
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <h2 class="text-2xl font-semibold">Zkušenosti a role</h2>
-
-                <p class="text-slate-300 leading-relaxed">
-                    Mám zkušenosti s vývojem rozsáhlých webových aplikací,
-                    návrhem backendových systémů i technickým vedením vývojového týmu.
-                    Kromě samotného kódování se věnuji také mentoringu
-                    a technickému rozhodování.
-                </p>
-
-                <p class="text-slate-300 leading-relaxed">
-                    Nejčastěji pracuji na backendu, ale full-stack přesah mi umožňuje
-                    lépe chápat potřeby produktu jako celku.
-                </p>
-            </div>
-
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <h2 class="text-2xl font-semibold">Mimo práci</h2>
-
-                <p class="text-slate-300 leading-relaxed">
-                    Ve volném čase mám rád hudbu (hlavně rock a metal),
-                    sci-fi, fantasy a anime. Baví mě experimentovat
-                    s vlastními nápady a malé projekty postupně posouvat
-                    směrem k použitelným produktům.
-                </p>
-            </div>
-        </div>
-
-        <!-- Sidebar -->
-        <aside class="space-y-10">
-            <div class="bg-slate-900 rounded-2xl p-8">
-                <h3 class="font-semibold mb-4">Technologie</h3>
-                <ul class="space-y-2 text-slate-400 text-sm">
-                    <li>Java / Kotlin / Spring</li>
-                    <li>PostgreSQL / Oracle</li>
-                    <li>Angular / TypeScript</li>
-                    <li>Docker / CI/CD</li>
-                    <li>Architektura & návrh API</li>
-                </ul>
-            </div>
-
-            <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8">
-                <h3 class="text-lg font-semibold mb-4">
-                    Spolupráce
-                </h3>
-
-                <p class="text-blue-100 mb-6">
-                    Pokud hledáš zkušeného backendového vývojáře
-                    nebo technického partnera pro svůj projekt,
-                    rád se ozvu.
-                </p>
-
-                <a
-                        href="/contact"
-                        class="inline-block bg-white text-blue-700 px-5 py-3 rounded-lg font-medium hover:bg-slate-100"
-                >
-                    Kontakt
-                </a>
-            </div>
-        </aside>
+        <p class="text-slate-300 leading-relaxed">
+            Právě tyto zkušenosti formovaly můj současný přístup.
+            Snažím se navrhovat řešení,
+            která obstojí i s odstupem několika let.
+        </p>
     </section>
+
+    <!-- MYŠLENÍ -->
+    <section class="max-w-5xl mb-40 space-y-10">
+        <h2 class="text-4xl font-bold">Jak přemýšlím o softwaru</h2>
+
+        <p class="text-slate-300 leading-relaxed">
+            Software vnímám jako dlouhodobou investici.
+            Každé rozhodnutí má dopad nejen dnes,
+            ale i v budoucnu.
+        </p>
+
+        <p class="text-slate-300 leading-relaxed">
+            Snažím se minimalizovat kognitivní zátěž vývojářů.
+            Jasná struktura, pojmenování a odpovědnosti
+            jsou pro mě zásadní.
+        </p>
+
+        <p class="text-slate-300 leading-relaxed">
+            Preferuji jednoduchá, ověřená řešení.
+            Technologie beru jako prostředek, ne cíl.
+        </p>
+    </section>
+
+    <!-- ČASOVÁ OSA -->
+    <section class="max-w-5xl mb-40">
+        <h2 class="text-4xl font-bold mb-20">Časová osa</h2>
+
+        <div class="relative border-l border-slate-700 pl-16 space-y-20">
+
+            <div class="relative">
+      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
+        <span class="relative inline-flex rounded-full h-4 w-4 bg-blue-500"></span>
+      </span>
+
+                <h3 class="text-2xl font-semibold mb-3">Začátky ve vývoji</h3>
+                <p class="text-slate-400 leading-relaxed max-w-xl">
+                    První kontakt s programováním a postupné objevování
+                    backendového vývoje. Učení se základních principů
+                    skrze experimentování a praxi.
+                </p>
+            </div>
+
+            <div class="relative">
+      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
+        <span class="relative inline-flex rounded-full h-4 w-4 bg-blue-500"></span>
+      </span>
+
+                <h3 class="text-2xl font-semibold mb-3">Profesní růst</h3>
+                <p class="text-slate-400 leading-relaxed max-w-xl">
+                    Práce na větších projektech a dlouhodobě běžících systémech,
+                    postupné přebírání odpovědnosti za backendové služby,
+                    databáze a stabilitu řešení.
+                </p>
+            </div>
+
+            <div class="relative">
+      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
+        <span class="relative inline-flex rounded-full h-4 w-4 bg-blue-500"></span>
+      </span>
+
+                <h3 class="text-2xl font-semibold mb-3">Architektura a technické vedení</h3>
+                <p class="text-slate-400 leading-relaxed max-w-xl">
+                    Návrh architektury systémů, technické rozhodování,
+                    mentoring a zodpovědnost za dlouhodobou udržitelnost
+                    a čitelnost řešení.
+                </p>
+            </div>
+
+            <div class="relative">
+      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
+        <span class="relative inline-flex rounded-full h-4 w-4 bg-blue-500"></span>
+      </span>
+
+                <h3 class="text-2xl font-semibold mb-3">Micro-SaaS a vlastní projekty</h3>
+                <p class="text-slate-400 leading-relaxed max-w-xl">
+                    Vývoj vlastních micro-SaaS projektů s plnou odpovědností
+                    za produkt – od prvotního nápadu, přes vývoj,
+                    až po provoz a údržbu.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ARCHITEKTURA -->
+    <section class="max-w-5xl mb-40 space-y-10">
+        <h2 class="text-4xl font-bold">Architektura a odpovědnost</h2>
+
+        <p class="text-slate-300 leading-relaxed">
+            Dobrá architektura není o složitosti.
+            Je o pochopení odpovědností
+            a správném rozdělení systému.
+        </p>
+
+        <p class="text-slate-300 leading-relaxed">
+            Cílem je vytvořit systém,
+            který bude srozumitelný i pro vývojáře,
+            kteří se k projektu připojí později.
+        </p>
+    </section>
+
+    <!-- LIDÉ -->
+    <section class="max-w-5xl mb-40 space-y-10">
+        <h2 class="text-4xl font-bold">Spolupráce a vedení</h2>
+
+        <p class="text-slate-300 leading-relaxed">
+            Pracoval jsem jak jako individuální vývojář,
+            tak i v rolích technického vedení.
+            Vážím si otevřené komunikace a důvěry v týmu.
+        </p>
+
+        <p class="text-slate-300 leading-relaxed">
+            Nejlepší řešení vznikají spoluprací.
+            Technická rozhodnutí by měla sloužit produktu
+            a lidem, kteří s ním pracují.
+        </p>
+    </section>
+
+    <!-- ČEMU SE ZÁMĚRNĚ VYHÝBÁM -->
+    <section class="max-w-5xl mb-40 space-y-10">
+        <h2 class="text-4xl font-bold">Čemu se záměrně vyhýbám</h2>
+
+        <p class="text-slate-300 leading-relaxed">
+            Postupem času jsem si uvědomil, že stejně důležité
+            jako to, co při vývoji dělám, je i to, co vědomě nedělám.
+            Tyto zkušenosti přicházejí až s praxí a chybami.
+        </p>
+
+        <ul class="space-y-6 text-slate-400">
+            <li>• Zbytečně složitým řešením bez jasného přínosu</li>
+            <li>• Nekritickému přebírání trendů a „hype“ technologií</li>
+            <li>• Architektuře, které rozumí jen jeden člověk</li>
+            <li>• Technickým rozhodnutím taženým egem místo potřeb produktu</li>
+        </ul>
+    </section>
+
+    <!-- OSOBNÍ -->
+    <section class="max-w-5xl mb-40 space-y-10">
+        <h2 class="text-4xl font-bold">Mimo práci</h2>
+
+        <p class="text-slate-300 leading-relaxed">
+            Ve volném čase mám rád hudbu,
+            sci-fi, fantasy a anime.
+            Vlastní projekty mi umožňují
+            zkoušet nové nápady a učit se.
+        </p>
+
+        <p class="text-slate-300 leading-relaxed">
+            Micro-SaaS projekty mi dávají
+            realistický pohled na celý životní cyklus produktu —
+            od vývoje až po provoz.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-16 max-w-6xl">
+        <h2 class="text-4xl font-bold mb-8">
+            Pojďme spolupracovat
+        </h2>
+
+        <p class="text-blue-100 text-lg leading-relaxed mb-10 max-w-3xl">
+            Pokud je ti můj přístup blízký,
+            budu rád, když se ozveš.
+        </p>
+
+        <a href="/cz/kontakt"
+           class="bg-white text-blue-700 px-10 py-5 rounded-xl font-medium hover:bg-slate-100 transition">
+            Kontakt
+        </a>
+    </section>
+
 </Layout>
