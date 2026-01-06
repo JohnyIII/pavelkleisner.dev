@@ -1,0 +1,63 @@
+---
+import "../styles/global.css";
+import Nav from "@/components/Nav.astro";
+
+const { title = "Pavel Kleisner" } = Astro.props;
+
+// 🔥 jazyk se určí podle URL
+const pathname = Astro.url.pathname;
+const lang = pathname.startsWith("/cz") ? "cz" : "en";
+---
+
+<!doctype html>
+<html lang={lang}>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{title}</title>
+	<meta
+		name="description"
+		content="Senior backend-heavy full-stack developer focused on architecture, micro-SaaS and long-term maintainable systems."
+	/>
+
+	<!-- Open Graph / LinkedIn -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content={title} />
+	<meta
+		property="og:description"
+		content="Senior backend-heavy full-stack developer focused on architecture, micro-SaaS and long-term maintainable systems."
+	/>
+	<meta property="og:url" content={Astro.url.href} />
+	<meta property="og:image" content="/og-image.png" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta
+		name="twitter:description"
+		content="Senior backend-heavy full-stack developer focused on architecture, micro-SaaS and long-term maintainable systems."
+	/>
+	<meta name="twitter:image" content="/og-image.png" />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+<header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+	<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <span class="font-semibold text-lg">
+          Pavel <span class="text-blue-500">Kleisner</span>
+        </span>
+
+		<Nav lang={lang} />
+	</div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-20">
+	<slot />
+</main>
+
+<footer class="border-t border-slate-800 mt-20">
+	<div class="max-w-6xl mx-auto px-6 py-8 text-sm text-slate-500">
+		© {new Date().getFullYear()} Pavel Kleisner
+	</div>
+</footer>
+</body>
+</html>
