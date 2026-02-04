@@ -1,1 +1,39 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.bg-ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(20, 184, 166, 0.16), transparent 70%),
+    radial-gradient(900px 500px at 90% 10%, rgba(13, 148, 136, 0.14), transparent 65%),
+    radial-gradient(700px 700px at 50% 80%, rgba(148, 163, 184, 0.10), transparent 70%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.98));
+}
+
+.bg-ambient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 0);
+  background-size: 24px 24px;
+  opacity: 0.25;
+  mask-image: radial-gradient(circle at 30% 20%, black, transparent 65%);
+}

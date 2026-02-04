@@ -5,31 +5,35 @@ import Layout from "@/layouts/Layout.astro";
 <Layout title="Pavel Kleisner – Backend vývojář & Micro-SaaS">
 
     <!-- HERO -->
-    <section class="max-w-5xl mb-48 motion-safe:animate-[fadeUp_600ms_ease-out_1]">
-        <h1 class="text-6xl font-bold mb-10">
-            Pavel <span class="text-blue-500">Kleisner</span>
+    <section class="max-w-5xl mb-36 motion-safe:animate-[fadeUp_600ms_ease-out_1]">
+        <h1 class="text-6xl font-bold mb-8">
+            Pavel <span class="text-teal-500">Kleisner</span>
         </h1>
 
-        <p class="text-2xl text-slate-400 leading-relaxed max-w-4xl mb-14">
+        <p class="text-2xl text-slate-400 leading-relaxed max-w-4xl mb-6">
             Backendově orientovaný full-stack vývojář a tech lead.
             Zaměřuji se na architekturu, dlouhodobou udržitelnost
             a vývoj vlastních <span class="text-slate-200">micro-SaaS projektů</span>.
         </p>
 
+        <p class="text-lg text-slate-300 max-w-3xl mb-12">
+            Mám rád čisté systémy, klidné dodávky a produkty, které řeší úzký problém opravdu dobře.
+        </p>
+
         <div class="flex flex-wrap gap-4">
             <a href="/cz/projekty"
-               class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-medium transition">
+               class="bg-teal-600 hover:bg-teal-700 px-8 py-4 rounded-xl font-medium transition">
                 Projekty
             </a>
             <a href="/cz/kontakt"
-               class="border border-slate-700 hover:border-blue-500 px-8 py-4 rounded-xl font-medium transition">
+               class="border border-slate-700 hover:border-teal-500 px-8 py-4 rounded-xl font-medium transition">
                 Kontakt
             </a>
         </div>
     </section>
 
     <!-- POZICOVÁNÍ -->
-    <section class="max-w-5xl mb-48 space-y-10">
+    <section class="max-w-5xl mb-36 space-y-8">
         <h2 class="text-4xl font-bold">Co dělám</h2>
 
         <p class="text-slate-300 leading-relaxed">
@@ -42,90 +46,165 @@ import Layout from "@/layouts/Layout.astro";
             Mým hlavním zaměřením je backend, ale díky full-stack zkušenostem
             dokážu vnímat produkt jako celek — od databáze až po uživatele.
         </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Časem jsem si uvědomil, že samotná technická dokonalost nestačí.
-            Nejlepší řešení vznikají vyvážením techniky a reality projektu.
-        </p>
     </section>
 
-    <!-- HLAVNÍ OBLASTI -->
-    <section class="mb-48">
-        <h2 class="text-4xl font-bold mb-16">Hlavní oblasti</h2>
+    <!-- HIGHLIGHTS -->
+    <section class="max-w-5xl mb-36">
+        <h2 class="text-4xl font-bold mb-10">Hlavní oblasti</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <h3 class="text-2xl font-semibold">Backend & architektura</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-4">
+                <h3 class="text-xl font-semibold">Backend & architektura</h3>
                 <p class="text-slate-400 leading-relaxed">
-                    Zaměřuji se na čistou architekturu backendu,
-                    jasné odpovědnosti a doménově správné datové modely.
-                </p>
-                <p class="text-slate-400 leading-relaxed">
-                    Preferuji ověřené technologie použité rozumným způsobem.
+                    Jasné odpovědnosti, předvídatelné datové toky a systémy, které dobře stárnou.
                 </p>
             </div>
 
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <h3 class="text-2xl font-semibold">Pragmatický přístup</h3>
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-4">
+                <h3 class="text-xl font-semibold">Pragmatické doručení</h3>
                 <p class="text-slate-400 leading-relaxed">
-                    Věřím v pragmatické rozhodování.
-                    Ne každý problém potřebuje složité řešení.
-                </p>
-                <p class="text-slate-400 leading-relaxed">
-                    Správná míra abstrakce je často důležitější
-                    než nejnovější technologie.
+                    Nejjednodušší smysluplné řešení s ohledem na dlouhodobé náklady.
                 </p>
             </div>
 
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <h3 class="text-2xl font-semibold">Micro-SaaS přístup</h3>
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-4">
+                <h3 class="text-xl font-semibold">Micro-SaaS mindset</h3>
                 <p class="text-slate-400 leading-relaxed">
-                    Aktivně pracuji na vlastních micro-SaaS projektech.
-                    Malé, jasně zaměřené nástroje.
-                </p>
-                <p class="text-slate-400 leading-relaxed">
-                    Vlastnictví celého životního cyklu přináší
-                    cenné zkušenosti.
+                    Malé, přesně zaměřené produkty a vlastnictví end-to-end.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- JAK PŘEMÝŠLÍM -->
-    <section class="max-w-5xl mb-48 space-y-10">
-        <h2 class="text-4xl font-bold">Jak přemýšlím o softwaru</h2>
+    <!-- ZKUŠENOSTI -->
+    <section class="max-w-5xl mb-36">
+        <div class="flex items-end justify-between gap-6 mb-10">
+            <h2 class="text-4xl font-bold">Zkušenosti</h2>
+            <div class="flex gap-3 text-xs uppercase tracking-[0.2em] text-slate-500">
+                <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">9+ let</span>
+                <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Team lead od 2023</span>
+            </div>
+        </div>
 
-        <p class="text-slate-300 leading-relaxed">
-            Software je dlouhodobá investice.
-            Rozhodnutí učiněná dnes ovlivní projekt
-            i tým v budoucnu.
-        </p>
+        <div class="space-y-10">
+            <div class="border-l border-slate-800 pl-6">
+                <div class="flex flex-wrap items-center gap-3 mb-2">
+                    <h3 class="text-xl font-semibold">Senior Backend-heavy Full-stack Engineer / Team Lead</h3>
+                    <span class="text-slate-500">DataLite, s.r.o.</span>
+                </div>
+                <div class="text-sm text-slate-500 mb-4">leden 2017 – současnost · Praha, Česká republika</div>
+                <ul class="text-slate-300 space-y-2">
+                    <li>Dlouhodobé vlastnictví komplexních produkčních systémů se zaměřením na stabilitu a udržitelnost.</li>
+                    <li>Backendová architektura, databáze, integrace a technická rozhodnutí pro klíčové systémy.</li>
+                    <li>Od roku 2023: vedení vývojového týmu, mentoring a zodpovědnost za dodávky.</li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-4 text-xs text-slate-400">
+                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Java</span>
+                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Kotlin</span>
+                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Spring</span>
+                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Kafka</span>
+                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Kubernetes</span>
+                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Oracle</span>
+                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">PostgreSQL</span>
+                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Angular</span>
+                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">CI/CD</span>
+                </div>
+            </div>
 
-        <p class="text-slate-300 leading-relaxed">
-            Snažím se snižovat kognitivní zátěž budoucích vývojářů.
-            Jasná pojmenování a jednoduché struktury jsou klíčové.
-        </p>
+            <div class="border-l border-slate-800 pl-6">
+                <div class="flex flex-wrap items-center gap-3 mb-2">
+                    <h3 class="text-xl font-semibold">Prodej</h3>
+                    <span class="text-slate-500">Elektro Juránek</span>
+                </div>
+                <div class="text-sm text-slate-500">srpen 2014 – prosinec 2016</div>
+            </div>
 
+            <div class="border-l border-slate-800 pl-6">
+                <div class="flex flex-wrap items-center gap-3 mb-2">
+                    <h3 class="text-xl font-semibold">Tester</h3>
+                    <span class="text-slate-500">GMC Software</span>
+                </div>
+                <div class="text-sm text-slate-500 mb-2">listopad 2013 – leden 2014 · Hradec Králové, Česko</div>
+                <p class="text-slate-300">Tvorba use-cases a implementace, provoz Jenkins serveru.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VZDĚLÁNÍ + CERTIFIKACE -->
+    <section class="max-w-5xl mb-36 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-6">
+            <h2 class="text-3xl font-bold">Vzdělání</h2>
+            <div>
+                <div class="font-semibold">České vysoké učení technické v Praze</div>
+                <div class="text-sm text-slate-500">Bc. · Softwarové technologie a management · 2009 – 2013</div>
+                <p class="text-slate-300 mt-2">
+                    Obor Web a multimédia. Bakalářská práce: vektorový editor ovládaný řečovými i neřečovými vstupy.
+                </p>
+            </div>
+            <div>
+                <div class="font-semibold">Univerzita Pardubice</div>
+                <div class="text-sm text-slate-500">Mikroprocesorová technika · 2008 – 2009</div>
+            </div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-6">
+            <h2 class="text-3xl font-bold">Licence a certifikace</h2>
+            <div>
+                <div class="font-semibold">Verzovací systém GIT</div>
+                <div class="text-sm text-slate-500">CZ.NIC · červen 2018</div>
+            </div>
+            <div>
+                <div class="font-semibold">Maven</div>
+                <div class="text-sm text-slate-500">Ing. Jiří Pinkas · listopad 2013</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KOMUNITA -->
+    <section class="max-w-5xl mb-36">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8">
+            <h2 class="text-3xl font-bold mb-4">Komunita</h2>
+            <div class="text-slate-300">
+                Pořadatel · Charita v Červeném Kostelci (od prosince 2015)
+            </div>
+            <div class="text-slate-300 mt-2">
+                Promítání v kině v Červeném Kostelci (prosinec 2015 – 2020)
+            </div>
+        </div>
+    </section>
+
+    <!-- JAK PRACUJI -->
+    <section class="max-w-5xl mb-36 space-y-8">
+        <h2 class="text-4xl font-bold">Jak pracuji</h2>
+        <ul class="text-slate-300 space-y-3">
+            <li>Jednoduché hranice a jasná pojmenování pro nižší kognitivní zátěž.</li>
+            <li>Těsné napojení na cíle produktu a realitu projektu.</li>
+            <li>Preferuji ověřené technologie, když to zvyšuje stabilitu.</li>
+        </ul>
+    </section>
+
+    <!-- NOW -->
+    <section class="max-w-5xl mb-36 space-y-4">
+        <h2 class="text-3xl font-bold">Teď (únor 2026)</h2>
         <p class="text-slate-300 leading-relaxed">
-            Velký důraz kladu na komunikaci.
-            Kvalitní řešení vznikají spoluprací napříč rolemi.
+            Stavím a iteruji malé SaaS nástroje a pomáhám týmům držet backendy klidné a udržitelné.
         </p>
     </section>
 
     <!-- CTA -->
-    <section class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-16 max-w-6xl">
+    <section class="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl p-16 max-w-6xl">
         <h2 class="text-4xl font-bold mb-8">
             Máš zájem o spolupráci?
         </h2>
 
-        <p class="text-blue-100 text-lg leading-relaxed mb-10 max-w-3xl">
+        <p class="text-teal-100 text-lg leading-relaxed mb-10 max-w-3xl">
             Pokud hledáš zkušeného backendového vývojáře,
             technického lídra nebo partnera pro svůj produkt,
-            ozvi se.
+            ozvi se. Nejrychleji reaguji na e-mail.
         </p>
 
         <a href="/cz/kontakt"
-           class="bg-white text-blue-700 px-10 py-5 rounded-xl font-medium hover:bg-slate-100 transition">
+           class="bg-white text-teal-700 px-10 py-5 rounded-xl font-medium hover:bg-slate-100 transition">
             Kontakt
         </a>
     </section>
