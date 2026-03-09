@@ -1,20 +1,29 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
-  --font-body: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
-  --font-display: "Space Grotesk", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-body: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-display: "Sora", "Manrope", system-ui, -apple-system, sans-serif;
+  --c-bg: #060b0d;
+  --c-surface: #0d1418;
+  --c-surface-2: #101a1f;
+  --c-border: rgba(148, 163, 184, 0.2);
+  --c-muted: #94a3b8;
+  --c-text: #e2e8f0;
+  --c-accent: #14b8a6;
+  --c-warm: #fb923c;
 }
 
 body {
   font-family: var(--font-body);
+  color: var(--c-text);
+  background: var(--c-bg);
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .bg-ambient {
@@ -22,18 +31,83 @@ h3 {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(20, 184, 166, 0.16), transparent 70%),
-    radial-gradient(900px 500px at 90% 10%, rgba(13, 148, 136, 0.14), transparent 65%),
-    radial-gradient(700px 700px at 50% 80%, rgba(148, 163, 184, 0.10), transparent 70%),
-    linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.98));
+    radial-gradient(900px 500px at 0% 0%, rgba(20, 184, 166, 0.22), transparent 65%),
+    radial-gradient(1000px 500px at 100% 10%, rgba(251, 146, 60, 0.18), transparent 70%),
+    radial-gradient(800px 800px at 50% 100%, rgba(20, 184, 166, 0.10), transparent 70%),
+    linear-gradient(180deg, #05080a 0%, #060b0d 45%, #070f12 100%);
 }
 
 .bg-ambient::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 0);
-  background-size: 24px 24px;
-  opacity: 0.25;
-  mask-image: radial-gradient(circle at 30% 20%, black, transparent 65%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+  opacity: 0.18;
+  mask-image: radial-gradient(circle at 50% 0%, black 35%, transparent 85%);
+}
+
+.surface-card {
+  background: linear-gradient(180deg, rgba(16, 26, 31, 0.88), rgba(13, 20, 24, 0.92));
+  border: 1px solid var(--c-border);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 600;
+  color: #0a0f12;
+  background: linear-gradient(135deg, var(--c-accent), #2dd4bf);
+  transition: transform 200ms ease, filter 200ms ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 600;
+  color: #d1d5db;
+  border: 1px solid var(--c-border);
+  background: rgba(15, 23, 28, 0.55);
+  transition: transform 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(20, 184, 166, 0.6);
+  color: #ffffff;
+}
+
+.pill {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 28, 0.6);
+  color: #cbd5e1;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+}
+
+.section-label {
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.accent-text {
+  color: #2dd4bf;
 }

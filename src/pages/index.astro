@@ -2,212 +2,145 @@
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout title="Pavel Kleisner – Backend Developer & Team Lead">
+<Layout title="Pavel Kleisner – Senior Backend Developer & Team Lead">
 
-    <!-- HERO -->
-    <section class="max-w-5xl mb-36 motion-safe:animate-[fadeUp_600ms_ease-out_1]">
-        <h1 class="text-6xl font-bold leading-tight mb-8">
-            Pavel <span class="text-teal-500">Kleisner</span>
-        </h1>
+    <section class="mb-28">
+        <div class="section-label mb-4">Senior Backend Developer · Team Lead</div>
+        <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-start">
+            <div>
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                    Pavel <span class="accent-text">Kleisner</span>
+                </h1>
 
-        <p class="text-2xl text-slate-400 leading-relaxed max-w-4xl mb-6">
-            Backend-heavy full-stack developer and tech lead focused on
-            system architecture, long-term maintainability, and practical
-            product development.
-        </p>
-
-        <p class="text-lg text-slate-300 max-w-3xl mb-12">
-            I like clean systems, calm delivery, and products that solve a narrow problem really well.
-        </p>
-
-        <div class="flex flex-wrap gap-4">
-            <a href="/projects"
-               class="bg-teal-600 hover:bg-teal-700 px-8 py-4 rounded-xl font-medium transition">
-                View projects
-            </a>
-            <a href="/contact"
-               class="border border-slate-700 hover:border-teal-500 px-8 py-4 rounded-xl font-medium transition">
-                Contact
-            </a>
-        </div>
-    </section>
-
-    <!-- INTRO / POSITIONING -->
-    <section class="max-w-5xl mb-36 space-y-8">
-        <h2 class="text-4xl font-bold">What I do</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            I design and build backend systems that are meant to last.
-            Systems that are understandable, maintainable and resilient
-            even years after the initial implementation.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            My primary focus is backend development, but my full-stack
-            background allows me to understand products as a whole —
-            from database design and APIs to frontend needs and user experience.
-        </p>
-    </section>
-
-    <!-- HIGHLIGHTS -->
-    <section class="max-w-5xl mb-36">
-        <h2 class="text-4xl font-bold mb-10">Selected highlights</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-4">
-                <h3 class="text-xl font-semibold">Backend & architecture</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Clear responsibilities, predictable data flows, and systems that age well.
+                <p class="text-xl text-slate-300 leading-relaxed max-w-3xl mb-6">
+                    I build and lead backend systems that need to stay reliable for years.
+                    My focus is architecture, maintainability, and clear delivery under real product constraints.
                 </p>
+
+                <p class="text-slate-400 leading-relaxed max-w-3xl mb-10">
+                    I combine hands-on engineering with technical leadership. Since 2023, I lead a development team,
+                    mentor developers, and take responsibility for technical direction and delivery.
+                </p>
+
+                <div class="flex flex-wrap gap-3">
+                    <a href="/projects" class="btn-primary">View projects</a>
+                    <a href="/contact" class="btn-secondary">Contact</a>
+                </div>
             </div>
 
-            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-4">
-                <h3 class="text-xl font-semibold">Pragmatic delivery</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Choosing the simplest viable approach, with an eye on long-term costs.
-                </p>
-            </div>
-
-            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-4">
-                <h3 class="text-xl font-semibold">Learning by building</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    I enjoy experimenting with new ideas and tools, currently including Flame Engine.
-                </p>
+            <div class="surface-card rounded-2xl p-6 space-y-4">
+                <div class="text-xs uppercase tracking-[0.18em] text-slate-400">At a glance</div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
+                        <div class="text-2xl font-semibold">9+</div>
+                        <div class="text-xs text-slate-400">Years in software</div>
+                    </div>
+                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
+                        <div class="text-2xl font-semibold">2023</div>
+                        <div class="text-xs text-slate-400">Team lead since</div>
+                    </div>
+                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
+                        <div class="text-2xl font-semibold">Prague</div>
+                        <div class="text-xs text-slate-400">Czech Republic</div>
+                    </div>
+                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
+                        <div class="text-2xl font-semibold">EN/CZ</div>
+                        <div class="text-xs text-slate-400">Work language</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-1">
+                    <span class="pill">Java</span>
+                    <span class="pill">Kotlin</span>
+                    <span class="pill">Spring</span>
+                    <span class="pill">Kafka</span>
+                    <span class="pill">Kubernetes</span>
+                    <span class="pill">PostgreSQL</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section class="max-w-5xl mb-36">
-        <div class="flex items-end justify-between gap-6 mb-10">
-            <h2 class="text-4xl font-bold">Experience</h2>
-            <div class="flex gap-3 text-xs uppercase tracking-[0.2em] text-slate-500">
-                <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">9+ years</span>
-                <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Team lead since 2023</span>
-            </div>
+    <section class="mb-28">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">What I bring</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            <article class="surface-card rounded-2xl p-6">
+                <h3 class="text-lg font-semibold mb-2">Architecture ownership</h3>
+                <p class="text-slate-400">Clear service boundaries, resilient integration flows, and systems that remain understandable over time.</p>
+            </article>
+            <article class="surface-card rounded-2xl p-6">
+                <h3 class="text-lg font-semibold mb-2">Reliable delivery</h3>
+                <p class="text-slate-400">Pragmatic decisions, realistic scope, and steady shipping cadence without hero-driven process.</p>
+            </article>
+            <article class="surface-card rounded-2xl p-6">
+                <h3 class="text-lg font-semibold mb-2">Technical leadership</h3>
+                <p class="text-slate-400">Mentoring developers, reviewing architecture decisions, and aligning engineering with product goals.</p>
+            </article>
+            <article class="surface-card rounded-2xl p-6">
+                <h3 class="text-lg font-semibold mb-2">Continuous learning</h3>
+                <p class="text-slate-400">I actively learn by building. Right now I experiment with <span class="accent-text">Flame Engine</span>.</p>
+            </article>
         </div>
+    </section>
 
-        <div class="space-y-10">
-            <div class="border-l border-slate-800 pl-6">
+    <section class="mb-28">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">Experience Snapshot</h2>
+        <div class="space-y-5">
+            <article class="surface-card rounded-2xl p-6">
                 <div class="flex flex-wrap items-center gap-3 mb-2">
                     <h3 class="text-xl font-semibold">Senior Backend-heavy Full-stack Engineer / Team Lead</h3>
-                    <span class="text-slate-500">DataLite, s.r.o.</span>
+                    <span class="text-slate-400">DataLite, s.r.o.</span>
                 </div>
-                <div class="text-sm text-slate-500 mb-4">January 2017 – Present · Prague, Czech Republic</div>
-                <ul class="text-slate-300 space-y-2">
-                    <li>Long-term ownership of complex production systems focused on stability and maintainability.</li>
-                    <li>Backend architecture, database design, integrations, and technical decisions for core systems.</li>
-                    <li>Since 2023: leading the engineering team, mentoring developers, and delivery accountability.</li>
+                <p class="text-sm text-slate-500 mb-4">January 2017 – Present · Prague</p>
+                <ul class="space-y-2 text-slate-300">
+                    <li>Architecture, databases, integrations, and key technical decisions in production systems.</li>
+                    <li>Long-term ownership of system stability, maintainability, and operational reliability.</li>
+                    <li>Leading the development team since 2023, including mentoring and delivery responsibility.</li>
                 </ul>
-                <div class="flex flex-wrap gap-2 mt-4 text-xs text-slate-400">
-                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Java</span>
-                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Kotlin</span>
-                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Spring</span>
-                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Kafka</span>
-                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Kubernetes</span>
-                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Oracle</span>
-                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">PostgreSQL</span>
-                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">Angular</span>
-                    <span class="bg-slate-900/60 border border-slate-800 rounded-full px-3 py-1">CI/CD</span>
-                </div>
-            </div>
+            </article>
 
-            <div class="border-l border-slate-800 pl-6">
-                <div class="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 class="text-xl font-semibold">Sales</h3>
-                    <span class="text-slate-500">Elektro Juránek</span>
-                </div>
-                <div class="text-sm text-slate-500">August 2014 – December 2016</div>
-            </div>
-
-            <div class="border-l border-slate-800 pl-6">
-                <div class="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 class="text-xl font-semibold">Tester</h3>
-                    <span class="text-slate-500">GMC Software</span>
-                </div>
-                <div class="text-sm text-slate-500 mb-2">November 2013 – January 2014 · Hradec Králové, Czech Republic</div>
-                <p class="text-slate-300">Use-case creation and implementation, Jenkins server operations.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <article class="surface-card rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold mb-2">Sales</h3>
+                    <p class="text-slate-400">Elektro Juránek</p>
+                    <p class="text-sm text-slate-500 mt-2">August 2014 – December 2016</p>
+                </article>
+                <article class="surface-card rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold mb-2">Tester</h3>
+                    <p class="text-slate-400">GMC Software</p>
+                    <p class="text-sm text-slate-500 mt-2">November 2013 – January 2014</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- EDUCATION + CERTS -->
-    <section class="max-w-5xl mb-36 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-6">
-            <h2 class="text-3xl font-bold">Education</h2>
-            <div>
-                <div class="font-semibold">Czech Technical University in Prague</div>
-                <div class="text-sm text-slate-500">BSc · Software Technologies & Management · 2009 – 2013</div>
-                <p class="text-slate-300 mt-2">
-                    Studied Web & Multimedia. Bachelor thesis: vector graphics editor with speech and non-speech input.
-                </p>
-            </div>
-            <div>
-                <div class="font-semibold">University of Pardubice</div>
-                <div class="text-sm text-slate-500">Microprocessor Technology · 2008 – 2009</div>
-            </div>
-        </div>
+    <section class="mb-28 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <article class="surface-card rounded-2xl p-6">
+            <h2 class="text-2xl font-bold mb-4">Education & Certifications</h2>
+            <ul class="space-y-3 text-slate-300">
+                <li>CTU Prague, BSc - Software Technologies & Management (2009-2013)</li>
+                <li>University of Pardubice - Microprocessor Technology (2008-2009)</li>
+                <li>Version control system GIT, CZ.NIC (2018)</li>
+                <li>Maven, Ing. Jiri Pinkas (2013)</li>
+            </ul>
+        </article>
 
-        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 space-y-6">
-            <h2 class="text-3xl font-bold">Licenses & certifications</h2>
-            <div>
-                <div class="font-semibold">Version control system GIT</div>
-                <div class="text-sm text-slate-500">CZ.NIC · June 2018</div>
-            </div>
-            <div>
-                <div class="font-semibold">Maven</div>
-                <div class="text-sm text-slate-500">Ing. Jiří Pinkas · November 2013</div>
-            </div>
-        </div>
+        <article class="surface-card rounded-2xl p-6">
+            <h2 class="text-2xl font-bold mb-4">Community & Interests</h2>
+            <ul class="space-y-3 text-slate-300">
+                <li>Organizer, Charity in Cerveny Kostelec (since December 2015)</li>
+                <li>Film screenings in Cerveny Kostelec (December 2015 - 2020)</li>
+                <li>Current technical focus: experimentation and learning with Flame Engine</li>
+            </ul>
+        </article>
     </section>
 
-    <!-- COMMUNITY -->
-    <section class="max-w-5xl mb-36">
-        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8">
-            <h2 class="text-3xl font-bold mb-4">Community</h2>
-            <div class="text-slate-300">
-                Organizer · Charity in Červený Kostelec (since December 2015)
-            </div>
-            <div class="text-slate-300 mt-2">
-                Film screenings in Červený Kostelec (December 2015 – 2020)
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW I WORK -->
-    <section class="max-w-5xl mb-36 space-y-8">
-        <h2 class="text-4xl font-bold">How I work</h2>
-        <ul class="text-slate-300 space-y-3">
-            <li>Simple boundaries and explicit naming to reduce future cognitive load.</li>
-            <li>Close alignment with product goals and real-world constraints.</li>
-            <li>Strong preference for boring, proven tech when it keeps systems stable.</li>
-        </ul>
-    </section>
-
-    <!-- NOW -->
-    <section class="max-w-5xl mb-36 space-y-4">
-        <h2 class="text-3xl font-bold">Now (February 2026)</h2>
-        <p class="text-slate-300 leading-relaxed">
-            Helping teams keep backend systems calm and maintainable, while learning and experimenting with Flame Engine.
+    <section class="surface-card rounded-3xl p-10 md:p-14 mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-5">Interested in collaboration?</h2>
+        <p class="text-slate-300 text-lg mb-8 max-w-3xl">
+            If you need a senior backend developer or technical lead for long-term product development,
+            I am open to discussing cooperation. Email is the fastest channel.
         </p>
-    </section>
-
-    <!-- CTA -->
-    <section class="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl p-16 max-w-6xl">
-        <h2 class="text-4xl font-bold mb-8">
-            Interested in working together?
-        </h2>
-
-        <p class="text-teal-100 text-lg leading-relaxed mb-10 max-w-3xl">
-            If you’re looking for a senior backend developer,
-            tech lead or technical partner for your product,
-            feel free to reach out. Email works best.
-        </p>
-
-        <a href="/contact"
-           class="bg-white text-teal-700 px-10 py-5 rounded-xl font-medium hover:bg-slate-100 transition">
-            Contact me
-        </a>
+        <a href="/contact" class="btn-primary">Get in touch</a>
     </section>
 
 </Layout>

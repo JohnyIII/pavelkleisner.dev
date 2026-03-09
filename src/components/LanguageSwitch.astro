@@ -4,8 +4,8 @@ const { lang = "en" } = Astro.props;
 
 <div class="text-xs text-slate-400">
     {lang === "en" ? (
-            <a href="/cz" class="hover:text-teal-400">CZ</a>
+            <a href="/cz" class="inline-flex rounded-full border border-slate-700/80 px-2.5 py-1 hover:text-white hover:border-slate-500 transition-colors">CZ</a>
     ) : (
-            <a href="/" class="hover:text-teal-400">EN</a>
+            <a href="/" class="inline-flex rounded-full border border-slate-700/80 px-2.5 py-1 hover:text-white hover:border-slate-500 transition-colors">EN</a>
     )}
 </div>
