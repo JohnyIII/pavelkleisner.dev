@@ -14,10 +14,13 @@ const lang = pathname.startsWith("/cz") ? "cz" : "en";
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
 	<title>{title}</title>
 	<meta
 		name="description"
-		content="Senior backend-heavy full-stack developer focused on architecture, micro-SaaS and long-term maintainable systems."
+		content="Senior backend and integration engineer focused on Kotlin, Java, Spring, PostgreSQL, production releases, and telecom-grade systems."
 	/>
 
 	<!-- Open Graph / LinkedIn -->
@@ -25,7 +28,7 @@ const lang = pathname.startsWith("/cz") ? "cz" : "en";
 	<meta property="og:title" content={title} />
 	<meta
 		property="og:description"
-		content="Senior backend-heavy full-stack developer focused on architecture, micro-SaaS and long-term maintainable systems."
+		content="Senior backend and integration engineer focused on Kotlin, Java, Spring, PostgreSQL, production releases, and telecom-grade systems."
 	/>
 	<meta property="og:url" content={Astro.url.href} />
 	<meta property="og:image" content="/og-image.png" />
@@ -35,15 +38,16 @@ const lang = pathname.startsWith("/cz") ? "cz" : "en";
 	<meta name="twitter:title" content={title} />
 	<meta
 		name="twitter:description"
-		content="Senior backend-heavy full-stack developer focused on architecture, micro-SaaS and long-term maintainable systems."
+		content="Senior backend and integration engineer focused on Kotlin, Java, Spring, PostgreSQL, production releases, and telecom-grade systems."
 	/>
 	<meta name="twitter:image" content="/og-image.png" />
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen">
-<header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+<body class="text-slate-100 min-h-screen antialiased">
+<div class="bg-ambient" aria-hidden="true"></div>
+<header class="border-b border-slate-800/80 bg-black/35 backdrop-blur-xl">
 	<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <span class="font-semibold text-lg">
-          Pavel <span class="text-blue-500">Kleisner</span>
+        <span class="font-semibold text-lg tracking-tight">
+          Pavel <span class="accent-text">Kleisner</span>
         </span>
 
 		<Nav lang={lang} />
@@ -54,7 +58,7 @@ const lang = pathname.startsWith("/cz") ? "cz" : "en";
 	<slot />
 </main>
 
-<footer class="border-t border-slate-800 mt-20">
+<footer class="border-t border-slate-800/80 mt-20">
 	<div class="max-w-6xl mx-auto px-6 py-8 text-sm text-slate-500">
 		© {new Date().getFullYear()} Pavel Kleisner
 	</div>

@@ -1,0 +1,11 @@
+---
+const {
+    title,
+    body,
+} = Astro.props;
+---
+
+<div class="section-intro">
+    <h2>{title}</h2>
+    {body && <p>{body}</p>}
+</div>

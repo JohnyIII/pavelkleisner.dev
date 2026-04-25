@@ -1,133 +1,107 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import PageIntro from "@/components/PageIntro.astro";
+import SectionIntro from "@/components/SectionIntro.astro";
+import InfoCard from "@/components/InfoCard.astro";
+import CtaBand from "@/components/CtaBand.astro";
 ---
 
-<Layout title="Pavel Kleisner – Backend vývojář & Micro-SaaS">
+<Layout title="Pavel Kleisner - Senior Backend & Integration Engineer">
 
-    <!-- HERO -->
-    <section class="max-w-5xl mb-48 motion-safe:animate-[fadeUp_600ms_ease-out_1]">
-        <h1 class="text-6xl font-bold mb-10">
-            Pavel <span class="text-blue-500">Kleisner</span>
-        </h1>
-
-        <p class="text-2xl text-slate-400 leading-relaxed max-w-4xl mb-14">
-            Backendově orientovaný full-stack vývojář a tech lead.
-            Zaměřuji se na architekturu, dlouhodobou udržitelnost
-            a vývoj vlastních <span class="text-slate-200">micro-SaaS projektů</span>.
-        </p>
-
-        <div class="flex flex-wrap gap-4">
-            <a href="/cz/projekty"
-               class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-medium transition">
-                Projekty
-            </a>
-            <a href="/cz/kontakt"
-               class="border border-slate-700 hover:border-blue-500 px-8 py-4 rounded-xl font-medium transition">
-                Kontakt
-            </a>
+    <PageIntro
+        eyebrow="Senior Backend & Integration Engineer"
+        title="Pavel"
+        highlight="Kleisner"
+        lead="Stavím a nasazuji produkční backendové systémy pro telekomunikační a enterprise prostředí."
+        body="Nejsilnější jsem tam, kde se potkávají doménová pravidla, data, integrace a releasy. Pracuji hlavně s Kotlinem, Javou, Springem a PostgreSQL, v posledních letech hlavně na TSM produkčních rolloutech, B2B chování, observabilitě a analýze incidentů."
+    >
+        <div class="flex flex-wrap gap-3 mt-8">
+            <a href="/cz/projekty" class="btn-primary">Zkušenosti</a>
+            <a href="/cz/kontakt" class="btn-secondary">Kontakt</a>
         </div>
-    </section>
+    </PageIntro>
 
-    <!-- POZICOVÁNÍ -->
-    <section class="max-w-5xl mb-48 space-y-10">
-        <h2 class="text-4xl font-bold">Co dělám</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Navrhuji a stavím backendové systémy, které mají dlouhou životnost.
-            Systémy, které jsou čitelné, rozšiřitelné a udržitelné
-            i po letech provozu.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Mým hlavním zaměřením je backend, ale díky full-stack zkušenostem
-            dokážu vnímat produkt jako celek — od databáze až po uživatele.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Časem jsem si uvědomil, že samotná technická dokonalost nestačí.
-            Nejlepší řešení vznikají vyvážením techniky a reality projektu.
-        </p>
-    </section>
-
-    <!-- HLAVNÍ OBLASTI -->
-    <section class="mb-48">
-        <h2 class="text-4xl font-bold mb-16">Hlavní oblasti</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <h3 class="text-2xl font-semibold">Backend & architektura</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Zaměřuji se na čistou architekturu backendu,
-                    jasné odpovědnosti a doménově správné datové modely.
-                </p>
-                <p class="text-slate-400 leading-relaxed">
-                    Preferuji ověřené technologie použité rozumným způsobem.
-                </p>
+    <section class="mb-24">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="info-card">
+                <div class="text-2xl font-semibold">9+</div>
+                <div class="text-sm text-slate-400 mt-1">Let ve vývoji</div>
             </div>
-
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <h3 class="text-2xl font-semibold">Pragmatický přístup</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Věřím v pragmatické rozhodování.
-                    Ne každý problém potřebuje složité řešení.
-                </p>
-                <p class="text-slate-400 leading-relaxed">
-                    Správná míra abstrakce je často důležitější
-                    než nejnovější technologie.
-                </p>
+            <div class="info-card">
+                <div class="text-2xl font-semibold">5700+</div>
+                <div class="text-sm text-slate-400 mt-1">Dohledaných pracovních commitů</div>
             </div>
-
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <h3 class="text-2xl font-semibold">Micro-SaaS přístup</h3>
-                <p class="text-slate-400 leading-relaxed">
-                    Aktivně pracuji na vlastních micro-SaaS projektech.
-                    Malé, jasně zaměřené nástroje.
-                </p>
-                <p class="text-slate-400 leading-relaxed">
-                    Vlastnictví celého životního cyklu přináší
-                    cenné zkušenosti.
-                </p>
+            <div class="info-card">
+                <div class="text-2xl font-semibold">TSM</div>
+                <div class="text-sm text-slate-400 mt-1">2.2 / 2.4 produkce</div>
+            </div>
+            <div class="info-card">
+                <div class="text-2xl font-semibold">Praha</div>
+                <div class="text-sm text-slate-400 mt-1">Česká republika</div>
             </div>
         </div>
     </section>
 
-    <!-- JAK PŘEMÝŠLÍM -->
-    <section class="max-w-5xl mb-48 space-y-10">
-        <h2 class="text-4xl font-bold">Jak přemýšlím o softwaru</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Software je dlouhodobá investice.
-            Rozhodnutí učiněná dnes ovlivní projekt
-            i tým v budoucnu.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Snažím se snižovat kognitivní zátěž budoucích vývojářů.
-            Jasná pojmenování a jednoduché struktury jsou klíčové.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Velký důraz kladu na komunikaci.
-            Kvalitní řešení vznikají spoluprací napříč rolemi.
-        </p>
+    <section class="mb-24">
+        <SectionIntro
+            title="Co přináším"
+            body="Backendový profil doplněný o full-stack, data a produkční kontext tak, abych dokázal vlastnit reálné chování systému."
+        />
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            <InfoCard title="Produkční integrace">
+                B2B API, procesní toky, zprávy, retry chování, logy a chybové stavy, které jsou důležité až po nasazení.
+            </InfoCard>
+            <InfoCard title="Release ownership">
+                Nasazování nových verzí do reálných prostředí se zaměřením na kompatibilitu, data a provozní rizika.
+            </InfoCard>
+            <InfoCard title="Pragmatická architektura">
+                Malé bezpečné změny, pojmenovaná business pravidla, jasné hranice služeb a kód připravený na další požadavky.
+            </InfoCard>
+            <InfoCard title="Full-stack kontext">
+                Backendová práce s dostatečnou znalostí frontendu a databází pro pochopení celého produkčního flow.
+            </InfoCard>
+        </div>
     </section>
 
-    <!-- CTA -->
-    <section class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-16 max-w-6xl">
-        <h2 class="text-4xl font-bold mb-8">
-            Máš zájem o spolupráci?
-        </h2>
-
-        <p class="text-blue-100 text-lg leading-relaxed mb-10 max-w-3xl">
-            Pokud hledáš zkušeného backendového vývojáře,
-            technického lídra nebo partnera pro svůj produkt,
-            ozvi se.
-        </p>
-
-        <a href="/cz/kontakt"
-           class="bg-white text-blue-700 px-10 py-5 rounded-xl font-medium hover:bg-slate-100 transition">
-            Kontakt
-        </a>
+    <section class="mb-24">
+        <SectionIntro title="Hlavní stack" />
+        <div class="flex flex-wrap gap-2">
+            <span class="pill">Kotlin</span>
+            <span class="pill">Java</span>
+            <span class="pill">Spring</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Kafka</span>
+            <span class="pill">Kubernetes</span>
+            <span class="pill">Angular</span>
+            <span class="pill">Oracle</span>
+            <span class="pill">Astro</span>
+            <span class="pill">TypeScript</span>
+        </div>
     </section>
+
+    <section class="mb-24">
+        <SectionIntro
+            title="Zkušenosti v kostce"
+            body="Většina mojí práce je interní nebo klientská, takže popisuji hlavně odpovědnost a produkční kontext místo ukazování kódu."
+        />
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <InfoCard title="TSM / CETIN" meta="2020 - současnost" tag="hlavní fokus">
+                Seniorní backend a integrační práce na Kotlin/Java/Spring službách, PostgreSQL systémech, B2B flow, PEW, NIP, change managementu a produkčních rolloutech nových verzí.
+            </InfoCard>
+            <InfoCard title="ZIS" meta="2017 - 2018" tag="základ">
+                Enterprise Java a ZK/ZUL práce přes obrazovky, controllery, služby, DAO vrstvy, importy, Excel zpracování a produkční opravy.
+            </InfoCard>
+            <InfoCard title="MNCP" meta="2018 - 2021" tag="full-stack">
+                Kotlin/Spring, Angular a databázová práce kolem autentizace, měřících dávek, archivů, exportů a provozních oprav.
+            </InfoCard>
+        </div>
+    </section>
+
+    <CtaBand
+        title="Máš zájem o spolupráci?"
+        body="Pokud hledáš seniorního vývojáře pro backend, integrace, produkční releasy nebo dlouhodobý vývoj produktu, nejrychlejší je e-mail."
+        href="/cz/kontakt"
+        label="Napiš mi"
+    />
 
 </Layout>
