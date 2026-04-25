@@ -3,9 +3,9 @@
 :root {
   --font-body: "Manrope", system-ui, -apple-system, sans-serif;
   --font-display: "Sora", "Manrope", system-ui, -apple-system, sans-serif;
-  --c-bg: #060b0d;
-  --c-surface: #0d1418;
-  --c-surface-2: #101a1f;
+  --c-bg: #070908;
+  --c-surface: #111614;
+  --c-surface-2: #151c19;
   --c-border: rgba(148, 163, 184, 0.2);
   --c-muted: #94a3b8;
   --c-text: #e2e8f0;
@@ -23,7 +23,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .bg-ambient {
@@ -31,10 +31,9 @@ h3 {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(900px 500px at 0% 0%, rgba(20, 184, 166, 0.22), transparent 65%),
-    radial-gradient(1000px 500px at 100% 10%, rgba(251, 146, 60, 0.18), transparent 70%),
-    radial-gradient(800px 800px at 50% 100%, rgba(20, 184, 166, 0.10), transparent 70%),
-    linear-gradient(180deg, #05080a 0%, #060b0d 45%, #070f12 100%);
+    linear-gradient(135deg, rgba(20, 184, 166, 0.14) 0%, transparent 28%),
+    linear-gradient(225deg, rgba(251, 146, 60, 0.10) 0%, transparent 30%),
+    linear-gradient(180deg, #070908 0%, #0a0f0d 48%, #080c0b 100%);
 }
 
 .bg-ambient::after {
@@ -49,9 +48,9 @@ h3 {
 }
 
 .surface-card {
-  background: linear-gradient(180deg, rgba(16, 26, 31, 0.88), rgba(13, 20, 24, 0.92));
+  background: linear-gradient(180deg, rgba(21, 28, 25, 0.92), rgba(17, 22, 20, 0.94));
   border: 1px solid var(--c-border);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(6px);
 }
 
@@ -59,7 +58,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
+  border-radius: 8px;
   padding: 0.9rem 1.4rem;
   font-weight: 600;
   color: #0a0f12;
@@ -76,7 +75,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
+  border-radius: 8px;
   padding: 0.9rem 1.4rem;
   font-weight: 600;
   color: #d1d5db;
@@ -110,4 +109,135 @@ h3 {
 
 .accent-text {
   color: #2dd4bf;
+}
+
+.page-intro {
+  margin-bottom: 6rem;
+  max-width: 56rem;
+}
+
+.page-title {
+  margin-bottom: 1.5rem;
+  font-size: clamp(3rem, 7vw, 4.75rem);
+  font-weight: 800;
+  line-height: 1.02;
+}
+
+.page-lead {
+  max-width: 48rem;
+  color: #cbd5e1;
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
+
+.page-body {
+  margin-top: 1.25rem;
+  max-width: 48rem;
+  color: #94a3b8;
+  line-height: 1.75;
+}
+
+.section-intro {
+  margin-bottom: 2rem;
+  max-width: 48rem;
+}
+
+.section-intro h2 {
+  margin-bottom: 0.9rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+}
+
+.section-intro p {
+  color: #94a3b8;
+  line-height: 1.75;
+}
+
+.info-card {
+  min-height: 100%;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: rgba(17, 22, 20, 0.78);
+  padding: 1.5rem;
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.info-card:hover {
+  border-color: rgba(45, 212, 191, 0.45);
+  background: rgba(21, 28, 25, 0.9);
+  transform: translateY(-2px);
+}
+
+.tag {
+  border: 1px solid rgba(45, 212, 191, 0.32);
+  border-radius: 999px;
+  background: rgba(20, 184, 166, 0.12);
+  color: #5eead4;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.timeline {
+  position: relative;
+  border-left: 1px solid rgba(148, 163, 184, 0.24);
+  padding-left: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1rem;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: rgba(17, 22, 20, 0.74);
+  padding: 1.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: calc(-2rem - 6px);
+  top: 2rem;
+  height: 11px;
+  width: 11px;
+  border-radius: 999px;
+  background: #2dd4bf;
+  box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.14);
+}
+
+.cta-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.24);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+  padding: 2.5rem 0;
+}
+
+.cta-band h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+}
+
+.cta-band p {
+  max-width: 48rem;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 720px) {
+  .cta-band {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .timeline {
+    padding-left: 1.35rem;
+  }
+
+  .timeline-dot {
+    left: calc(-1.35rem - 6px);
+  }
 }

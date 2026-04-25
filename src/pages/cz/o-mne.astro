@@ -1,213 +1,121 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import PageIntro from "@/components/PageIntro.astro";
+import SectionIntro from "@/components/SectionIntro.astro";
+import InfoCard from "@/components/InfoCard.astro";
+import TimelineItem from "@/components/TimelineItem.astro";
+import CtaBand from "@/components/CtaBand.astro";
 ---
 
-<Layout title="O mně – Pavel Kleisner">
+<Layout title="O mně - Pavel Kleisner">
 
-    <!-- ÚVOD -->
-    <section class="max-w-4xl mb-40 motion-safe:animate-[fadeUp_600ms_ease-out_1]">
-        <h1 class="text-5xl font-bold mb-10">O mně</h1>
+    <PageIntro
+        title="O"
+        highlight="mně"
+        lead="Jsem senior backend a integrační vývojář zaměřený na Kotlin, Javu, Spring, PostgreSQL a produkční systémy."
+        body="Nejlépe funguju tam, kde záleží na korektnosti, kompatibilitě, observabilitě a bezpečném releasu. Můj současný profil není jen psaní backendového kódu. Je to ownership místa, kde se potkává implementace, doménové chování, integrační kontrakty a produkční releasy."
+    />
 
-        <p class="text-2xl text-slate-400 leading-relaxed">
-            Jsem backendově orientovaný full-stack vývojář a tech lead,
-            který se dlouhodobě zaměřuje na architekturu,
-            udržitelnost a smysluplný vývoj softwaru.
-        </p>
-    </section>
-
-    <!-- PŘÍBĚH -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">Moje cesta</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Během své kariéry jsem pracoval na různorodých projektech —
-            od interních nástrojů až po rozsáhlé systémy,
-            které jsou v každodenním provozu.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Zpočátku jsem se soustředil především na psaní kódu
-            a dodávání funkcionality.
-            Postupem času jsem si ale uvědomil,
-            že skutečné problémy často přicházejí později.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Právě tyto zkušenosti formovaly můj současný přístup.
-            Snažím se navrhovat řešení,
-            která obstojí i s odstupem několika let.
-        </p>
-    </section>
-
-    <!-- MYŠLENÍ -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">Jak přemýšlím o softwaru</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Software vnímám jako dlouhodobou investici.
-            Každé rozhodnutí má dopad nejen dnes,
-            ale i v budoucnu.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Snažím se minimalizovat kognitivní zátěž vývojářů.
-            Jasná struktura, pojmenování a odpovědnosti
-            jsou pro mě zásadní.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Preferuji jednoduchá, ověřená řešení.
-            Technologie beru jako prostředek, ne cíl.
-        </p>
-    </section>
-
-    <!-- ČASOVÁ OSA -->
-    <section class="max-w-5xl mb-40">
-        <h2 class="text-4xl font-bold mb-20">Časová osa</h2>
-
-        <div class="relative border-l border-slate-700 pl-16 space-y-20">
-
-            <div class="relative">
-      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
-        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-      </span>
-
-                <h3 class="text-2xl font-semibold mb-3">Začátky ve vývoji</h3>
-                <p class="text-slate-400 leading-relaxed max-w-xl">
-                    První kontakt s programováním a postupné objevování
-                    backendového vývoje. Učení se základních principů
-                    skrze experimentování a praxi.
-                </p>
-            </div>
-
-            <div class="relative">
-      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
-        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-      </span>
-
-                <h3 class="text-2xl font-semibold mb-3">Profesní růst</h3>
-                <p class="text-slate-400 leading-relaxed max-w-xl">
-                    Práce na větších projektech a dlouhodobě běžících systémech,
-                    postupné přebírání odpovědnosti za backendové služby,
-                    databáze a stabilitu řešení.
-                </p>
-            </div>
-
-            <div class="relative">
-      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
-        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-      </span>
-
-                <h3 class="text-2xl font-semibold mb-3">Architektura a technické vedení</h3>
-                <p class="text-slate-400 leading-relaxed max-w-xl">
-                    Návrh architektury systémů, technické rozhodování,
-                    mentoring a zodpovědnost za dlouhodobou udržitelnost
-                    a čitelnost řešení.
-                </p>
-            </div>
-
-            <div class="relative">
-      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
-        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-      </span>
-
-                <h3 class="text-2xl font-semibold mb-3">Experimenty s Flame Engine</h3>
-                <p class="text-slate-400 leading-relaxed max-w-xl">
-                    Učení a experimentování ve Flame Engine s vlastními prototypy
-                    za produkt – od prvotního nápadu, přes vývoj,
-                    až po provoz a údržbu.
-                </p>
-            </div>
-
+    <section class="mb-24">
+        <SectionIntro title="Jak přemýšlím o softwaru" />
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <InfoCard title="Malé explicitní změny">
+                V produkčních systémech je často bezpečnější dobře pojmenované
+                business pravidlo, izolované mapování, lepší fallback nebo cílený test
+                než velký přepis.
+            </InfoCard>
+            <InfoCard title="Moderní s důvodem">
+                Nové verze, frameworky a infrastruktura dávají smysl, když systém
+                dělají spolehlivější, lépe pozorovatelný nebo snazší na změnu.
+            </InfoCard>
+            <InfoCard title="Runtime ownership">
+                Skutečný systém začíná po nasazení: stará data, retry,
+                externí kontrakty, logy, metriky a supportovatelnost.
+            </InfoCard>
         </div>
     </section>
 
-    <!-- ARCHITEKTURA -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">Architektura a odpovědnost</h2>
+    <section class="mb-24">
+        <SectionIntro
+            title="Profesní cesta"
+            body="Zkrácená timeline toho, jak se moje odpovědnost vyvíjela napříč projekty a stacky."
+        />
+        <div class="timeline space-y-4">
+            <TimelineItem title="2017-2018: ZIS">
+                Enterprise Java, ZK/ZUL obrazovky, controllery, služby,
+                DAO vrstvy, importy a produkční opravy. Fáze, kde jsem se naučil
+                dodávat kompletní aplikační funkcionalitu.
+            </TimelineItem>
+            <TimelineItem title="2019-2020: MNCP">
+                Full-stack práce přes Kotlin/Spring, Angular a databázové skripty.
+                Security, exporty, archivy, měřící dávky a provozní opravy
+                napříč celým flow.
+            </TimelineItem>
+            <TimelineItem title="2020-současnost: TSM">
+                Seniorní backend a integrační práce na Kotlin/Java/Spring službách,
+                PostgreSQL, integračních tocích, B2B komunikaci, analýze incidentů
+                a produkčních rolloutech nových verzí.
+            </TimelineItem>
+            <TimelineItem title="2024-současnost: širší stack">
+                Menší práce v Nordic/Django a vlastní experimenty.
+                Hlavně připomínka, že dobré inženýrské návyky mají být přenositelné
+                napříč stacky, ne závislé na jednom frameworku.
+            </TimelineItem>
+        </div>
+    </section>
 
-        <p class="text-slate-300 leading-relaxed">
-            Dobrá architektura není o složitosti.
-            Je o pochopení odpovědností
-            a správném rozdělení systému.
-        </p>
+    <section class="mb-24">
+        <SectionIntro title="Pracovní styl" />
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <InfoCard title="Architektura a odpovědnost">
+                Dobrá architektura není o složitosti nebo diagramech.
+                Je o odpovědnosti, ownershipu a pochopení míst, kde změna patří
+                a kde už škodí.
+            </InfoCard>
+            <InfoCard title="Spolupráce">
+                Nejlepší řešení vznikají spoluprací vývojářů, analytiků,
+                product ownerů a provozu. Technická rozhodnutí mají sloužit
+                produktu a lidem, kteří ho drží v chodu.
+            </InfoCard>
+        </div>
+    </section>
 
-        <p class="text-slate-300 leading-relaxed">
-            Cílem je vytvořit systém,
-            který bude srozumitelný i pro vývojáře,
-            kteří se k projektu připojí později.
+    <section class="mb-24">
+        <SectionIntro title="Čemu se záměrně vyhýbám" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InfoCard title="Over-engineering">
+                Nepřidávám architekturu, která nesnižuje reálnou složitost,
+                riziko nebo náklady na údržbu.
+            </InfoCard>
+            <InfoCard title="Rozhodnutí podle trendů">
+                Moderní nástroje mám rád, ale jen když zlepšují dodávku,
+                spolehlivost nebo pochopení systému.
+            </InfoCard>
+            <InfoCard title="Architektura pro jednoho člověka">
+                Systém není dobře navržený, pokud ho bezpečně umí měnit jen jeden člověk.
+            </InfoCard>
+            <InfoCard title="Ego v technických rozhodnutích">
+                Technická rozhodnutí mají sloužit produktu a runtime chování,
+                ne osobnímu vkusu.
+            </InfoCard>
+        </div>
+    </section>
+
+    <section class="mb-24">
+        <SectionIntro title="Mimo kód" />
+        <p class="max-w-4xl text-slate-300 leading-relaxed">
+            Ve volném čase mám rád hudbu, sci-fi, fantasy a anime.
+            Vlastní projekty mi umožňují zkoušet nové nápady bez tlaku produkčních deadline.
+            Rád stavím věci od začátku do konce, protože to udržuje viditelný celý
+            životní cyklus produktu: nápad, implementaci, nasazení, údržbu a zpětnou vazbu.
         </p>
     </section>
 
-    <!-- LIDÉ -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">Spolupráce a vedení</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Pracoval jsem jak jako individuální vývojář,
-            tak i v rolích technického vedení.
-            Vážím si otevřené komunikace a důvěry v týmu.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Nejlepší řešení vznikají spoluprací.
-            Technická rozhodnutí by měla sloužit produktu
-            a lidem, kteří s ním pracují.
-        </p>
-    </section>
-
-    <!-- ČEMU SE ZÁMĚRNĚ VYHÝBÁM -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">Čemu se záměrně vyhýbám</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Postupem času jsem si uvědomil, že stejně důležité
-            jako to, co při vývoji dělám, je i to, co vědomě nedělám.
-            Tyto zkušenosti přicházejí až s praxí a chybami.
-        </p>
-
-        <ul class="space-y-6 text-slate-400">
-            <li>• Zbytečně složitým řešením bez jasného přínosu</li>
-            <li>• Nekritickému přebírání trendů a „hype“ technologií</li>
-            <li>• Architektuře, které rozumí jen jeden člověk</li>
-            <li>• Technickým rozhodnutím taženým egem místo potřeb produktu</li>
-        </ul>
-    </section>
-
-    <!-- OSOBNÍ -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">Mimo práci</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Ve volném čase mám rád hudbu,
-            sci-fi, fantasy a anime.
-            Vlastní projekty mi umožňují
-            zkoušet nové nápady a učit se.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Experimenty ve Flame Engine mi dávají
-            realistický pohled na celý životní cyklus produktu —
-            od vývoje až po provoz.
-        </p>
-    </section>
-
-
-    <!-- CTA -->
-    <section class="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl p-16 max-w-6xl">
-        <h2 class="text-4xl font-bold mb-8">
-            Pojďme spolupracovat
-        </h2>
-
-        <p class="text-teal-100 text-lg leading-relaxed mb-10 max-w-3xl">
-            Pokud je ti můj přístup blízký,
-            budu rád, když se ozveš.
-        </p>
-
-        <a href="/cz/kontakt"
-           class="bg-white text-teal-700 px-10 py-5 rounded-xl font-medium hover:bg-slate-100 transition">
-            Kontakt
-        </a>
-    </section>
+    <CtaBand
+        title="Pojďme spolupracovat"
+        body="Pokud tenhle přístup odpovídá tomu, co potřebuješ, ozvi se."
+        href="/cz/kontakt"
+        label="Kontakt"
+    />
 
 </Layout>

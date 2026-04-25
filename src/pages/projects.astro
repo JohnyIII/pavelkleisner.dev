@@ -1,99 +1,135 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import PageIntro from "@/components/PageIntro.astro";
+import SectionIntro from "@/components/SectionIntro.astro";
+import InfoCard from "@/components/InfoCard.astro";
+import TimelineItem from "@/components/TimelineItem.astro";
 ---
 
-<Layout title="Projects / Experiments – Pavel Kleisner">
+<Layout title="Projects & Experience - Pavel Kleisner">
 
-    <!-- HERO -->
-    <section class="max-w-4xl mb-24">
-        <h1 class="text-5xl font-bold mb-6">
-            Projects & <span class="text-teal-500">Experiments</span>
-        </h1>
+    <PageIntro
+        title="Projects &"
+        highlight="experience"
+        lead="A practical overview of the systems that shaped my work."
+        body="Most of my work has been on internal or client systems, so the code is not public. I focus on responsibility, stack, production behavior and the type of problems I handled."
+    />
 
-        <p class="text-xl text-slate-400 leading-relaxed">
-            A selection of projects I’ve worked on — from small experiments
-            to ongoing experiments and learning projects.
-            I focus on simple tools that solve concrete problems.
-        </p>
+    <section class="mb-24">
+        <SectionIntro title="Project overview" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InfoCard title="TSM Platform" tag="Production">
+                Senior backend and integration work on a modern service management platform:
+                Kotlin/Java/Spring services, PostgreSQL, B2B communication, process flows,
+                incident analysis and production rollouts of versions 2.2 and 2.4.
+                <p class="mt-4 text-sm text-slate-500">Stack: Kotlin, Java, Spring, PostgreSQL, Kafka, Kubernetes</p>
+            </InfoCard>
+
+            <InfoCard title="ZIS" tag="Enterprise">
+                Enterprise Java application work with ZK/ZUL UI, controllers,
+                services, DAO layers, imports, Excel processing and production bug fixes.
+                This was the phase where I learned to deliver complete business features.
+                <p class="mt-4 text-sm text-slate-500">Stack: Java, ZK, ZUL, Maven, SQL</p>
+            </InfoCard>
+
+            <InfoCard title="MNCP" tag="Full-stack">
+                Full-stack work across backend, frontend and database scripts:
+                authentication, exports, archives, measuring batches, operational fixes
+                and flow-level behavior from UI to persistence.
+                <p class="mt-4 text-sm text-slate-500">Stack: Kotlin, Spring, Angular, Oracle/PostgreSQL</p>
+            </InfoCard>
+
+            <InfoCard title="Nordic & side work" tag="Smaller scope">
+                Smaller changes in a Django-based web stack and personal experiments.
+                Useful for keeping engineering habits transferable across technologies
+                and not tied to one ecosystem.
+                <p class="mt-4 text-sm text-slate-500">Stack: Python, Django, templates, Astro, TypeScript</p>
+            </InfoCard>
+        </div>
     </section>
 
-    <!-- PROJECTS GRID -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-32">
+    <section class="mb-24">
+        <SectionIntro
+            title="Project timeline"
+            body="The timeline shows how the responsibility moved from complete feature delivery to full-stack ownership and then to production integration and release ownership."
+        />
 
-        <!-- Project card -->
-        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
-                transition transform-gpu duration-300
-                hover:-translate-y-1
-                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-            <div class="flex items-center justify-between">
-                <h3 class="text-xl font-semibold">Flame Engine Prototype #1</h3>
-                <span class="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300">
-          Idea
-        </span>
-            </div>
+        <div class="timeline space-y-4">
+            <TimelineItem title="ZIS" period="2017 - 2018">
+                <p class="mb-4">
+                    Enterprise application for CETIN operations. I worked on Java/ZK screens,
+                    controller-service-DAO flows, imports, Excel processing and production defects.
+                </p>
+                <ul class="space-y-2">
+                    <li>Delivered complete business screens from UI to persistence.</li>
+                    <li>Worked in a classic enterprise Java stack with strong process and data constraints.</li>
+                    <li>Built the foundation for later backend and integration ownership.</li>
+                </ul>
+            </TimelineItem>
 
-            <p class="text-slate-400 leading-relaxed">
-                A gameplay-focused prototype built to learn Flame Engine patterns.
-                Currently in idea and validation phase.
-            </p>
+            <TimelineItem title="MNCP" period="2018 - 2021">
+                <p class="mb-4">
+                    Full-stack project around measuring, archives, exports and operational workflows.
+                    This phase pushed me from feature delivery into owning behavior across backend,
+                    frontend and database boundaries.
+                </p>
+                <ul class="space-y-2">
+                    <li>Worked with Kotlin/Spring, Angular, database scripts and deployment concerns.</li>
+                    <li>Implemented authentication, export fixes, archive filters and measuring batch behavior.</li>
+                    <li>Learned to debug issues across the whole request and data flow, not only in one layer.</li>
+                </ul>
+            </TimelineItem>
 
-            <p class="text-sm text-slate-500">
-                Stack: Kotlin, Spring, PostgreSQL
-            </p>
+            <TimelineItem title="TSM / CETIN" period="2020 - present">
+                <p class="mb-4">
+                    My main long-term focus: backend and integration work on a modern TSM platform.
+                    I work close to production behavior, releases, B2B communication, process rules
+                    and data compatibility.
+                </p>
+                <ul class="space-y-2">
+                    <li>Production rollout experience with TSM versions 2.2 and 2.4.</li>
+                    <li>Integration work around NIP, ticketing, change management, B2B, PEW and related flows.</li>
+                    <li>Incident analysis using logs, metrics and domain knowledge instead of blind patching.</li>
+                    <li>Modern stack: Kotlin, Java, Spring, PostgreSQL, Kafka-style messaging and Kubernetes environments.</li>
+                </ul>
+            </TimelineItem>
+
+            <TimelineItem title="Nordic Web" period="2024 - 2026">
+                <p class="mb-4">
+                    Smaller focused work in a Django-based web system. The value here is not volume,
+                    but being able to enter a different stack and make precise changes without forcing
+                    familiar patterns onto it.
+                </p>
+                <ul class="space-y-2">
+                    <li>Worked on self-service and web behavior in Python/Django/templates.</li>
+                    <li>Handled targeted production-oriented changes in an existing codebase.</li>
+                </ul>
+            </TimelineItem>
+
+            <TimelineItem title="Personal site & experiments" period="ongoing">
+                <p class="mb-4">
+                    Small personal projects are where I keep the full product lifecycle visible:
+                    idea, implementation, deployment, maintenance and feedback. This website is one of them.
+                </p>
+                <ul class="space-y-2">
+                    <li>Astro, TypeScript, Tailwind CSS and Cloudflare Pages.</li>
+                    <li>Simple static architecture, bilingual content and low-maintenance deployment.</li>
+                </ul>
+            </TimelineItem>
         </div>
-
-        <!-- Project card -->
-        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
-                transition transform-gpu duration-300
-                hover:-translate-y-1
-                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-            <div class="flex items-center justify-between">
-                <h3 class="text-xl font-semibold">Internal Tool</h3>
-                <span class="text-xs px-3 py-1 rounded-full bg-teal-600/20 text-teal-400">
-          MVP
-        </span>
-            </div>
-
-            <p class="text-slate-400 leading-relaxed">
-                An internal tool focused on improving workflows
-                and reducing manual work in day-to-day development.
-            </p>
-
-            <p class="text-sm text-slate-500">
-                Stack: Java, Spring, Angular
-            </p>
-        </div>
-
-        <!-- Placeholder -->
-        <div class="bg-slate-900/60 border border-dashed border-slate-700
-                rounded-2xl p-8 flex items-center justify-center text-slate-500">
-            More projects coming soon
-        </div>
-
     </section>
 
-    <!-- PHILOSOPHY -->
-    <section class="max-w-5xl mb-32">
-        <h2 class="text-4xl font-bold mb-10">
-            Project philosophy
-        </h2>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <p class="text-slate-300 leading-relaxed">
-                    I prefer small, focused projects over large unfocused platforms.
-                    Hands-on experimentation allows fast iteration, direct feedback
-                    and clear ownership.
-                </p>
-            </div>
-
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <p class="text-slate-300 leading-relaxed">
-                    Even unfinished ideas are valuable.
-                    They serve as learning experiences and often
-                    evolve into better solutions later.
-                </p>
-            </div>
+    <section class="mb-8">
+        <SectionIntro title="Project philosophy" />
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <InfoCard title="Concrete ownership">
+                A good project is one where runtime behavior, data model,
+                release path and support story are understood together.
+            </InfoCard>
+            <InfoCard title="Modern, but useful">
+                I like modern stacks, but the point is safer delivery,
+                better observability, clearer code and fewer surprises after deployment.
+            </InfoCard>
         </div>
     </section>
 

@@ -1,101 +1,55 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import PageIntro from "@/components/PageIntro.astro";
+import InfoCard from "@/components/InfoCard.astro";
+import CtaBand from "@/components/CtaBand.astro";
 ---
 
-<Layout title="Kontakt – Pavel Kleisner">
+<Layout title="Kontakt - Pavel Kleisner">
 
-    <!-- HERO -->
-    <section class="max-w-4xl mb-24">
-        <h1 class="text-5xl font-bold mb-6">
-            Kontakt
-        </h1>
+    <PageIntro
+        title="Kontakt"
+        lead="Pokud hledáš seniorního backend a integračního vývojáře pro produkční systémy, telekomunikační integrace, release ownership nebo dlouhodobý vývoj produktu, ozvi se."
+    />
 
-        <p class="text-xl text-slate-400 leading-relaxed">
-            Pokud hledáš zkušeného backendového vývojáře,
-            technického partnera nebo někoho, kdo pomůže
-            s architekturou tvého produktu, ozvi se.
-        </p>
-    </section>
-
-    <!-- KONTAKTY -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-
-        <!-- Email -->
-        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
-                transition transform-gpu duration-300
-                hover:-translate-y-1
-                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-            <h3 class="text-xl font-semibold">Email</h3>
-            <p class="text-slate-400">
-                Nejrychlejší způsob, jak mě kontaktovat.
-            </p>
-            <a
-                    href="mailto:contact@pavelkleisner.dev"
-                    class="inline-block text-teal-400 hover:text-teal-300 font-medium"
-            >
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-24">
+        <InfoCard title="Email">
+            <p class="mb-4">Nejrychlejší způsob, jak mě kontaktovat.</p>
+            <a href="mailto:contact@pavelkleisner.dev" class="text-teal-400 hover:text-teal-300 font-medium">
                 contact@pavelkleisner.dev
             </a>
-        </div>
+        </InfoCard>
 
-        <!-- LinkedIn -->
-        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
-                transition transform-gpu duration-300
-                hover:-translate-y-1
-                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-            <h3 class="text-xl font-semibold">LinkedIn</h3>
-            <p class="text-slate-400">
-                Profesní profil a zkušenosti.
-            </p>
+        <InfoCard title="LinkedIn">
+            <p class="mb-4">Profesní profil a zkušenosti.</p>
             <a
-                    href="https://www.linkedin.com/in/pavel-kleisner-895989129/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-block text-teal-400 hover:text-teal-300 font-medium"
+                href="https://www.linkedin.com/in/pavel-kleisner-895989129/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-teal-400 hover:text-teal-300 font-medium"
             >
                 Zobrazit profil
             </a>
-        </div>
+        </InfoCard>
 
-        <!-- GitHub -->
-        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
-                transition transform-gpu duration-300
-                hover:-translate-y-1
-                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-            <h3 class="text-xl font-semibold">GitHub</h3>
-            <p class="text-slate-400">
-                Kód, experimenty a vlastní projekty.
-            </p>
+        <InfoCard title="GitHub">
+            <p class="mb-4">Kód, experimenty a vlastní projekty.</p>
             <a
-                    href="https://github.com/JohnyIII"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-block text-teal-400 hover:text-teal-300 font-medium"
+                href="https://github.com/JohnyIII"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-teal-400 hover:text-teal-300 font-medium"
             >
                 github.com/JohnyIII
             </a>
-        </div>
-
+        </InfoCard>
     </section>
 
-    <!-- CTA -->
-    <section class="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl p-12 max-w-5xl">
-        <h2 class="text-3xl font-bold mb-6">
-            Otevřený spolupráci
-        </h2>
-
-        <p class="text-teal-100 text-lg leading-relaxed mb-8 max-w-3xl">
-            Rád se zapojím do zajímavých projektů,
-            dlouhodobé spolupráce nebo vývoje vlastního produktu.
-        </p>
-
-        <a
-                href="mailto:contact@pavelkleisner.dev"
-                class="inline-block bg-white text-teal-700 px-8 py-4 rounded-xl font-medium
-             transition transform-gpu duration-200
-             hover:-translate-y-0.5 hover:bg-slate-100"
-        >
-            Napsat email
-        </a>
-    </section>
+    <CtaBand
+        title="Otevřený cílené spolupráci"
+        body="Největší smysl dávám u systémů, kde záleží na backendovém chování, datech, externích kontraktech a produkčních releasech. Nejlépe funguje jasný scope, reálná odpovědnost a přímá komunikace."
+        href="mailto:contact@pavelkleisner.dev"
+        label="Napsat email"
+    />
 
 </Layout>

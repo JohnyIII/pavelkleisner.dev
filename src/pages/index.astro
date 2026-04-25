@@ -1,146 +1,107 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import PageIntro from "@/components/PageIntro.astro";
+import SectionIntro from "@/components/SectionIntro.astro";
+import InfoCard from "@/components/InfoCard.astro";
+import CtaBand from "@/components/CtaBand.astro";
 ---
 
-<Layout title="Pavel Kleisner – Senior Backend Developer & Team Lead">
+<Layout title="Pavel Kleisner - Senior Backend & Integration Engineer">
 
-    <section class="mb-28">
-        <div class="section-label mb-4">Senior Backend Developer · Team Lead</div>
-        <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-start">
-            <div>
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                    Pavel <span class="accent-text">Kleisner</span>
-                </h1>
+    <PageIntro
+        eyebrow="Senior Backend & Integration Engineer"
+        title="Pavel"
+        highlight="Kleisner"
+        lead="I build and ship production backend systems for telecom and enterprise environments."
+        body="My strongest area is the place where domain rules, data, integrations and releases meet. I work mainly with Kotlin, Java, Spring and PostgreSQL, with recent focus on TSM production rollouts, B2B behavior, observability and incident analysis."
+    >
+        <div class="flex flex-wrap gap-3 mt-8">
+            <a href="/projects" class="btn-primary">View experience</a>
+            <a href="/contact" class="btn-secondary">Contact</a>
+        </div>
+    </PageIntro>
 
-                <p class="text-xl text-slate-300 leading-relaxed max-w-3xl mb-6">
-                    I build and lead backend systems that need to stay reliable for years.
-                    My focus is architecture, maintainability, and clear delivery under real product constraints.
-                </p>
-
-                <p class="text-slate-400 leading-relaxed max-w-3xl mb-10">
-                    I combine hands-on engineering with technical leadership. Since 2023, I lead a development team,
-                    mentor developers, and take responsibility for technical direction and delivery.
-                </p>
-
-                <div class="flex flex-wrap gap-3">
-                    <a href="/projects" class="btn-primary">View projects</a>
-                    <a href="/contact" class="btn-secondary">Contact</a>
-                </div>
+    <section class="mb-24">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="info-card">
+                <div class="text-2xl font-semibold">9+</div>
+                <div class="text-sm text-slate-400 mt-1">Years in software</div>
             </div>
-
-            <div class="surface-card rounded-2xl p-6 space-y-4">
-                <div class="text-xs uppercase tracking-[0.18em] text-slate-400">At a glance</div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
-                        <div class="text-2xl font-semibold">9+</div>
-                        <div class="text-xs text-slate-400">Years in software</div>
-                    </div>
-                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
-                        <div class="text-2xl font-semibold">2023</div>
-                        <div class="text-xs text-slate-400">Team lead since</div>
-                    </div>
-                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
-                        <div class="text-2xl font-semibold">Prague</div>
-                        <div class="text-xs text-slate-400">Czech Republic</div>
-                    </div>
-                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
-                        <div class="text-2xl font-semibold">EN/CZ</div>
-                        <div class="text-xs text-slate-400">Work language</div>
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-1">
-                    <span class="pill">Java</span>
-                    <span class="pill">Kotlin</span>
-                    <span class="pill">Spring</span>
-                    <span class="pill">Kafka</span>
-                    <span class="pill">Kubernetes</span>
-                    <span class="pill">PostgreSQL</span>
-                </div>
+            <div class="info-card">
+                <div class="text-2xl font-semibold">5700+</div>
+                <div class="text-sm text-slate-400 mt-1">Tracked work commits</div>
+            </div>
+            <div class="info-card">
+                <div class="text-2xl font-semibold">TSM</div>
+                <div class="text-sm text-slate-400 mt-1">2.2 / 2.4 production</div>
+            </div>
+            <div class="info-card">
+                <div class="text-2xl font-semibold">Prague</div>
+                <div class="text-sm text-slate-400 mt-1">Czech Republic</div>
             </div>
         </div>
     </section>
 
-    <section class="mb-28">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">What I bring</h2>
+    <section class="mb-24">
+        <SectionIntro
+            title="What I bring"
+            body="A backend-first profile with enough full-stack, data and production context to own real system behavior."
+        />
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            <article class="surface-card rounded-2xl p-6">
-                <h3 class="text-lg font-semibold mb-2">Architecture ownership</h3>
-                <p class="text-slate-400">Clear service boundaries, resilient integration flows, and systems that remain understandable over time.</p>
-            </article>
-            <article class="surface-card rounded-2xl p-6">
-                <h3 class="text-lg font-semibold mb-2">Reliable delivery</h3>
-                <p class="text-slate-400">Pragmatic decisions, realistic scope, and steady shipping cadence without hero-driven process.</p>
-            </article>
-            <article class="surface-card rounded-2xl p-6">
-                <h3 class="text-lg font-semibold mb-2">Technical leadership</h3>
-                <p class="text-slate-400">Mentoring developers, reviewing architecture decisions, and aligning engineering with product goals.</p>
-            </article>
-            <article class="surface-card rounded-2xl p-6">
-                <h3 class="text-lg font-semibold mb-2">Continuous learning</h3>
-                <p class="text-slate-400">I actively learn by building. Right now I experiment with <span class="accent-text">Flame Engine</span>.</p>
-            </article>
+            <InfoCard title="Production integrations">
+                B2B APIs, process flows, message-driven behavior, retries, logs and failure modes that matter after deployment.
+            </InfoCard>
+            <InfoCard title="Release ownership">
+                Rolling new versions into real environments while watching compatibility, data shape and operational risk.
+            </InfoCard>
+            <InfoCard title="Pragmatic architecture">
+                Small safe changes, named business rules, clear service boundaries and code that can survive future requirements.
+            </InfoCard>
+            <InfoCard title="Full-stack context">
+                Backend work with enough frontend and database experience to understand the whole production flow.
+            </InfoCard>
         </div>
     </section>
 
-    <section class="mb-28">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">Experience Snapshot</h2>
-        <div class="space-y-5">
-            <article class="surface-card rounded-2xl p-6">
-                <div class="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 class="text-xl font-semibold">Senior Backend-heavy Full-stack Engineer / Team Lead</h3>
-                    <span class="text-slate-400">DataLite, s.r.o.</span>
-                </div>
-                <p class="text-sm text-slate-500 mb-4">January 2017 – Present · Prague</p>
-                <ul class="space-y-2 text-slate-300">
-                    <li>Architecture, databases, integrations, and key technical decisions in production systems.</li>
-                    <li>Long-term ownership of system stability, maintainability, and operational reliability.</li>
-                    <li>Leading the development team since 2023, including mentoring and delivery responsibility.</li>
-                </ul>
-            </article>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <article class="surface-card rounded-2xl p-6">
-                    <h3 class="text-lg font-semibold mb-2">Sales</h3>
-                    <p class="text-slate-400">Elektro Juránek</p>
-                    <p class="text-sm text-slate-500 mt-2">August 2014 – December 2016</p>
-                </article>
-                <article class="surface-card rounded-2xl p-6">
-                    <h3 class="text-lg font-semibold mb-2">Tester</h3>
-                    <p class="text-slate-400">GMC Software</p>
-                    <p class="text-sm text-slate-500 mt-2">November 2013 – January 2014</p>
-                </article>
-            </div>
+    <section class="mb-24">
+        <SectionIntro title="Core stack" />
+        <div class="flex flex-wrap gap-2">
+            <span class="pill">Kotlin</span>
+            <span class="pill">Java</span>
+            <span class="pill">Spring</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Kafka</span>
+            <span class="pill">Kubernetes</span>
+            <span class="pill">Angular</span>
+            <span class="pill">Oracle</span>
+            <span class="pill">Astro</span>
+            <span class="pill">TypeScript</span>
         </div>
     </section>
 
-    <section class="mb-28 grid grid-cols-1 md:grid-cols-2 gap-5">
-        <article class="surface-card rounded-2xl p-6">
-            <h2 class="text-2xl font-bold mb-4">Education & Certifications</h2>
-            <ul class="space-y-3 text-slate-300">
-                <li>CTU Prague, BSc - Software Technologies & Management (2009-2013)</li>
-                <li>University of Pardubice - Microprocessor Technology (2008-2009)</li>
-                <li>Version control system GIT, CZ.NIC (2018)</li>
-                <li>Maven, Ing. Jiri Pinkas (2013)</li>
-            </ul>
-        </article>
-
-        <article class="surface-card rounded-2xl p-6">
-            <h2 class="text-2xl font-bold mb-4">Community & Interests</h2>
-            <ul class="space-y-3 text-slate-300">
-                <li>Organizer, Charity in Cerveny Kostelec (since December 2015)</li>
-                <li>Film screenings in Cerveny Kostelec (December 2015 - 2020)</li>
-                <li>Current technical focus: experimentation and learning with Flame Engine</li>
-            </ul>
-        </article>
+    <section class="mb-24">
+        <SectionIntro
+            title="Experience snapshot"
+            body="Most of my professional work is internal or client-owned, so I describe responsibility and production context rather than exposing code."
+        />
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <InfoCard title="TSM / CETIN" meta="2020 - present" tag="main focus">
+                Senior backend and integration work on Kotlin/Java/Spring services, PostgreSQL-backed systems, B2B flows, PEW, NIP, change management and production rollout of new platform versions.
+            </InfoCard>
+            <InfoCard title="ZIS" meta="2017 - 2018" tag="foundation">
+                Enterprise Java and ZK/ZUL work across screens, controllers, services, DAO layers, imports, Excel processing and production bug fixes.
+            </InfoCard>
+            <InfoCard title="MNCP" meta="2018 - 2021" tag="full-stack">
+                Kotlin/Spring, Angular and database work around authentication, measuring batches, archives, exports and operational fixes.
+            </InfoCard>
+        </div>
     </section>
 
-    <section class="surface-card rounded-3xl p-10 md:p-14 mb-8">
-        <h2 class="text-3xl md:text-4xl font-bold mb-5">Interested in collaboration?</h2>
-        <p class="text-slate-300 text-lg mb-8 max-w-3xl">
-            If you need a senior backend developer or technical lead for long-term product development,
-            I am open to discussing cooperation. Email is the fastest channel.
-        </p>
-        <a href="/contact" class="btn-primary">Get in touch</a>
-    </section>
+    <CtaBand
+        title="Interested in collaboration?"
+        body="If you need a senior engineer for backend systems, integrations, production releases or long-term product development, email is the fastest channel."
+        href="/contact"
+        label="Get in touch"
+    />
 
 </Layout>

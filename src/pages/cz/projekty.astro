@@ -1,99 +1,136 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import PageIntro from "@/components/PageIntro.astro";
+import SectionIntro from "@/components/SectionIntro.astro";
+import InfoCard from "@/components/InfoCard.astro";
+import TimelineItem from "@/components/TimelineItem.astro";
 ---
 
-<Layout title="Projekty / Experimenty – Pavel Kleisner">
+<Layout title="Projekty a zkušenosti - Pavel Kleisner">
 
-    <!-- HERO -->
-    <section class="max-w-4xl mb-24">
-        <h1 class="text-5xl font-bold mb-6">
-            Projekty & <span class="text-teal-500">Experimenty</span>
-        </h1>
+    <PageIntro
+        title="Projekty a"
+        highlight="zkušenosti"
+        lead="Praktický přehled systémů, které formovaly moji práci."
+        body="Většina mojí práce je na interních nebo klientských systémech, takže kód není veřejný. Popisuji hlavně odpovědnost, stack, produkční chování a typ problémů, které jsem řešil."
+    />
 
-        <p class="text-xl text-slate-400 leading-relaxed">
-            Výběr projektů, na kterých pracuji — od menších experimentů
-            až po průběžné experimenty a učící projekty.
-            Zaměřuji se na jednoduché nástroje řešící konkrétní problémy.
-        </p>
+    <section class="mb-24">
+        <SectionIntro title="Přehled projektů" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InfoCard title="TSM platforma" tag="Produkce">
+                Seniorní backend a integrační práce na moderní service management platformě:
+                Kotlin/Java/Spring služby, PostgreSQL, B2B komunikace, procesní toky,
+                analýza incidentů a produkční rollouty verzí 2.2 a 2.4.
+                <p class="mt-4 text-sm text-slate-500">Stack: Kotlin, Java, Spring, PostgreSQL, Kafka, Kubernetes</p>
+            </InfoCard>
+
+            <InfoCard title="ZIS" tag="Enterprise">
+                Enterprise Java aplikace se ZK/ZUL UI, controllery,
+                službami, DAO vrstvou, importy, Excelem a produkčními opravami.
+                Fáze, kde jsem se naučil dodávat kompletní business funkcionalitu.
+                <p class="mt-4 text-sm text-slate-500">Stack: Java, ZK, ZUL, Maven, SQL</p>
+            </InfoCard>
+
+            <InfoCard title="MNCP" tag="Full-stack">
+                Full-stack práce napříč backendem, frontendem a databázovými skripty:
+                autentizace, exporty, archivy, měřící dávky, provozní opravy
+                a chování celého flow od UI po persistenci.
+                <p class="mt-4 text-sm text-slate-500">Stack: Kotlin, Spring, Angular, Oracle/PostgreSQL</p>
+            </InfoCard>
+
+            <InfoCard title="Nordic a vlastní věci" tag="Menší rozsah">
+                Menší změny v Django web stacku a vlastní experimenty.
+                Dobrá připomínka, že inženýrské návyky mají být přenositelné
+                napříč technologiemi a ne závislé na jednom ekosystému.
+                <p class="mt-4 text-sm text-slate-500">Stack: Python, Django, templates, Astro, TypeScript</p>
+            </InfoCard>
+        </div>
     </section>
 
-    <!-- PROJECTS GRID -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-32">
+    <section class="mb-24">
+        <SectionIntro
+            title="Časová osa projektů"
+            body="Timeline ukazuje posun od dodávání kompletních funkcí přes full-stack ownership až k produkčním integracím a release ownershipu."
+        />
 
-        <!-- Project card -->
-        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
-                transition transform-gpu duration-300
-                hover:-translate-y-1
-                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-            <div class="flex items-center justify-between">
-                <h3 class="text-xl font-semibold">Flame Engine prototyp #1</h3>
-                <span class="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300">
-          Nápad
-        </span>
-            </div>
+        <div class="timeline space-y-4">
+            <TimelineItem title="ZIS" period="2017 - 2018">
+                <p class="mb-4">
+                    Enterprise aplikace pro CETIN provoz. Pracoval jsem na Java/ZK obrazovkách,
+                    controller-service-DAO flow, importech, Excel zpracování a produkčních defektech.
+                </p>
+                <ul class="space-y-2">
+                    <li>Dodával jsem kompletní business obrazovky od UI po persistenci.</li>
+                    <li>Práce v klasickém enterprise Java stacku se silnými procesními a datovými omezeními.</li>
+                    <li>Základ pro pozdější backendový a integrační ownership.</li>
+                </ul>
+            </TimelineItem>
 
-            <p class="text-slate-400 leading-relaxed">
-                Herní prototyp zaměřený na učení praktických postupů ve Flame Engine.
-                Aktuálně ve fázi nápadu a validace.
-            </p>
+            <TimelineItem title="MNCP" period="2018 - 2021">
+                <p class="mb-4">
+                    Full-stack projekt kolem měření, archivů, exportů a provozních workflow.
+                    Tahle fáze mě posunula od dodávání funkcí k ownershipu chování napříč
+                    backendem, frontendem a databází.
+                </p>
+                <ul class="space-y-2">
+                    <li>Kotlin/Spring, Angular, databázové skripty a provozní věci kolem nasazení.</li>
+                    <li>Autentizace, exporty, archivní filtry a chování měřících dávek.</li>
+                    <li>Ladění problémů přes celý request a datový tok, ne jen v jedné vrstvě.</li>
+                </ul>
+            </TimelineItem>
 
-            <p class="text-sm text-slate-500">
-                Stack: Kotlin, Spring, PostgreSQL
-            </p>
+            <TimelineItem title="TSM / CETIN" period="2020 - současnost">
+                <p class="mb-4">
+                    Moje hlavní dlouhodobé zaměření: backendová a integrační práce na moderní TSM platformě.
+                    Jsem blízko produkčnímu chování, releasům, B2B komunikaci, procesním pravidlům
+                    a datové kompatibilitě.
+                </p>
+                <ul class="space-y-2">
+                    <li>Produkční rollout zkušenost s verzemi TSM 2.2 a 2.4.</li>
+                    <li>Integrace kolem NIP, ticketingu, change managementu, B2B, PEW a souvisejících flow.</li>
+                    <li>Analýza incidentů přes logy, metriky a doménovou znalost místo slepého patchování.</li>
+                    <li>Moderní stack: Kotlin, Java, Spring, PostgreSQL, Kafka-style messaging a Kubernetes prostředí.</li>
+                </ul>
+            </TimelineItem>
+
+            <TimelineItem title="Nordic Web" period="2024 - 2026">
+                <p class="mb-4">
+                    Menší cílená práce v Django web systému. Hodnota tu není v objemu,
+                    ale ve schopnosti vstoupit do jiného stacku a udělat přesnou změnu
+                    bez násilného přenášení známých patternů.
+                </p>
+                <ul class="space-y-2">
+                    <li>Self-service a webové chování v Python/Django/templates stacku.</li>
+                    <li>Cílené produkčně orientované změny v existujícím codebase.</li>
+                </ul>
+            </TimelineItem>
+
+            <TimelineItem title="Osobní web a experimenty" period="průběžně">
+                <p class="mb-4">
+                    Menší vlastní projekty mi drží viditelný celý životní cyklus produktu:
+                    nápad, implementaci, nasazení, údržbu a zpětnou vazbu. Tenhle web je jeden z nich.
+                </p>
+                <ul class="space-y-2">
+                    <li>Astro, TypeScript, Tailwind CSS a Cloudflare Pages.</li>
+                    <li>Jednoduchá statická architektura, dvojjazyčný obsah a nízkoúdržbové nasazení.</li>
+                </ul>
+            </TimelineItem>
         </div>
-
-        <!-- Project card -->
-        <div class="bg-slate-900 rounded-2xl p-8 space-y-4
-                transition transform-gpu duration-300
-                hover:-translate-y-1
-                hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-            <div class="flex items-center justify-between">
-                <h3 class="text-xl font-semibold">Interní nástroj</h3>
-                <span class="text-xs px-3 py-1 rounded-full bg-teal-600/20 text-teal-400">
-          MVP
-        </span>
-            </div>
-
-            <p class="text-slate-400 leading-relaxed">
-                Interní nástroj zaměřený na zefektivnění práce
-                a omezení manuálních činností při vývoji.
-            </p>
-
-            <p class="text-sm text-slate-500">
-                Stack: Java, Spring, Angular
-            </p>
-        </div>
-
-        <!-- Placeholder -->
-        <div class="bg-slate-900/60 border border-dashed border-slate-700
-                rounded-2xl p-8 flex items-center justify-center text-slate-500">
-            Další projekty brzy přibudou
-        </div>
-
     </section>
 
-    <!-- FILOZOFIE -->
-    <section class="max-w-5xl mb-32">
-        <h2 class="text-4xl font-bold mb-10">
-            Přístup k projektům
-        </h2>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <p class="text-slate-300 leading-relaxed">
-                    Preferuji menší, jasně zaměřené projekty
-                    před velkými a nejasnými platformami.
-                    Experimentování umožňuje rychlou iteraci a přímou zpětnou vazbu.
-                </p>
-            </div>
-
-            <div class="bg-slate-900 rounded-2xl p-10 space-y-6">
-                <p class="text-slate-300 leading-relaxed">
-                    I nedokončené nápady mají hodnotu.
-                    Často slouží jako základ pro další,
-                    lépe zpracovaná řešení.
-                </p>
-            </div>
+    <section class="mb-8">
+        <SectionIntro title="Přístup k projektům" />
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <InfoCard title="Konkrétní ownership">
+                Dobrý projekt je ten, kde se společně chápe runtime chování,
+                datový model, release cesta i support po nasazení.
+            </InfoCard>
+            <InfoCard title="Moderní, ale užitečné">
+                Mám rád moderní stacky, ale cílem není novost sama o sobě.
+                Cílem je bezpečnější dodávka, lepší observabilita,
+                čitelnější kód a méně překvapení po nasazení.
+            </InfoCard>
         </div>
     </section>
 

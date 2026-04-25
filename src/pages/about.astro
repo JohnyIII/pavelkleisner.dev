@@ -1,208 +1,121 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import PageIntro from "@/components/PageIntro.astro";
+import SectionIntro from "@/components/SectionIntro.astro";
+import InfoCard from "@/components/InfoCard.astro";
+import TimelineItem from "@/components/TimelineItem.astro";
+import CtaBand from "@/components/CtaBand.astro";
 ---
 
-<Layout title="About – Pavel Kleisner">
+<Layout title="About - Pavel Kleisner">
 
-    <!-- INTRO -->
-    <section class="max-w-4xl mb-40 motion-safe:animate-[fadeUp_600ms_ease-out_1]">
-        <h1 class="text-5xl font-bold mb-10">About me</h1>
+    <PageIntro
+        title="About"
+        highlight="me"
+        lead="I’m a senior backend and integration engineer focused on Kotlin, Java, Spring, PostgreSQL and production systems."
+        body="I work best where correctness, compatibility, observability and release safety matter. My current profile is not only writing backend code. It is owning the part of the system where implementation, domain behavior, integration contracts and production releases overlap."
+    />
 
-        <p class="text-2xl text-slate-400 leading-relaxed">
-            I’m a backend-heavy full-stack developer and tech lead
-            with a strong focus on architecture, maintainability
-            and long-term thinking.
-        </p>
-    </section>
-
-    <!-- STORY -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">My journey</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Over the years, I’ve worked on a wide range of software projects —
-            from internal tools to complex, long-running systems used daily
-            by real users.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Early in my career, I focused primarily on writing code and delivering
-            features. With time, I learned that the real challenges often appear
-            months or years later — when systems grow, teams change and original
-            assumptions no longer hold.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            This experience shaped how I approach software today.
-            I care deeply about clarity, structure and decisions
-            that make future development easier rather than harder.
-        </p>
-    </section>
-
-    <!-- MINDSET -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">How I think about software</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            I believe software is a long-term investment.
-            Every shortcut taken today has a cost that will eventually
-            be paid by someone — often a future developer or the business itself.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            I aim to reduce cognitive load wherever possible.
-            Clear naming, explicit boundaries and simple flows
-            help teams move faster in the long run.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            I prefer boring, proven solutions applied thoughtfully.
-            Novelty can be useful, but only when it clearly solves
-            a real problem.
-        </p>
-    </section>
-
-    <!-- TIMELINE -->
-    <section class="max-w-5xl mb-40">
-        <h2 class="text-4xl font-bold mb-20">Timeline</h2>
-
-        <div class="relative border-l border-slate-700 pl-16 space-y-20">
-
-            <div class="relative">
-      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
-        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-      </span>
-
-                <h3 class="text-2xl font-semibold mb-3">Early development</h3>
-                <p class="text-slate-400 leading-relaxed max-w-xl">
-                    First exposure to programming and backend concepts.
-                    Learning fundamentals through experimentation
-                    and hands-on practice.
-                </p>
-            </div>
-
-            <div class="relative">
-      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
-        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-      </span>
-
-                <h3 class="text-2xl font-semibold mb-3">Professional growth</h3>
-                <p class="text-slate-400 leading-relaxed max-w-xl">
-                    Working on larger systems, gradually taking responsibility
-                    for backend services, data models and reliability.
-                </p>
-            </div>
-
-            <div class="relative">
-      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
-        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-      </span>
-
-                <h3 class="text-2xl font-semibold mb-3">Architecture & leadership</h3>
-                <p class="text-slate-400 leading-relaxed max-w-xl">
-                    Designing system architecture, mentoring others
-                    and making decisions with long-term impact.
-                </p>
-            </div>
-
-            <div class="relative">
-      <span class="absolute -left-[38px] top-2 flex h-4 w-4">
-        <span class="relative inline-flex rounded-full h-4 w-4 bg-teal-500"></span>
-      </span>
-
-                <h3 class="text-2xl font-semibold mb-3">Flame Engine experiments</h3>
-                <p class="text-slate-400 leading-relaxed max-w-xl">
-                    Learning and experimenting with Flame Engine,
-                    owning the full lifecycle from idea to production.
-                </p>
-            </div>
-
+    <section class="mb-24">
+        <SectionIntro title="How I think about software" />
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <InfoCard title="Small explicit changes">
+                In production systems, a precisely named business rule, isolated mapping,
+                better fallback or focused test is often safer than a large rewrite.
+            </InfoCard>
+            <InfoCard title="Modern with a reason">
+                New versions, frameworks and infrastructure matter when they make
+                the system more reliable, observable or easier to change.
+            </InfoCard>
+            <InfoCard title="Runtime ownership">
+                The real system starts after deployment: old data, retries,
+                external contracts, logs, metrics and supportability.
+            </InfoCard>
         </div>
     </section>
 
-    <!-- ARCHITECTURE -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">Architecture & responsibility</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Good architecture is not about complexity or fancy diagrams.
-            It’s about responsibility, ownership and understanding
-            where changes should and should not happen.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            I strive to design systems that are understandable
-            even to someone who joins the project years later.
-            Architecture should guide developers, not confuse them.
-        </p>
+    <section class="mb-24">
+        <SectionIntro
+            title="Career path"
+            body="A compressed timeline of how my responsibilities evolved across projects and stack changes."
+        />
+        <div class="timeline space-y-4">
+            <TimelineItem title="2017-2018: ZIS">
+                Enterprise Java, ZK/ZUL screens, controllers, services,
+                DAO layers, imports and production fixes. This was the phase
+                where I learned to deliver complete application features.
+            </TimelineItem>
+            <TimelineItem title="2019-2020: MNCP">
+                Full-stack work across Kotlin/Spring, Angular and database scripts.
+                I worked on security, exports, archives, measuring batches and operational
+                fixes across the whole flow.
+            </TimelineItem>
+            <TimelineItem title="2020-present: TSM">
+                Senior backend and integration work on Kotlin/Java/Spring services,
+                PostgreSQL, Kafka-style integrations, B2B flows, incident analysis
+                and production rollout of new platform versions.
+            </TimelineItem>
+            <TimelineItem title="2024-present: wider stack">
+                Smaller work in Nordic/Django and personal experiments.
+                Useful mainly as a reminder that good engineering habits should
+                transfer across stacks, not depend on one framework.
+            </TimelineItem>
+        </div>
     </section>
 
-    <!-- LEADERSHIP -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">Working with people</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            I’ve worked both as an individual contributor and
-            in leadership roles.
-            I value communication, trust and shared ownership.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            The best solutions often come from collaboration
-            between developers, product owners and stakeholders.
-            Technical decisions should serve the product, not ego.
-        </p>
+    <section class="mb-24">
+        <SectionIntro title="Working style" />
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <InfoCard title="Architecture and responsibility">
+                Good architecture is not about complexity or diagrams. It is about
+                responsibility, ownership and understanding where changes should
+                and should not happen.
+            </InfoCard>
+            <InfoCard title="Collaboration">
+                The best solutions usually come from collaboration between developers,
+                analysts, product owners and operations. Technical decisions should
+                serve the product and the people who keep it running.
+            </InfoCard>
+        </div>
     </section>
 
-    <!-- WHAT I AVOID -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">What I deliberately avoid</h2>
-
-        <p class="text-slate-300 leading-relaxed">
-            Experience taught me that knowing what not to do
-            is just as important as knowing what to build.
-        </p>
-
-        <ul class="space-y-6 text-slate-400">
-            <li>• Over-engineering without clear value</li>
-            <li>• Blindly following trends and hype</li>
-            <li>• Architectures only one person understands</li>
-            <li>• Decisions driven by ego instead of product needs</li>
-        </ul>
+    <section class="mb-24">
+        <SectionIntro title="What I deliberately avoid" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InfoCard title="Over-engineering">
+                I avoid adding architecture that does not reduce real complexity,
+                risk or maintenance cost.
+            </InfoCard>
+            <InfoCard title="Trend-driven decisions">
+                I like modern tools, but only when they clearly improve delivery,
+                reliability or developer understanding.
+            </InfoCard>
+            <InfoCard title="One-person architecture">
+                A system is not well designed if only one person can safely change it.
+            </InfoCard>
+            <InfoCard title="Ego-driven choices">
+                Technical decisions should serve the product and runtime behavior,
+                not personal taste.
+            </InfoCard>
+        </div>
     </section>
 
-    <!-- PERSONAL -->
-    <section class="max-w-5xl mb-40 space-y-10">
-        <h2 class="text-4xl font-bold">Beyond code</h2>
-
-        <p class="text-slate-300 leading-relaxed">
+    <section class="mb-24">
+        <SectionIntro title="Beyond code" />
+        <p class="max-w-4xl text-slate-300 leading-relaxed">
             Outside of work, I enjoy music, sci-fi, fantasy and anime.
-            Side projects allow me to experiment, learn
-            and explore ideas without pressure.
-        </p>
-
-        <p class="text-slate-300 leading-relaxed">
-            Learning and building in Flame Engine helps me stay grounded
-            in real-world constraints — from deployment
-            to maintenance and user feedback.
+            Side projects let me experiment, learn and explore ideas without the pressure
+            of production deadlines. I like building things end to end because it keeps
+            the whole product lifecycle visible: idea, implementation, deployment,
+            maintenance and feedback.
         </p>
     </section>
 
-    <!-- CTA -->
-    <section class="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl p-16 max-w-6xl">
-        <h2 class="text-4xl font-bold mb-8">
-            Let’s work together
-        </h2>
-
-        <p class="text-teal-100 text-lg leading-relaxed mb-10 max-w-3xl">
-            If my mindset and approach resonate with you,
-            feel free to reach out.
-        </p>
-
-        <a href="/contact"
-           class="bg-white text-teal-700 px-10 py-5 rounded-xl font-medium hover:bg-slate-100 transition">
-            Contact me
-        </a>
-    </section>
+    <CtaBand
+        title="Let’s work together"
+        body="If this approach matches what you need, feel free to reach out."
+        href="/contact"
+        label="Contact me"
+    />
 
 </Layout>

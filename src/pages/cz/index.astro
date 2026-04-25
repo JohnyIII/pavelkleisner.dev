@@ -1,146 +1,107 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import PageIntro from "@/components/PageIntro.astro";
+import SectionIntro from "@/components/SectionIntro.astro";
+import InfoCard from "@/components/InfoCard.astro";
+import CtaBand from "@/components/CtaBand.astro";
 ---
 
-<Layout title="Pavel Kleisner – Senior Backend Developer & Team Lead">
+<Layout title="Pavel Kleisner - Senior Backend & Integration Engineer">
 
-    <section class="mb-28">
-        <div class="section-label mb-4">Senior Backend Developer · Team Lead</div>
-        <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-start">
-            <div>
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                    Pavel <span class="accent-text">Kleisner</span>
-                </h1>
+    <PageIntro
+        eyebrow="Senior Backend & Integration Engineer"
+        title="Pavel"
+        highlight="Kleisner"
+        lead="Stavím a nasazuji produkční backendové systémy pro telekomunikační a enterprise prostředí."
+        body="Nejsilnější jsem tam, kde se potkávají doménová pravidla, data, integrace a releasy. Pracuji hlavně s Kotlinem, Javou, Springem a PostgreSQL, v posledních letech hlavně na TSM produkčních rolloutech, B2B chování, observabilitě a analýze incidentů."
+    >
+        <div class="flex flex-wrap gap-3 mt-8">
+            <a href="/cz/projekty" class="btn-primary">Zkušenosti</a>
+            <a href="/cz/kontakt" class="btn-secondary">Kontakt</a>
+        </div>
+    </PageIntro>
 
-                <p class="text-xl text-slate-300 leading-relaxed max-w-3xl mb-6">
-                    Stavím a vedu backendové systémy, které musí být spolehlivé i po letech.
-                    Hlavní fokus je architektura, udržitelnost a doručování v reálných produktových podmínkách.
-                </p>
-
-                <p class="text-slate-400 leading-relaxed max-w-3xl mb-10">
-                    Kombinuji hands-on vývoj s technickým vedením. Od roku 2023 vedu vývojový tým,
-                    mentoruji vývojáře a nesu odpovědnost za technický směr i dodávky.
-                </p>
-
-                <div class="flex flex-wrap gap-3">
-                    <a href="/cz/projekty" class="btn-primary">Projekty</a>
-                    <a href="/cz/kontakt" class="btn-secondary">Kontakt</a>
-                </div>
+    <section class="mb-24">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="info-card">
+                <div class="text-2xl font-semibold">9+</div>
+                <div class="text-sm text-slate-400 mt-1">Let ve vývoji</div>
             </div>
-
-            <div class="surface-card rounded-2xl p-6 space-y-4">
-                <div class="text-xs uppercase tracking-[0.18em] text-slate-400">Rychlý přehled</div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
-                        <div class="text-2xl font-semibold">9+</div>
-                        <div class="text-xs text-slate-400">Let v IT</div>
-                    </div>
-                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
-                        <div class="text-2xl font-semibold">2023</div>
-                        <div class="text-xs text-slate-400">Team lead od</div>
-                    </div>
-                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
-                        <div class="text-2xl font-semibold">Praha</div>
-                        <div class="text-xs text-slate-400">Česká republika</div>
-                    </div>
-                    <div class="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
-                        <div class="text-2xl font-semibold">EN/CZ</div>
-                        <div class="text-xs text-slate-400">Pracovní jazyk</div>
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-1">
-                    <span class="pill">Java</span>
-                    <span class="pill">Kotlin</span>
-                    <span class="pill">Spring</span>
-                    <span class="pill">Kafka</span>
-                    <span class="pill">Kubernetes</span>
-                    <span class="pill">PostgreSQL</span>
-                </div>
+            <div class="info-card">
+                <div class="text-2xl font-semibold">5700+</div>
+                <div class="text-sm text-slate-400 mt-1">Dohledaných pracovních commitů</div>
+            </div>
+            <div class="info-card">
+                <div class="text-2xl font-semibold">TSM</div>
+                <div class="text-sm text-slate-400 mt-1">2.2 / 2.4 produkce</div>
+            </div>
+            <div class="info-card">
+                <div class="text-2xl font-semibold">Praha</div>
+                <div class="text-sm text-slate-400 mt-1">Česká republika</div>
             </div>
         </div>
     </section>
 
-    <section class="mb-28">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">Co přináším</h2>
+    <section class="mb-24">
+        <SectionIntro
+            title="Co přináším"
+            body="Backendový profil doplněný o full-stack, data a produkční kontext tak, abych dokázal vlastnit reálné chování systému."
+        />
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            <article class="surface-card rounded-2xl p-6">
-                <h3 class="text-lg font-semibold mb-2">Vlastnictví architektury</h3>
-                <p class="text-slate-400">Jasné hranice služeb, odolné integrace a systémy, které zůstávají čitelné i po čase.</p>
-            </article>
-            <article class="surface-card rounded-2xl p-6">
-                <h3 class="text-lg font-semibold mb-2">Spolehlivé dodávky</h3>
-                <p class="text-slate-400">Pragmatická rozhodnutí, realistický scope a stabilní tempo bez hero přístupu.</p>
-            </article>
-            <article class="surface-card rounded-2xl p-6">
-                <h3 class="text-lg font-semibold mb-2">Technické vedení</h3>
-                <p class="text-slate-400">Mentoring vývojářů, revize architektury a napojení engineeringu na cíle produktu.</p>
-            </article>
-            <article class="surface-card rounded-2xl p-6">
-                <h3 class="text-lg font-semibold mb-2">Průběžné učení</h3>
-                <p class="text-slate-400">Učím se stavbou reálných věcí. Aktuálně experimentuji hlavně ve <span class="accent-text">Flame Engine</span>.</p>
-            </article>
+            <InfoCard title="Produkční integrace">
+                B2B API, procesní toky, zprávy, retry chování, logy a chybové stavy, které jsou důležité až po nasazení.
+            </InfoCard>
+            <InfoCard title="Release ownership">
+                Nasazování nových verzí do reálných prostředí se zaměřením na kompatibilitu, data a provozní rizika.
+            </InfoCard>
+            <InfoCard title="Pragmatická architektura">
+                Malé bezpečné změny, pojmenovaná business pravidla, jasné hranice služeb a kód připravený na další požadavky.
+            </InfoCard>
+            <InfoCard title="Full-stack kontext">
+                Backendová práce s dostatečnou znalostí frontendu a databází pro pochopení celého produkčního flow.
+            </InfoCard>
         </div>
     </section>
 
-    <section class="mb-28">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">Zkušenosti v kostce</h2>
-        <div class="space-y-5">
-            <article class="surface-card rounded-2xl p-6">
-                <div class="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 class="text-xl font-semibold">Senior Backend-heavy Full-stack Engineer / Team Lead</h3>
-                    <span class="text-slate-400">DataLite, s.r.o.</span>
-                </div>
-                <p class="text-sm text-slate-500 mb-4">leden 2017 - současnost · Praha</p>
-                <ul class="space-y-2 text-slate-300">
-                    <li>Architektura, databáze, integrace a klíčová technická rozhodnutí v produkčních systémech.</li>
-                    <li>Dlouhodobá odpovědnost za stabilitu, udržitelnost a provozní spolehlivost.</li>
-                    <li>Od roku 2023 vedení týmu, mentoring a odpovědnost za dodávky.</li>
-                </ul>
-            </article>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <article class="surface-card rounded-2xl p-6">
-                    <h3 class="text-lg font-semibold mb-2">Prodej</h3>
-                    <p class="text-slate-400">Elektro Juránek</p>
-                    <p class="text-sm text-slate-500 mt-2">srpen 2014 - prosinec 2016</p>
-                </article>
-                <article class="surface-card rounded-2xl p-6">
-                    <h3 class="text-lg font-semibold mb-2">Tester</h3>
-                    <p class="text-slate-400">GMC Software</p>
-                    <p class="text-sm text-slate-500 mt-2">listopad 2013 - leden 2014</p>
-                </article>
-            </div>
+    <section class="mb-24">
+        <SectionIntro title="Hlavní stack" />
+        <div class="flex flex-wrap gap-2">
+            <span class="pill">Kotlin</span>
+            <span class="pill">Java</span>
+            <span class="pill">Spring</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Kafka</span>
+            <span class="pill">Kubernetes</span>
+            <span class="pill">Angular</span>
+            <span class="pill">Oracle</span>
+            <span class="pill">Astro</span>
+            <span class="pill">TypeScript</span>
         </div>
     </section>
 
-    <section class="mb-28 grid grid-cols-1 md:grid-cols-2 gap-5">
-        <article class="surface-card rounded-2xl p-6">
-            <h2 class="text-2xl font-bold mb-4">Vzdělání a certifikace</h2>
-            <ul class="space-y-3 text-slate-300">
-                <li>ČVUT Praha, Bc. - Softwarové technologie a management (2009-2013)</li>
-                <li>Univerzita Pardubice - Mikroprocesorová technika (2008-2009)</li>
-                <li>Verzovací systém GIT, CZ.NIC (2018)</li>
-                <li>Maven, Ing. Jiří Pinkas (2013)</li>
-            </ul>
-        </article>
-
-        <article class="surface-card rounded-2xl p-6">
-            <h2 class="text-2xl font-bold mb-4">Komunita a zájmy</h2>
-            <ul class="space-y-3 text-slate-300">
-                <li>Pořadatel, Charita v Červeném Kostelci (od prosince 2015)</li>
-                <li>Promítání v kině v Červeném Kostelci (prosinec 2015 - 2020)</li>
-                <li>Aktuální fokus: učení a experimentování ve Flame Engine</li>
-            </ul>
-        </article>
+    <section class="mb-24">
+        <SectionIntro
+            title="Zkušenosti v kostce"
+            body="Většina mojí práce je interní nebo klientská, takže popisuji hlavně odpovědnost a produkční kontext místo ukazování kódu."
+        />
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <InfoCard title="TSM / CETIN" meta="2020 - současnost" tag="hlavní fokus">
+                Seniorní backend a integrační práce na Kotlin/Java/Spring službách, PostgreSQL systémech, B2B flow, PEW, NIP, change managementu a produkčních rolloutech nových verzí.
+            </InfoCard>
+            <InfoCard title="ZIS" meta="2017 - 2018" tag="základ">
+                Enterprise Java a ZK/ZUL práce přes obrazovky, controllery, služby, DAO vrstvy, importy, Excel zpracování a produkční opravy.
+            </InfoCard>
+            <InfoCard title="MNCP" meta="2018 - 2021" tag="full-stack">
+                Kotlin/Spring, Angular a databázová práce kolem autentizace, měřících dávek, archivů, exportů a provozních oprav.
+            </InfoCard>
+        </div>
     </section>
 
-    <section class="surface-card rounded-3xl p-10 md:p-14 mb-8">
-        <h2 class="text-3xl md:text-4xl font-bold mb-5">Máš zájem o spolupráci?</h2>
-        <p class="text-slate-300 text-lg mb-8 max-w-3xl">
-            Pokud hledáš seniorního backend vývojáře nebo technického leada pro dlouhodobý vývoj produktu,
-            rád proberu možnosti spolupráce. Nejrychlejší je e-mail.
-        </p>
-        <a href="/cz/kontakt" class="btn-primary">Napiš mi</a>
-    </section>
+    <CtaBand
+        title="Máš zájem o spolupráci?"
+        body="Pokud hledáš seniorního vývojáře pro backend, integrace, produkční releasy nebo dlouhodobý vývoj produktu, nejrychlejší je e-mail."
+        href="/cz/kontakt"
+        label="Napiš mi"
+    />
 
 </Layout>
