@@ -2,6 +2,7 @@
 import en from "@/i18n/en";
 import cz from "@/i18n/cz";
 import LanguageSwitch from "@/components/LanguageSwitch.astro";
+import ThemeSwitch from "@/components/ThemeSwitch.astro";
 
 const { lang = "en" } = Astro.props;
 const t = lang === "cz" ? cz : en;
@@ -9,22 +10,23 @@ const t = lang === "cz" ? cz : en;
 
 
 
-<div class="flex items-center gap-4">
-    <nav class="space-x-2 text-sm text-slate-300">
+<div class="site-nav-wrap">
+    <nav class="site-nav">
         <a
                 href={t.routes.home}
-                class="inline-flex rounded-full border border-transparent px-3 py-1.5 hover:border-slate-700 hover:bg-slate-900/70 hover:text-white transition-colors duration-200">            {t.nav.home}
+                class="nav-link">            {t.nav.home}
         </a>
-        <a href={t.routes.about} class="inline-flex rounded-full border border-transparent px-3 py-1.5 hover:border-slate-700 hover:bg-slate-900/70 hover:text-white transition-colors duration-200">
+        <a href={t.routes.about} class="nav-link">
             {t.nav.about}
         </a>
-        <a href={t.routes.projects} class="inline-flex rounded-full border border-transparent px-3 py-1.5 hover:border-slate-700 hover:bg-slate-900/70 hover:text-white transition-colors duration-200">
+        <a href={t.routes.projects} class="nav-link">
             {t.nav.projects}
         </a>
-        <a href={t.routes.contact} class="inline-flex rounded-full border border-transparent px-3 py-1.5 hover:border-slate-700 hover:bg-slate-900/70 hover:text-white transition-colors duration-200">
+        <a href={t.routes.contact} class="nav-link">
             {t.nav.contact}
         </a>
     </nav>
 
+    <ThemeSwitch />
     <LanguageSwitch lang={lang} />
 </div>

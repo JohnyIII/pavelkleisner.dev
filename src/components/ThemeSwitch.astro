@@ -1,0 +1,23 @@
+<div class="theme-switch" aria-label="Theme">
+    <button type="button" data-theme-choice="void" aria-pressed="true">Void</button>
+    <button type="button" data-theme-choice="paper" aria-pressed="false">Paper</button>
+</div>
+
+<script>
+    const key = "pavelkleisner-theme";
+    const choices = document.querySelectorAll<HTMLButtonElement>("[data-theme-choice]");
+
+    function setTheme(theme: string) {
+        document.documentElement.dataset.theme = theme;
+        localStorage.setItem(key, theme);
+        choices.forEach((button) => {
+            button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
+        });
+    }
+
+    choices.forEach((button) => {
+        button.addEventListener("click", () => setTheme(button.dataset.themeChoice ?? "void"));
+    });
+
+    setTheme(localStorage.getItem(key) ?? document.documentElement.dataset.theme ?? "void");
+</script>

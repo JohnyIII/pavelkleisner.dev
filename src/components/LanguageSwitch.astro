@@ -2,10 +2,10 @@
 const { lang = "en" } = Astro.props;
 ---
 
-<div class="text-xs text-slate-400">
+<div class="language-switch">
     {lang === "en" ? (
-            <a href="/cz" class="inline-flex rounded-full border border-slate-700/80 px-2.5 py-1 hover:text-white hover:border-slate-500 transition-colors">CZ</a>
+            <a href="/cz">CZ</a>
     ) : (
-            <a href="/" class="inline-flex rounded-full border border-slate-700/80 px-2.5 py-1 hover:text-white hover:border-slate-500 transition-colors">EN</a>
+            <a href="/">EN</a>
     )}
 </div>

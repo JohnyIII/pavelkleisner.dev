@@ -10,11 +10,15 @@ import CtaBand from "@/components/CtaBand.astro";
 
     <PageIntro
         eyebrow="Senior Backend & Integration Engineer"
-        title="Pavel"
-        highlight="Kleisner"
-        lead="I build and ship production backend systems for telecom and enterprise environments."
-        body="My strongest area is the place where domain rules, data, integrations and releases meet. I work mainly with Kotlin, Java, Spring and PostgreSQL, with recent focus on TSM production rollouts, B2B behavior, observability and incident analysis."
+        title="Pavel Kleisner"
+        lead="Backend, integration and release work for systems where production mistakes are expensive."
+        body="I mainly work with Kotlin, Java, Spring and PostgreSQL. In recent years my focus has been TSM/CETIN production flow: B2B behavior, data compatibility, incident analysis, new version rollout and the places where business rules meet runtime reality."
     >
+        <p>
+            I am not a “full-stack generalist for everything”. I am a backend-heavy
+            programmer who can still read the frontend, database and operational logs
+            when the real cause is spread across the system.
+        </p>
         <div class="flex flex-wrap gap-3 mt-8">
             <a href="/projects" class="btn-primary">View experience</a>
             <a href="/contact" class="btn-secondary">Contact</a>
@@ -22,45 +26,37 @@ import CtaBand from "@/components/CtaBand.astro";
     </PageIntro>
 
     <section class="mb-24">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div class="info-card">
-                <div class="text-2xl font-semibold">9+</div>
-                <div class="text-sm text-slate-400 mt-1">Years in software</div>
+        <div class="fact-strip">
+            <div>
+                <div class="fact-value">9+</div>
+                <div class="fact-label">years in software</div>
             </div>
-            <div class="info-card">
-                <div class="text-2xl font-semibold">5700+</div>
-                <div class="text-sm text-slate-400 mt-1">Tracked work commits</div>
+            <div>
+                <div class="fact-value">5700+</div>
+                <div class="fact-label">tracked work commits</div>
             </div>
-            <div class="info-card">
-                <div class="text-2xl font-semibold">TSM</div>
-                <div class="text-sm text-slate-400 mt-1">2.2 / 2.4 production</div>
+            <div>
+                <div class="fact-value">TSM</div>
+                <div class="fact-label">2.2 / 2.4 production rollouts</div>
             </div>
-            <div class="info-card">
-                <div class="text-2xl font-semibold">Prague</div>
-                <div class="text-sm text-slate-400 mt-1">Czech Republic</div>
+            <div>
+                <div class="fact-value">Prague</div>
+                <div class="fact-label">Czech Republic</div>
             </div>
         </div>
     </section>
 
     <section class="mb-24">
         <SectionIntro
-            title="What I bring"
-            body="A backend-first profile with enough full-stack, data and production context to own real system behavior."
+            title="Where I fit best"
+            body="The value is usually not another abstraction layer. It is a change that survives real data, integrations, support and the next release."
         />
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            <InfoCard title="Production integrations">
-                B2B APIs, process flows, message-driven behavior, retries, logs and failure modes that matter after deployment.
-            </InfoCard>
-            <InfoCard title="Release ownership">
-                Rolling new versions into real environments while watching compatibility, data shape and operational risk.
-            </InfoCard>
-            <InfoCard title="Pragmatic architecture">
-                Small safe changes, named business rules, clear service boundaries and code that can survive future requirements.
-            </InfoCard>
-            <InfoCard title="Full-stack context">
-                Backend work with enough frontend and database experience to understand the whole production flow.
-            </InfoCard>
-        </div>
+        <ul class="note-list">
+            <li><strong>Integrations</strong><span>B2B APIs, process flows, message behavior, retries, logs and failure modes that only become visible after deployment.</span></li>
+            <li><strong>Releases</strong><span>Rolling new versions into real environments while watching compatibility, old data and operational risk.</span></li>
+            <li><strong>Architecture</strong><span>Small safe changes, clearly named rules and service boundaries. No ceremony around patterns.</span></li>
+            <li><strong>Debugging</strong><span>Incidents through logs, metrics, databases and domain context. Not random patches around symptoms.</span></li>
+        </ul>
     </section>
 
     <section class="mb-24">

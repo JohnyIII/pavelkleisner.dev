@@ -10,11 +10,15 @@ import CtaBand from "@/components/CtaBand.astro";
 
     <PageIntro
         eyebrow="Senior Backend & Integration Engineer"
-        title="Pavel"
-        highlight="Kleisner"
-        lead="Stavím a nasazuji produkční backendové systémy pro telekomunikační a enterprise prostředí."
-        body="Nejsilnější jsem tam, kde se potkávají doménová pravidla, data, integrace a releasy. Pracuji hlavně s Kotlinem, Javou, Springem a PostgreSQL, v posledních letech hlavně na TSM produkčních rolloutech, B2B chování, observabilitě a analýze incidentů."
+        title="Pavel Kleisner"
+        lead="Backend, integrace a release práce pro systémy, kde chyba po nasazení opravdu něco stojí."
+        body="Dělám hlavně Kotlin, Javu, Spring a PostgreSQL. V posledních letech řeším TSM/CETIN produkční flow: B2B chování, datovou kompatibilitu, incidenty, rollout nových verzí a místa, kde se business pravidlo potká s runtime realitou."
     >
+        <p>
+            Nejsem “full-stack generalista na všechno”. Jsem backendově těžký programátor,
+            který umí číst frontend, databázi i provozní logy, když je potřeba najít
+            skutečný důvod problému.
+        </p>
         <div class="flex flex-wrap gap-3 mt-8">
             <a href="/cz/projekty" class="btn-primary">Zkušenosti</a>
             <a href="/cz/kontakt" class="btn-secondary">Kontakt</a>
@@ -22,45 +26,37 @@ import CtaBand from "@/components/CtaBand.astro";
     </PageIntro>
 
     <section class="mb-24">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div class="info-card">
-                <div class="text-2xl font-semibold">9+</div>
-                <div class="text-sm text-slate-400 mt-1">Let ve vývoji</div>
+        <div class="fact-strip">
+            <div>
+                <div class="fact-value">9+</div>
+                <div class="fact-label">let ve vývoji</div>
             </div>
-            <div class="info-card">
-                <div class="text-2xl font-semibold">5700+</div>
-                <div class="text-sm text-slate-400 mt-1">Dohledaných pracovních commitů</div>
+            <div>
+                <div class="fact-value">5700+</div>
+                <div class="fact-label">dohledaných pracovních commitů</div>
             </div>
-            <div class="info-card">
-                <div class="text-2xl font-semibold">TSM</div>
-                <div class="text-sm text-slate-400 mt-1">2.2 / 2.4 produkce</div>
+            <div>
+                <div class="fact-value">TSM</div>
+                <div class="fact-label">2.2 / 2.4 produkční rollouty</div>
             </div>
-            <div class="info-card">
-                <div class="text-2xl font-semibold">Praha</div>
-                <div class="text-sm text-slate-400 mt-1">Česká republika</div>
+            <div>
+                <div class="fact-value">Praha</div>
+                <div class="fact-label">Česká republika</div>
             </div>
         </div>
     </section>
 
     <section class="mb-24">
         <SectionIntro
-            title="Co přináším"
-            body="Backendový profil doplněný o full-stack, data a produkční kontext tak, abych dokázal vlastnit reálné chování systému."
+            title="Kde dávám největší smysl"
+            body="Největší hodnota není v tom přidat další vrstvu abstrakce. Je v tom udělat změnu, která přežije data, integrace, support a další release."
         />
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            <InfoCard title="Produkční integrace">
-                B2B API, procesní toky, zprávy, retry chování, logy a chybové stavy, které jsou důležité až po nasazení.
-            </InfoCard>
-            <InfoCard title="Release ownership">
-                Nasazování nových verzí do reálných prostředí se zaměřením na kompatibilitu, data a provozní rizika.
-            </InfoCard>
-            <InfoCard title="Pragmatická architektura">
-                Malé bezpečné změny, pojmenovaná business pravidla, jasné hranice služeb a kód připravený na další požadavky.
-            </InfoCard>
-            <InfoCard title="Full-stack kontext">
-                Backendová práce s dostatečnou znalostí frontendu a databází pro pochopení celého produkčního flow.
-            </InfoCard>
-        </div>
+        <ul class="note-list">
+            <li><strong>Integrace</strong><span>B2B API, procesní toky, zprávy, retry chování, logy a chybové stavy, které začnou být důležité až po nasazení.</span></li>
+            <li><strong>Releasy</strong><span>Nasazování nových verzí do reálných prostředí se zaměřením na kompatibilitu, stará data a provozní rizika.</span></li>
+            <li><strong>Architektura</strong><span>Malé bezpečné změny, jasně pojmenovaná pravidla a hranice služeb. Bez divadla kolem patternů.</span></li>
+            <li><strong>Debugging</strong><span>Incidenty přes logy, metriky, databázi a doménový kontext. Ne přes náhodné patchování symptomů.</span></li>
+        </ul>
     </section>
 
     <section class="mb-24">

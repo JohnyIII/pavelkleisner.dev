@@ -9,11 +9,15 @@ const {
 ---
 
 <section class="page-intro">
-    {eyebrow && <div class="section-label mb-4">{eyebrow}</div>}
-    <h1 class="page-title">
-        {title}{highlight && <> <span class="accent-text">{highlight}</span></>}
-    </h1>
-    {lead && <p class="page-lead">{lead}</p>}
-    {body && <p class="page-body">{body}</p>}
-    <slot />
+    <div>
+        {eyebrow && <div class="section-label mb-4">{eyebrow}</div>}
+        <h1 class="page-title">
+            {title}{highlight && <> <span class="accent-text">{highlight}</span></>}
+        </h1>
+        {lead && <p class="page-lead">{lead}</p>}
+        {body && <p class="page-body">{body}</p>}
+    </div>
+    <div class="page-aside">
+        <slot />
+    </div>
 </section>
