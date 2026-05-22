@@ -1,0 +1,25 @@
+/* TEAM */
+
+  Owner & Engineer:   Pavel Kleisner
+  Role:               Senior Backend & Integration Engineer
+  Location:           Prague, Czech Republic
+  Contact:            contact [at] pavelkleisner.dev
+  GitHub:             github.com/JohnyIII
+  LinkedIn:           linkedin.com/in/pavel-kleisner-895989129
+
+
+/* SITE */
+
+  Language:           English, Czech
+  Doctype:            HTML5
+  Standards:          HTML5, CSS3, ES2022
+  Components:         Astro, TypeScript, Tailwind CSS
+  Fonts:              IBM Plex Sans, Rajdhani, JetBrains Mono, Source Serif 4
+  Hosting:            Cloudflare Pages
+  Source:             github.com/JohnyIII/pavelkleisner.dev
+
+
+/* THANKS */
+
+  To everyone whose log lines, EXPLAIN ANALYZE outputs and 3 a.m. incident
+  retrospectives quietly taught me how production systems actually behave.

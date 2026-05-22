@@ -1,11 +1,17 @@
 ---
-const { lang = "en" } = Astro.props;
+const { lang = "en", altHref } = Astro.props;
+const fallback = lang === "en" ? "/cz" : "/";
+const href = altHref ?? fallback;
 ---
 
-<div class="text-xs text-slate-400">
+<div class="lang-switch" aria-label="Language">
     {lang === "en" ? (
-            <a href="/cz" class="inline-flex rounded-full border border-slate-700/80 px-2.5 py-1 hover:text-white hover:border-slate-500 transition-colors">CZ</a>
+        <span class="lang-active" aria-current="true">EN</span>
+        <span class="lang-sep">·</span>
+        <a href={href}>CZ</a>
     ) : (
-            <a href="/" class="inline-flex rounded-full border border-slate-700/80 px-2.5 py-1 hover:text-white hover:border-slate-500 transition-colors">EN</a>
+        <a href={href}>EN</a>
+        <span class="lang-sep">·</span>
+        <span class="lang-active" aria-current="true">CZ</span>
     )}
 </div>

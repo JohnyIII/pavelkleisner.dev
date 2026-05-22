@@ -9,9 +9,9 @@ const {
     <span class="timeline-dot" aria-hidden="true"></span>
     <div class="flex flex-wrap items-center gap-3 mb-3">
         <h3 class="text-2xl font-semibold">{title}</h3>
-        {period && <span class="text-sm text-slate-500">{period}</span>}
+        {period && <span class="card-meta">{period}</span>}
     </div>
-    <div class="text-slate-400 leading-relaxed">
+    <div class="card-body">
         <slot />
     </div>
 </article>
