@@ -2,60 +2,111 @@
 import "../styles/global.css";
 import Nav from "@/components/Nav.astro";
 
-const { title = "Pavel Kleisner" } = Astro.props;
+const { title, description } = Astro.props;
 
 const pathname = Astro.url.pathname;
 const lang = pathname.startsWith("/cz") ? "cz" : "en";
+
+const defaults = {
+    en: {
+        title: "Pavel Kleisner - Senior Backend & Integration Engineer",
+        description: "Senior backend and integration engineer focused on Kotlin, Java, Spring, PostgreSQL, production releases, and telecom-grade systems.",
+    },
+    cz: {
+        title: "Pavel Kleisner - Senior backend a integrační vývojář",
+        description: "Senior backend a integrační vývojář zaměřený na Kotlin, Javu, Spring, PostgreSQL, produkční releasy a systémy telecom úrovně.",
+    },
+};
+
+const pageTitle = title ?? defaults[lang].title;
+const pageDescription = description ?? defaults[lang].description;
+
+const buildDate = new Date().toISOString().slice(0, 10);
+const labels = lang === "cz"
+    ? { source: "Zdrojový kód", updated: "Poslední úprava", built: "Postaveno v" }
+    : { source: "Source code", updated: "Last updated", built: "Built with" };
+
+const siteUrl = "https://pavelkleisner.dev";
+const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Pavel Kleisner",
+    url: siteUrl,
+    jobTitle: "Senior Backend & Integration Engineer",
+    description: defaults.en.description,
+    knowsAbout: [
+        "Kotlin", "Java", "Spring Framework", "PostgreSQL", "Kafka",
+        "System integration", "Production releases", "B2B integrations",
+        "Backend architecture", "Incident analysis",
+    ],
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Prague",
+        addressCountry: "CZ",
+    },
+    sameAs: [
+        "https://github.com/JohnyIII",
+        "https://www.linkedin.com/in/pavel-kleisner-895989129/",
+    ],
+};
 ---
 
 <!doctype html>
-<html lang={lang} data-theme="void">
+<html lang={lang === "cz" ? "cs" : "en"} data-theme="void">
 <head>
 	<meta charset="utf-8" />
+	{/*
+	  Hi there. Yes, this site is hand-built.
+	  Astro + TypeScript + Tailwind, hosted on Cloudflare Pages.
+	  Source: https://github.com/JohnyIII/pavelkleisner.dev
+	  -- Pavel
+	*/}
 	<script is:inline>
-		try {
-			document.documentElement.dataset.theme = localStorage.getItem("pavelkleisner-theme") || "void";
-		} catch {
-			document.documentElement.dataset.theme = "void";
-		}
+		(function () {
+			try {
+				var stored = localStorage.getItem("pavelkleisner-theme");
+				if (stored === "void" || stored === "paper") {
+					document.documentElement.dataset.theme = stored;
+					return;
+				}
+			} catch {}
+			var prefersLight = typeof window !== "undefined"
+				&& window.matchMedia
+				&& window.matchMedia("(prefers-color-scheme: light)").matches;
+			document.documentElement.dataset.theme = prefersLight ? "paper" : "void";
+		})();
 	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
-	<title>{title}</title>
-	<meta
-		name="description"
-		content="Senior backend and integration engineer focused on Kotlin, Java, Spring, PostgreSQL, production releases, and telecom-grade systems."
-	/>
+	<title>{pageTitle}</title>
+	<meta name="description" content={pageDescription} />
+	<link rel="canonical" href={Astro.url.href} />
 
-	<!-- Open Graph / LinkedIn -->
+	<link rel="alternate" hreflang="en" href={`${siteUrl}${pathname.startsWith("/cz") ? pathname.replace(/^\/cz\/?/, "/").replace(/\/o-mne/, "/about").replace(/\/projekty/, "/projects").replace(/\/kontakt/, "/contact") : pathname}`} />
+	<link rel="alternate" hreflang="cs" href={`${siteUrl}${pathname.startsWith("/cz") ? pathname : pathname === "/" ? "/cz" : "/cz" + pathname.replace(/^\/about/, "/o-mne").replace(/^\/projects/, "/projekty").replace(/^\/contact/, "/kontakt")}`} />
+
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content={title} />
-	<meta
-		property="og:description"
-		content="Senior backend and integration engineer focused on Kotlin, Java, Spring, PostgreSQL, production releases, and telecom-grade systems."
-	/>
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:description" content={pageDescription} />
 	<meta property="og:url" content={Astro.url.href} />
 	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:locale" content={lang === "cz" ? "cs_CZ" : "en_US"} />
 
-	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={title} />
-	<meta
-		name="twitter:description"
-		content="Senior backend and integration engineer focused on Kotlin, Java, Spring, PostgreSQL, production releases, and telecom-grade systems."
-	/>
+	<meta name="twitter:title" content={pageTitle} />
+	<meta name="twitter:description" content={pageDescription} />
 	<meta name="twitter:image" content="/og-image.png" />
+
+	<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 </head>
 <body class="min-h-screen antialiased">
 <div class="bg-ambient" aria-hidden="true"></div>
+
 <header class="site-header">
 	<div class="max-w-6xl mx-auto px-5 sm:px-6 py-5 flex flex-wrap justify-between items-center gap-4">
-        <span class="site-mark">
-          Pavel Kleisner <span class="accent-text">/ backend</span>
-        </span>
+        <a href={lang === "cz" ? "/cz" : "/"} class="site-mark">
+          Pavel Kleisner <span class="mark-sub">/ backend</span>
+        </a>
 
 		<Nav lang={lang} />
 	</div>
@@ -66,8 +117,40 @@ const lang = pathname.startsWith("/cz") ? "cz" : "en";
 </main>
 
 <footer class="site-footer mt-20">
-	<div class="max-w-6xl mx-auto px-5 sm:px-6 py-8 text-sm">
-		© {new Date().getFullYear()} Pavel Kleisner
+	<div class="max-w-6xl mx-auto px-5 sm:px-6 py-10">
+		<div class="footer-grid">
+			<div class="footer-links">
+				<a href="https://github.com/JohnyIII" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+					<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.4-5.27 5.68.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+					</svg>
+					<span>GitHub</span>
+				</a>
+				<a href="https://www.linkedin.com/in/pavel-kleisner-895989129/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+					<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001ZM3 9.75h4v11.25H3V9.75ZM9.5 9.75H13v1.55h.05c.49-.92 1.68-1.9 3.46-1.9 3.7 0 4.39 2.44 4.39 5.61V21h-4v-4.92c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21H9.5V9.75Z"/>
+					</svg>
+					<span>LinkedIn</span>
+				</a>
+				<a href="mailto:contact@pavelkleisner.dev" aria-label="Email">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<rect x="3" y="5" width="18" height="14" rx="2"/>
+						<path d="m3 7 9 6 9-6"/>
+					</svg>
+					<span>contact@pavelkleisner.dev</span>
+				</a>
+			</div>
+
+			<div class="footer-meta">
+				<div>
+					<a href="https://github.com/JohnyIII/pavelkleisner.dev" target="_blank" rel="noopener noreferrer" class="footer-source">
+						{labels.source} →
+					</a>
+				</div>
+				<div>{labels.updated}: {buildDate}</div>
+				<div>{labels.built} Astro · © {new Date().getFullYear()}</div>
+			</div>
+		</div>
 	</div>
 </footer>
 </body>

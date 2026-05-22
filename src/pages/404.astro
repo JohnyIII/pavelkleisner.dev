@@ -1,0 +1,121 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const pathname = Astro.url.pathname;
+const lang = pathname.startsWith("/cz") ? "cz" : "en";
+const t = lang === "cz"
+    ? {
+        title: "404 - Stránka nenalezena",
+        heading: "404",
+        sub: "Route not found in router config",
+        body: "Hledaná stránka neexistuje. Možná jsi narazil na překlep v URL, na starý odkaz, nebo na něco, co bylo refactornuto pryč.",
+        homeLabel: "Zpět na home",
+        homeHref: "/cz",
+        contactLabel: "Napsat",
+        contactHref: "/cz/kontakt",
+        stackTitle: "Stack trace",
+        stackLines: [
+            "RouteNotFoundException: no static route matched",
+            `  at /pages router → "${pathname}"`,
+            "  at src/pages/[404].astro",
+            "  at user.expectations → reality",
+            "Hint: zkontroluj URL nebo se vrať na hlavní stránku.",
+        ],
+    }
+    : {
+        title: "404 - Page not found",
+        heading: "404",
+        sub: "Route not found in router config",
+        body: "The page you are looking for does not exist. Maybe a typo in the URL, an old link, or something that has been refactored away.",
+        homeLabel: "Back to home",
+        homeHref: "/",
+        contactLabel: "Send me a note",
+        contactHref: "/contact",
+        stackTitle: "Stack trace",
+        stackLines: [
+            "RouteNotFoundException: no static route matched",
+            `  at /pages router → "${pathname}"`,
+            "  at src/pages/[404].astro",
+            "  at user.expectations → reality",
+            "Hint: check the URL or head back to the homepage.",
+        ],
+    };
+
+function lineClass(line: string): string {
+    if (line.startsWith("RouteNotFoundException")) return "stack-err";
+    if (line.startsWith("Hint")) return "stack-hint";
+    return "stack-line";
+}
+---
+
+<Layout title={t.title}>
+    <section class="not-found">
+        <div class="not-found-head">
+            <div class="section-label">{t.sub}</div>
+            <h1 class="not-found-code">{t.heading}</h1>
+            <p class="not-found-body">{t.body}</p>
+            <div class="flex flex-wrap gap-3 mt-6">
+                <a href={t.homeHref} class="btn-primary">{t.homeLabel}</a>
+                <a href={t.contactHref} class="btn-secondary">{t.contactLabel}</a>
+            </div>
+        </div>
+
+        <pre class="stack-trace" aria-label={t.stackTitle}><span class="stack-title">{t.stackTitle}</span>
+{t.stackLines.map((line) => <span class={lineClass(line)}>{line + "\n"}</span>)}</pre>
+    </section>
+</Layout>
+
+<style>
+    .not-found {
+        display: grid;
+        gap: 2.5rem;
+        max-width: 56rem;
+    }
+
+    .not-found-code {
+        font-family: var(--font-display);
+        font-size: clamp(5rem, 14vw, 10rem);
+        line-height: 0.9;
+        margin: 1rem 0 1.5rem;
+    }
+
+    .not-found-body {
+        max-width: 38rem;
+        color: var(--c-muted);
+        line-height: 1.65;
+        font-size: 1.05rem;
+    }
+
+    .stack-trace {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        line-height: 1.6;
+        background: color-mix(in srgb, var(--c-paper) 92%, transparent);
+        border: 1px solid var(--c-border);
+        border-left: 3px solid var(--c-accent);
+        border-radius: var(--radius-card);
+        padding: 1.25rem 1.5rem;
+        color: var(--c-muted);
+        white-space: pre-wrap;
+        overflow-x: auto;
+    }
+
+    .stack-title {
+        display: block;
+        color: var(--c-text);
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-size: 0.7rem;
+    }
+
+    .stack-err {
+        color: var(--c-accent);
+        font-weight: 700;
+    }
+
+    .stack-hint {
+        color: var(--c-text);
+    }
+</style>

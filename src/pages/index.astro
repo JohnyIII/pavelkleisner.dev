@@ -15,9 +15,8 @@ import CtaBand from "@/components/CtaBand.astro";
         body="I mainly work with Kotlin, Java, Spring and PostgreSQL. In recent years my focus has been TSM/CETIN production flow: B2B behavior, data compatibility, incident analysis, new version rollout and the places where business rules meet runtime reality."
     >
         <p>
-            I am not a “full-stack generalist for everything”. I am a backend-heavy
-            programmer who can still read the frontend, database and operational logs
-            when the real cause is spread across the system.
+            <strong>Backend-heavy by choice.</strong> I read the frontend, database and operational
+            logs when the real cause of a production issue is spread across the system.
         </p>
         <div class="flex flex-wrap gap-3 mt-8">
             <a href="/projects" class="btn-primary">View experience</a>
@@ -26,22 +25,26 @@ import CtaBand from "@/components/CtaBand.astro";
     </PageIntro>
 
     <section class="mb-24">
-        <div class="fact-strip">
+        <div class="snapshot-list">
             <div>
-                <div class="fact-value">9+</div>
-                <div class="fact-label">years in software</div>
+                <div class="snapshot-key">Primary stack</div>
+                <div class="snapshot-value">Kotlin · Java · Spring</div>
+                <div class="snapshot-detail">PostgreSQL, Kafka-style messaging</div>
             </div>
             <div>
-                <div class="fact-value">5700+</div>
-                <div class="fact-label">tracked work commits</div>
+                <div class="snapshot-key">Production rollouts</div>
+                <div class="snapshot-value">TSM <span class="accent-text">1.5 · 2.2 · 2.4</span></div>
+                <div class="snapshot-detail">Lead on 2.2 / 2.4, core contributor on 1.5</div>
             </div>
             <div>
-                <div class="fact-value">TSM</div>
-                <div class="fact-label">2.2 / 2.4 production rollouts</div>
+                <div class="snapshot-key">Experience</div>
+                <div class="snapshot-value">9+ years</div>
+                <div class="snapshot-detail">Backend, integrations, full-stack stints</div>
             </div>
             <div>
-                <div class="fact-value">Prague</div>
-                <div class="fact-label">Czech Republic</div>
+                <div class="snapshot-key">Based in</div>
+                <div class="snapshot-value">Prague · CET</div>
+                <div class="snapshot-detail">Open to remote collaboration</div>
             </div>
         </div>
     </section>
@@ -51,27 +54,54 @@ import CtaBand from "@/components/CtaBand.astro";
             title="Where I fit best"
             body="The value is usually not another abstraction layer. It is a change that survives real data, integrations, support and the next release."
         />
-        <ul class="note-list">
-            <li><strong>Integrations</strong><span>B2B APIs, process flows, message behavior, retries, logs and failure modes that only become visible after deployment.</span></li>
-            <li><strong>Releases</strong><span>Rolling new versions into real environments while watching compatibility, old data and operational risk.</span></li>
-            <li><strong>Architecture</strong><span>Small safe changes, clearly named rules and service boundaries. No ceremony around patterns.</span></li>
-            <li><strong>Debugging</strong><span>Incidents through logs, metrics, databases and domain context. Not random patches around symptoms.</span></li>
-        </ul>
+        <div class="fit-grid">
+            <div class="fit-row">
+                <div class="fit-cat">Integrations</div>
+                <div class="fit-desc">B2B APIs, process flows, message behavior, retries, logs and failure modes that only become visible after deployment.</div>
+                <div class="fit-eg">// retry handler, off-by-one in production</div>
+            </div>
+            <div class="fit-row">
+                <div class="fit-cat">Releases</div>
+                <div class="fit-desc">Rolling new versions into real environments while watching compatibility, old data and operational risk.</div>
+                <div class="fit-eg">// TSM 2.4 rollout, zero data loss</div>
+            </div>
+            <div class="fit-row">
+                <div class="fit-cat">Architecture</div>
+                <div class="fit-desc">Small safe changes, clearly named rules and service boundaries. No ceremony around patterns.</div>
+                <div class="fit-eg">// domain rules &gt; pattern catalogues</div>
+            </div>
+            <div class="fit-row">
+                <div class="fit-cat">Debugging</div>
+                <div class="fit-desc">Incidents through logs, metrics, databases and domain context. Not random patches around symptoms.</div>
+                <div class="fit-eg">// psql, grep, EXPLAIN ANALYZE</div>
+            </div>
+        </div>
     </section>
 
     <section class="mb-24">
         <SectionIntro title="Core stack" />
-        <div class="flex flex-wrap gap-2">
-            <span class="pill">Kotlin</span>
-            <span class="pill">Java</span>
-            <span class="pill">Spring</span>
-            <span class="pill">PostgreSQL</span>
-            <span class="pill">Kafka</span>
-            <span class="pill">Kubernetes</span>
-            <span class="pill">Angular</span>
-            <span class="pill">Oracle</span>
-            <span class="pill">Astro</span>
-            <span class="pill">TypeScript</span>
+        <div>
+            <div class="stack-group">
+                <div class="stack-label">Primary</div>
+                <div class="stack-pills">
+                    <span class="pill pill-strong">Kotlin</span>
+                    <span class="pill pill-strong">Java</span>
+                    <span class="pill pill-strong">Spring</span>
+                    <span class="pill pill-strong">PostgreSQL</span>
+                    <span class="pill pill-strong">Kafka</span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <div class="stack-label">Also</div>
+                <div class="stack-pills">
+                    <span class="pill pill-muted">Kubernetes</span>
+                    <span class="pill pill-muted">Oracle</span>
+                    <span class="pill pill-muted">Angular</span>
+                    <span class="pill pill-muted">Python / Django</span>
+                    <span class="pill pill-muted">Astro</span>
+                    <span class="pill pill-muted">TypeScript</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -81,14 +111,14 @@ import CtaBand from "@/components/CtaBand.astro";
             body="Most of my professional work is internal or client-owned, so I describe responsibility and production context rather than exposing code."
         />
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <InfoCard title="TSM / CETIN" meta="2020 - present" tag="main focus">
+            <InfoCard title="TSM / CETIN" meta="2020 - present" tag="current focus">
                 Senior backend and integration work on Kotlin/Java/Spring services, PostgreSQL-backed systems, B2B flows, PEW, NIP, change management and production rollout of new platform versions.
-            </InfoCard>
-            <InfoCard title="ZIS" meta="2017 - 2018" tag="foundation">
-                Enterprise Java and ZK/ZUL work across screens, controllers, services, DAO layers, imports, Excel processing and production bug fixes.
             </InfoCard>
             <InfoCard title="MNCP" meta="2018 - 2021" tag="full-stack">
                 Kotlin/Spring, Angular and database work around authentication, measuring batches, archives, exports and operational fixes.
+            </InfoCard>
+            <InfoCard title="ZIS" meta="2017 - 2018" tag="foundation">
+                Enterprise Java and ZK/ZUL work across screens, controllers, services, DAO layers, imports, Excel processing and production bug fixes.
             </InfoCard>
         </div>
     </section>

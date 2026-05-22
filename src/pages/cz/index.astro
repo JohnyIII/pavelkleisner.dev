@@ -6,7 +6,7 @@ import InfoCard from "@/components/InfoCard.astro";
 import CtaBand from "@/components/CtaBand.astro";
 ---
 
-<Layout title="Pavel Kleisner - Senior Backend & Integration Engineer">
+<Layout title="Pavel Kleisner - Senior backend a integrační vývojář">
 
     <PageIntro
         eyebrow="Senior Backend & Integration Engineer"
@@ -15,9 +15,8 @@ import CtaBand from "@/components/CtaBand.astro";
         body="Dělám hlavně Kotlin, Javu, Spring a PostgreSQL. V posledních letech řeším TSM/CETIN produkční flow: B2B chování, datovou kompatibilitu, incidenty, rollout nových verzí a místa, kde se business pravidlo potká s runtime realitou."
     >
         <p>
-            Nejsem “full-stack generalista na všechno”. Jsem backendově těžký programátor,
-            který umí číst frontend, databázi i provozní logy, když je potřeba najít
-            skutečný důvod problému.
+            <strong>Backendově těžký, vědomě.</strong> Frontend, databázi i provozní logy čtu, když
+            se skutečný důvod problému schovává napříč systémem.
         </p>
         <div class="flex flex-wrap gap-3 mt-8">
             <a href="/cz/projekty" class="btn-primary">Zkušenosti</a>
@@ -26,22 +25,26 @@ import CtaBand from "@/components/CtaBand.astro";
     </PageIntro>
 
     <section class="mb-24">
-        <div class="fact-strip">
+        <div class="snapshot-list">
             <div>
-                <div class="fact-value">9+</div>
-                <div class="fact-label">let ve vývoji</div>
+                <div class="snapshot-key">Hlavní stack</div>
+                <div class="snapshot-value">Kotlin · Java · Spring</div>
+                <div class="snapshot-detail">PostgreSQL, Kafka-style messaging</div>
             </div>
             <div>
-                <div class="fact-value">5700+</div>
-                <div class="fact-label">dohledaných pracovních commitů</div>
+                <div class="snapshot-key">Produkční rollouty</div>
+                <div class="snapshot-value">TSM <span class="accent-text">1.5 · 2.2 · 2.4</span></div>
+                <div class="snapshot-detail">Hlavní vývojář u 2.2 / 2.4, podstatná součást u 1.5</div>
             </div>
             <div>
-                <div class="fact-value">TSM</div>
-                <div class="fact-label">2.2 / 2.4 produkční rollouty</div>
+                <div class="snapshot-key">Zkušenost</div>
+                <div class="snapshot-value">9+ let</div>
+                <div class="snapshot-detail">Backend, integrace, full-stack epizody</div>
             </div>
             <div>
-                <div class="fact-value">Praha</div>
-                <div class="fact-label">Česká republika</div>
+                <div class="snapshot-key">Působím v</div>
+                <div class="snapshot-value">Praha · CET</div>
+                <div class="snapshot-detail">Otevřený vzdálené spolupráci</div>
             </div>
         </div>
     </section>
@@ -51,27 +54,54 @@ import CtaBand from "@/components/CtaBand.astro";
             title="Kde dávám největší smysl"
             body="Největší hodnota není v tom přidat další vrstvu abstrakce. Je v tom udělat změnu, která přežije data, integrace, support a další release."
         />
-        <ul class="note-list">
-            <li><strong>Integrace</strong><span>B2B API, procesní toky, zprávy, retry chování, logy a chybové stavy, které začnou být důležité až po nasazení.</span></li>
-            <li><strong>Releasy</strong><span>Nasazování nových verzí do reálných prostředí se zaměřením na kompatibilitu, stará data a provozní rizika.</span></li>
-            <li><strong>Architektura</strong><span>Malé bezpečné změny, jasně pojmenovaná pravidla a hranice služeb. Bez divadla kolem patternů.</span></li>
-            <li><strong>Debugging</strong><span>Incidenty přes logy, metriky, databázi a doménový kontext. Ne přes náhodné patchování symptomů.</span></li>
-        </ul>
+        <div class="fit-grid">
+            <div class="fit-row">
+                <div class="fit-cat">Integrace</div>
+                <div class="fit-desc">B2B API, procesní toky, zprávy, retry chování, logy a chybové stavy, které začnou být důležité až po nasazení.</div>
+                <div class="fit-eg">// retry handler, off-by-one v produkci</div>
+            </div>
+            <div class="fit-row">
+                <div class="fit-cat">Releasy</div>
+                <div class="fit-desc">Nasazování nových verzí do reálných prostředí se zaměřením na kompatibilitu, stará data a provozní rizika.</div>
+                <div class="fit-eg">// TSM 2.4 rollout bez ztráty dat</div>
+            </div>
+            <div class="fit-row">
+                <div class="fit-cat">Architektura</div>
+                <div class="fit-desc">Malé bezpečné změny, jasně pojmenovaná pravidla a hranice služeb. Bez divadla kolem patternů.</div>
+                <div class="fit-eg">// doménová pravidla &gt; katalog patternů</div>
+            </div>
+            <div class="fit-row">
+                <div class="fit-cat">Debugging</div>
+                <div class="fit-desc">Incidenty přes logy, metriky, databázi a doménový kontext. Ne přes náhodné patchování symptomů.</div>
+                <div class="fit-eg">// psql, grep, EXPLAIN ANALYZE</div>
+            </div>
+        </div>
     </section>
 
     <section class="mb-24">
         <SectionIntro title="Hlavní stack" />
-        <div class="flex flex-wrap gap-2">
-            <span class="pill">Kotlin</span>
-            <span class="pill">Java</span>
-            <span class="pill">Spring</span>
-            <span class="pill">PostgreSQL</span>
-            <span class="pill">Kafka</span>
-            <span class="pill">Kubernetes</span>
-            <span class="pill">Angular</span>
-            <span class="pill">Oracle</span>
-            <span class="pill">Astro</span>
-            <span class="pill">TypeScript</span>
+        <div>
+            <div class="stack-group">
+                <div class="stack-label">Hlavní</div>
+                <div class="stack-pills">
+                    <span class="pill pill-strong">Kotlin</span>
+                    <span class="pill pill-strong">Java</span>
+                    <span class="pill pill-strong">Spring</span>
+                    <span class="pill pill-strong">PostgreSQL</span>
+                    <span class="pill pill-strong">Kafka</span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <div class="stack-label">Také</div>
+                <div class="stack-pills">
+                    <span class="pill pill-muted">Kubernetes</span>
+                    <span class="pill pill-muted">Oracle</span>
+                    <span class="pill pill-muted">Angular</span>
+                    <span class="pill pill-muted">Python / Django</span>
+                    <span class="pill pill-muted">Astro</span>
+                    <span class="pill pill-muted">TypeScript</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -84,11 +114,11 @@ import CtaBand from "@/components/CtaBand.astro";
             <InfoCard title="TSM / CETIN" meta="2020 - současnost" tag="hlavní fokus">
                 Seniorní backend a integrační práce na Kotlin/Java/Spring službách, PostgreSQL systémech, B2B flow, PEW, NIP, change managementu a produkčních rolloutech nových verzí.
             </InfoCard>
-            <InfoCard title="ZIS" meta="2017 - 2018" tag="základ">
-                Enterprise Java a ZK/ZUL práce přes obrazovky, controllery, služby, DAO vrstvy, importy, Excel zpracování a produkční opravy.
-            </InfoCard>
             <InfoCard title="MNCP" meta="2018 - 2021" tag="full-stack">
                 Kotlin/Spring, Angular a databázová práce kolem autentizace, měřících dávek, archivů, exportů a provozních oprav.
+            </InfoCard>
+            <InfoCard title="ZIS" meta="2017 - 2018" tag="základ">
+                Enterprise Java a ZK/ZUL práce přes obrazovky, controllery, služby, DAO vrstvy, importy, Excel zpracování a produkční opravy.
             </InfoCard>
         </div>
     </section>

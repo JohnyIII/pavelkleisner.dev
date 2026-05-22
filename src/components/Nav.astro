@@ -6,27 +6,32 @@ import ThemeSwitch from "@/components/ThemeSwitch.astro";
 
 const { lang = "en" } = Astro.props;
 const t = lang === "cz" ? cz : en;
+
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+
+const enRoutes = [en.routes.home, en.routes.about, en.routes.projects, en.routes.contact];
+const czRoutes = [cz.routes.home, cz.routes.about, cz.routes.projects, cz.routes.contact];
+
+let altHref: string;
+if (lang === "cz") {
+    const idx = czRoutes.indexOf(pathname);
+    altHref = idx >= 0 ? enRoutes[idx] : "/";
+} else {
+    const idx = enRoutes.indexOf(pathname);
+    altHref = idx >= 0 ? czRoutes[idx] : "/cz";
+}
 ---
 
-
-
 <div class="site-nav-wrap">
-    <nav class="site-nav">
-        <a
-                href={t.routes.home}
-                class="nav-link">            {t.nav.home}
-        </a>
-        <a href={t.routes.about} class="nav-link">
-            {t.nav.about}
-        </a>
-        <a href={t.routes.projects} class="nav-link">
-            {t.nav.projects}
-        </a>
-        <a href={t.routes.contact} class="nav-link">
-            {t.nav.contact}
-        </a>
+    <nav class="site-nav" aria-label="Primary">
+        <a href={t.routes.home} class="nav-link">{t.nav.home}</a>
+        <a href={t.routes.about} class="nav-link">{t.nav.about}</a>
+        <a href={t.routes.projects} class="nav-link">{t.nav.projects}</a>
+        <a href={t.routes.contact} class="nav-link">{t.nav.contact}</a>
     </nav>
 
-    <ThemeSwitch />
-    <LanguageSwitch lang={lang} />
+    <div class="header-tools">
+        <LanguageSwitch lang={lang} altHref={altHref} />
+        <ThemeSwitch lang={lang} />
+    </div>
 </div>

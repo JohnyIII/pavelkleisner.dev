@@ -1,23 +1,46 @@
-<div class="theme-switch" aria-label="Theme">
-    <button type="button" data-theme-choice="void" aria-pressed="true">Void</button>
-    <button type="button" data-theme-choice="paper" aria-pressed="false">Paper</button>
-</div>
+---
+const { lang = "en" } = Astro.props;
+const labelDark = lang === "cz" ? "Tmavý režim" : "Dark mode";
+const labelLight = lang === "cz" ? "Světlý režim" : "Light mode";
+---
+
+<button
+    type="button"
+    class="theme-toggle"
+    data-theme-toggle
+    aria-label={labelDark}
+    data-label-dark={labelDark}
+    data-label-light={labelLight}
+>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+    </svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    </svg>
+</button>
 
 <script>
-    const key = "pavelkleisner-theme";
-    const choices = document.querySelectorAll<HTMLButtonElement>("[data-theme-choice]");
+    const KEY = "pavelkleisner-theme";
+    const btn = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
 
-    function setTheme(theme: string) {
+    function apply(theme: string) {
         document.documentElement.dataset.theme = theme;
-        localStorage.setItem(key, theme);
-        choices.forEach((button) => {
-            button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
-        });
+        try { localStorage.setItem(KEY, theme); } catch {}
+        if (btn) {
+            const next = theme === "paper" ? "void" : "paper";
+            btn.setAttribute("aria-label", next === "paper" ? btn.dataset.labelLight ?? "" : btn.dataset.labelDark ?? "");
+        }
     }
 
-    choices.forEach((button) => {
-        button.addEventListener("click", () => setTheme(button.dataset.themeChoice ?? "void"));
-    });
+    const initial = (() => {
+        try { return localStorage.getItem(KEY); } catch { return null; }
+    })() ?? document.documentElement.dataset.theme ?? "void";
+    apply(initial);
 
-    setTheme(localStorage.getItem(key) ?? document.documentElement.dataset.theme ?? "void");
+    btn?.addEventListener("click", () => {
+        const current = document.documentElement.dataset.theme === "paper" ? "paper" : "void";
+        apply(current === "paper" ? "void" : "paper");
+    });
 </script>
