@@ -4,6 +4,7 @@ import PageIntro from "@/components/PageIntro.astro";
 import SectionIntro from "@/components/SectionIntro.astro";
 import InfoCard from "@/components/InfoCard.astro";
 import CtaBand from "@/components/CtaBand.astro";
+import WarStory from "@/components/WarStory.astro";
 ---
 
 <Layout title="Pavel Kleisner - Senior backend a integrační vývojář">
@@ -11,14 +12,12 @@ import CtaBand from "@/components/CtaBand.astro";
     <PageIntro
         eyebrow="Senior Backend & Integration Engineer"
         title="Pavel Kleisner"
-        lead="Backend, integrace a release práce pro systémy, kde chyba po nasazení opravdu něco stojí."
-        body="Dělám hlavně Kotlin, Javu, Spring a PostgreSQL. V posledních letech řeším TSM/CETIN produkční flow: B2B chování, datovou kompatibilitu, incidenty, rollout nových verzí a místa, kde se business pravidlo potká s runtime realitou."
+        lead="Backend, integrace a releasy — ta nezáživná část, kde se systém potká s reálnými daty a má zůstat naživu."
+        body="Dělám Kotlin/Java/Spring služby a PostgreSQL, hlavně kolem TSM/CETIN produkčního flow: B2B chování, datová kompatibilita, incidenty a rollout nových verzí. Radši opravím produkci, než abych měl pravdu."
+        photo="/pavel.jpg"
+        photoAlt="Pavel Kleisner"
     >
-        <p>
-            <strong>Backendově těžký, vědomě.</strong> Frontend, databázi i provozní logy čtu, když
-            se skutečný důvod problému schovává napříč systémem.
-        </p>
-        <div class="flex flex-wrap gap-3 mt-8">
+        <div slot="actions" class="flex flex-wrap gap-3 mt-8">
             <a href="/cz/projekty" class="btn-primary">Zkušenosti</a>
             <a href="/cz/kontakt" class="btn-secondary">Kontakt</a>
         </div>
@@ -58,25 +57,35 @@ import CtaBand from "@/components/CtaBand.astro";
             <div class="fit-row">
                 <div class="fit-cat">Integrace</div>
                 <div class="fit-desc">B2B API, procesní toky, zprávy, retry chování, logy a chybové stavy, které začnou být důležité až po nasazení.</div>
-                <div class="fit-eg">// retry handler, off-by-one v produkci</div>
             </div>
             <div class="fit-row">
                 <div class="fit-cat">Releasy</div>
                 <div class="fit-desc">Nasazování nových verzí do reálných prostředí se zaměřením na kompatibilitu, stará data a provozní rizika.</div>
-                <div class="fit-eg">// TSM 2.4 rollout bez ztráty dat</div>
             </div>
             <div class="fit-row">
                 <div class="fit-cat">Architektura</div>
                 <div class="fit-desc">Malé bezpečné změny, jasně pojmenovaná pravidla a hranice služeb. Bez divadla kolem patternů.</div>
-                <div class="fit-eg">// doménová pravidla &gt; katalog patternů</div>
             </div>
             <div class="fit-row">
                 <div class="fit-cat">Debugging</div>
                 <div class="fit-desc">Incidenty přes logy, metriky, databázi a doménový kontext. Ne přes náhodné patchování symptomů.</div>
-                <div class="fit-eg">// psql, grep, EXPLAIN ANALYZE</div>
             </div>
         </div>
     </section>
+
+    <WarStory kicker="War story · anonymně" title="UUID, které nebylo UUID">
+        <p class="mb-4">
+            Při rolloutu první verze platformy slibovala kuchařka <code>messageId</code> jako
+            UUID. Jednomu partnerovi to začalo hned padat. Jejich systém si potichu parsoval ID
+            ticketu <em>ze</em> starého formátu <code>idTicketu_timestamp</code> — přestože ID
+            ticketu měli rovnou v těle zprávy.
+        </p>
+        <p>
+            Čistá oprava byla na jejich straně, jenže v korporátu by trvala měsíce. Tak jsem naši
+            stranu přizpůsobil zpět původnímu tvaru a nechal produkci běžet. Někdy správné řešení
+            není to čisté — je to to, které ve dvě ráno nerozbije někoho jiného.
+        </p>
+    </WarStory>
 
     <section class="mb-24">
         <SectionIntro title="Hlavní stack" />
@@ -121,6 +130,12 @@ import CtaBand from "@/components/CtaBand.astro";
                 Enterprise Java a ZK/ZUL práce přes obrazovky, controllery, služby, DAO vrstvy, importy, Excel zpracování a produkční opravy.
             </InfoCard>
         </div>
+    </section>
+
+    <section class="offclock-line mb-24">
+        <span class="offclock-kicker">Mimo klávesnici</span>
+        <span>Hráč, čtenář a metalista z Podkrkonoší.</span>
+        <a href="/cz/o-mne" class="offclock-link">Víc o mně →</a>
     </section>
 
     <CtaBand
