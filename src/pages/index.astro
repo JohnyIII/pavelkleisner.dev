@@ -4,6 +4,7 @@ import PageIntro from "@/components/PageIntro.astro";
 import SectionIntro from "@/components/SectionIntro.astro";
 import InfoCard from "@/components/InfoCard.astro";
 import CtaBand from "@/components/CtaBand.astro";
+import WarStory from "@/components/WarStory.astro";
 ---
 
 <Layout title="Pavel Kleisner - Senior Backend & Integration Engineer">
@@ -11,14 +12,12 @@ import CtaBand from "@/components/CtaBand.astro";
     <PageIntro
         eyebrow="Senior Backend & Integration Engineer"
         title="Pavel Kleisner"
-        lead="Backend, integration and release work for systems where production mistakes are expensive."
-        body="I mainly work with Kotlin, Java, Spring and PostgreSQL. In recent years my focus has been TSM/CETIN production flow: B2B behavior, data compatibility, incident analysis, new version rollout and the places where business rules meet runtime reality."
+        lead="Backend, integrations and releases — the unglamorous part where systems meet real data and have to stay up."
+        body="I work on Kotlin/Java/Spring services and PostgreSQL, mostly around TSM/CETIN production flow: B2B behaviour, data compatibility, incident analysis and rolling out new platform versions. I'd rather fix production than be right about it."
+        photo="/pavel.jpg"
+        photoAlt="Pavel Kleisner"
     >
-        <p>
-            <strong>Backend-heavy by choice.</strong> I read the frontend, database and operational
-            logs when the real cause of a production issue is spread across the system.
-        </p>
-        <div class="flex flex-wrap gap-3 mt-8">
+        <div slot="actions" class="flex flex-wrap gap-3 mt-8">
             <a href="/projects" class="btn-primary">View experience</a>
             <a href="/contact" class="btn-secondary">Contact</a>
         </div>
@@ -52,31 +51,43 @@ import CtaBand from "@/components/CtaBand.astro";
     <section class="mb-24">
         <SectionIntro
             title="Where I fit best"
-            body="The value is usually not another abstraction layer. It is a change that survives real data, integrations, support and the next release."
+            body="Usually the value isn't another abstraction layer. It's a change that survives real data, integrations, support and the next release."
         />
         <div class="fit-grid">
             <div class="fit-row">
                 <div class="fit-cat">Integrations</div>
                 <div class="fit-desc">B2B APIs, process flows, message behavior, retries, logs and failure modes that only become visible after deployment.</div>
-                <div class="fit-eg">// retry handler, off-by-one in production</div>
             </div>
             <div class="fit-row">
                 <div class="fit-cat">Releases</div>
                 <div class="fit-desc">Rolling new versions into real environments while watching compatibility, old data and operational risk.</div>
-                <div class="fit-eg">// TSM 2.4 rollout, zero data loss</div>
             </div>
             <div class="fit-row">
                 <div class="fit-cat">Architecture</div>
                 <div class="fit-desc">Small safe changes, clearly named rules and service boundaries. No ceremony around patterns.</div>
-                <div class="fit-eg">// domain rules &gt; pattern catalogues</div>
             </div>
             <div class="fit-row">
                 <div class="fit-cat">Debugging</div>
                 <div class="fit-desc">Incidents through logs, metrics, databases and domain context. Not random patches around symptoms.</div>
-                <div class="fit-eg">// psql, grep, EXPLAIN ANALYZE</div>
             </div>
         </div>
     </section>
+
+    <WarStory kicker="War story · anonymised" title="The UUID that wasn't a UUID">
+        <p class="mb-4">
+            When we rolled out the first platform version, the integration spec said the
+            <code>messageId</code> would be a UUID. One partner started failing immediately.
+            Their system was quietly parsing the ticket ID <em>out of</em> the old
+            <code>ticketId_timestamp</code> format — even though the ticket ID sat right
+            there in the message body.
+        </p>
+        <p>
+            The clean fix was on their side, but in a corporate setting that change would take
+            months. So I adapted our side back to the old shape and kept production running.
+            Sometimes the right call isn't the pure one — it's the one that doesn't break
+            someone else at 2 a.m.
+        </p>
+    </WarStory>
 
     <section class="mb-24">
         <SectionIntro title="Core stack" />
@@ -121,6 +132,12 @@ import CtaBand from "@/components/CtaBand.astro";
                 Enterprise Java and ZK/ZUL work across screens, controllers, services, DAO layers, imports, Excel processing and production bug fixes.
             </InfoCard>
         </div>
+    </section>
+
+    <section class="offclock-line mb-24">
+        <span class="offclock-kicker">Off the keyboard</span>
+        <span>I'm a gamer, a heavy reader and a metalhead from the Krkonoše foothills.</span>
+        <a href="/about" class="offclock-link">More about me →</a>
     </section>
 
     <CtaBand

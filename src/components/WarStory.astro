@@ -1,0 +1,9 @@
+---
+const { kicker, title } = Astro.props;
+---
+
+<section class="war-story mb-24">
+    {kicker && <div class="war-kicker">{kicker}</div>}
+    <h2 class="war-title">{title}</h2>
+    <div class="war-body"><slot /></div>
+</section>

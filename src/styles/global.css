@@ -14,6 +14,7 @@
   --c-text: #eef1f3;
   --c-accent: #e22932;
   --c-accent-2: #61d7e8;
+  --c-accent-3: #5fb37a;
   --c-card: rgba(16, 20, 25, 0.82);
   --c-card-hover: rgba(22, 28, 35, 0.92);
   --c-primary-bg: #eef1f3;
@@ -38,6 +39,7 @@
   --c-text: #1a1c1e;
   --c-accent: #b0322d;
   --c-accent-2: #1f6268;
+  --c-accent-3: #3a5a40;
   --c-card: #ffffff;
   --c-card-hover: #fbfbf8;
   --c-primary-bg: #1a1c1e;
@@ -425,6 +427,21 @@ h3 {
   display: none;
 }
 
+.page-aside:has(.hero-photo) {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 20rem;
+  aspect-ratio: 360 / 500;
+  object-fit: cover;
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
 .page-intro:has(.page-aside:empty) {
   grid-template-columns: minmax(0, 48rem);
 }
@@ -542,6 +559,46 @@ h3 {
   line-height: 1.65;
 }
 
+.war-story {
+  border: 1px solid var(--c-border);
+  border-left: 3px solid var(--c-accent);
+  border-radius: var(--radius-card);
+  background: var(--c-card);
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.war-kicker {
+  color: var(--c-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.war-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.85rem;
+}
+
+.war-body {
+  max-width: 52rem;
+  color: var(--c-muted);
+  line-height: 1.7;
+}
+
+.war-body code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--c-text);
+  background: color-mix(in srgb, var(--c-accent) 12%, transparent);
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+}
+
 .snapshot-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -592,7 +649,7 @@ h3 {
 
 .fit-grid {
   display: grid;
-  grid-template-columns: 12rem minmax(0, 1.5fr) minmax(0, 1fr);
+  grid-template-columns: 12rem minmax(0, 1fr);
   gap: 1rem 1.5rem;
   border-top: 1px solid var(--c-border);
 }
@@ -608,8 +665,7 @@ h3 {
 }
 
 .fit-row > .fit-cat,
-.fit-row > .fit-desc,
-.fit-row > .fit-eg {
+.fit-row > .fit-desc {
   padding: 1.1rem 0;
   border-bottom: 1px solid var(--c-border);
 }
@@ -623,14 +679,6 @@ h3 {
 .fit-desc {
   color: var(--c-muted);
   line-height: 1.6;
-}
-
-.fit-eg {
-  font-family: var(--font-mono);
-  color: var(--c-accent);
-  font-size: 0.85rem;
-  line-height: 1.5;
-  align-self: center;
 }
 
 .stack-group {
@@ -691,8 +739,7 @@ h3 {
   }
 
   .fit-row > .fit-cat,
-  .fit-row > .fit-desc,
-  .fit-row > .fit-eg {
+  .fit-row > .fit-desc {
     padding: 0.4rem 0;
     border-bottom: 0;
   }
@@ -701,7 +748,7 @@ h3 {
     padding-top: 1rem;
   }
 
-  .fit-row > .fit-eg {
+  .fit-row > .fit-desc {
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--c-border);
   }
@@ -720,6 +767,11 @@ h3 {
     border-top: 2px solid var(--c-accent);
     padding-top: 1rem;
     padding-left: 0;
+  }
+
+  .page-aside:has(.hero-photo) {
+    border-top: 0;
+    padding-top: 0;
   }
 
   .cta-band {
@@ -747,4 +799,66 @@ h3 {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
+}
+
+.offclock-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.9rem;
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  padding: 1.4rem 0;
+  color: var(--c-text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.offclock-kicker {
+  color: var(--c-accent-3);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.offclock-link {
+  color: var(--c-accent-2);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.offclock-link:hover {
+  color: var(--c-accent);
+}
+
+.status-readout {
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-card);
+  background: var(--c-card);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  max-width: 32rem;
+}
+
+.sr-row {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.sr-row:last-child {
+  border-bottom: 0;
+}
+
+.sr-key {
+  color: var(--c-accent-2);
+  min-width: 8.5rem;
+}
+
+.sr-val {
+  color: var(--c-text);
+  min-width: 0;
+  overflow-wrap: anywhere;
 }

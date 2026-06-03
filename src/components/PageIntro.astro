@@ -5,6 +5,8 @@ const {
     highlight,
     lead,
     body,
+    photo,
+    photoAlt,
 } = Astro.props;
 ---
 
@@ -16,8 +18,11 @@ const {
         </h1>
         {lead && <p class="page-lead">{lead}</p>}
         {body && <p class="page-body">{body}</p>}
+        <slot name="actions" />
     </div>
     <div class="page-aside">
-        <slot />
+        {photo
+            ? <img class="hero-photo" src={photo} alt={photoAlt ?? ""} width="360" height="500" loading="eager" />
+            : <slot />}
     </div>
 </section>

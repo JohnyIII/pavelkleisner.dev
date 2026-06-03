@@ -5,6 +5,7 @@ import SectionIntro from "@/components/SectionIntro.astro";
 import InfoCard from "@/components/InfoCard.astro";
 import TimelineItem from "@/components/TimelineItem.astro";
 import CtaBand from "@/components/CtaBand.astro";
+import StatusReadout from "@/components/StatusReadout.astro";
 ---
 
 <Layout title="O mně - Pavel Kleisner">
@@ -12,25 +13,26 @@ import CtaBand from "@/components/CtaBand.astro";
     <PageIntro
         title="O"
         highlight="mně"
-        lead="Jsem senior backend a integrační vývojář zaměřený na Kotlin, Javu, Spring, PostgreSQL a produkční systémy."
-        body="Nejlépe funguju tam, kde záleží na korektnosti, kompatibilitě, observabilitě a bezpečném releasu. Můj současný profil není jen psaní backendového kódu. Je to ownership místa, kde se potkává implementace, doménové chování, integrační kontrakty a produkční releasy."
+        lead="Senior backend a integrační vývojář — Kotlin, Java, Spring, PostgreSQL a produkční systémy, co na nich běží."
+        body="Nejlíp mi je tam, kde fakt záleží na správnosti, kompatibilitě a bezpečnosti releasů. Není to jen psaní backendu — je to vlastnictví místa, kde se potká implementace, doménové chování, integrační kontrakty a produkční nasazení. Rád pomáhám, pořád se učím a nehraju si na víc, než jsem."
+        photo="/pavel.jpg"
+        photoAlt="Pavel Kleisner"
     />
 
     <section class="mb-24">
         <SectionIntro title="Jak přemýšlím o softwaru" />
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <InfoCard title="Malé explicitní změny">
-                V produkčních systémech je často bezpečnější dobře pojmenované
-                business pravidlo, izolované mapování, lepší fallback nebo cílený test
-                než velký přepis.
+            <InfoCard title="Malé, jasné změny">
+                V živém systému většinou přesně pojmenované pravidlo, izolovaný mapping nebo
+                jeden cílený test porazí velký rewrite. Míň věcí, co se ve dvě ráno rozbije.
             </InfoCard>
-            <InfoCard title="Moderní s důvodem">
-                Nové verze, frameworky a infrastruktura dávají smysl, když systém
-                dělají spolehlivější, lépe pozorovatelný nebo snazší na změnu.
+            <InfoCard title="Moderní, když se to vyplatí">
+                Mám rád nové verze a nástroje — ale jen když dělají systém spolehlivější,
+                přehlednější nebo snazší na změnu. Ne kvůli životopisu.
             </InfoCard>
-            <InfoCard title="Runtime ownership">
-                Skutečný systém začíná po nasazení: stará data, retry,
-                externí kontrakty, logy, metriky a supportovatelnost.
+            <InfoCard title="Nasazením to nekončí">
+                Skutečný systém začíná po nasazení: stará data, retry, externí kontrakty,
+                logy, metriky a ten, kdo to bude supportovat.
             </InfoCard>
         </div>
     </section>
@@ -102,13 +104,33 @@ import CtaBand from "@/components/CtaBand.astro";
     </section>
 
     <section class="mb-24">
-        <SectionIntro title="Mimo kód" />
-        <p class="max-w-4xl card-body leading-relaxed">
-            Ve volném čase mám rád hudbu, sci-fi, fantasy a anime.
-            Vlastní projekty mi umožňují zkoušet nové nápady bez tlaku produkčních deadline.
-            Rád stavím věci od začátku do konce, protože to udržuje viditelný celý
-            životní cyklus produktu: nápad, implementaci, nasazení, údržbu a zpětnou vazbu.
-        </p>
+        <SectionIntro
+            title="Mimo práci"
+            body="Stavím věci od začátku do konce i proto, že mě to baví. Tady je člověk za commity."
+        />
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+            <InfoCard title="Čtení & audioknihy">
+                Asi 125 knih a přibývá — LitRPG (Vasily Mahanenko), spousta české sci-fi/fantasy
+                (Kotleta, Sněgoňová, Starý, Kadlečková, Stehlíková) a k tomu Andy Weir, Liu Cixin,
+                Sapkowski a Pratchett. Většinu poslouchám jako audioknihy.
+            </InfoCard>
+            <InfoCard title="Anime">
+                Vyrostl jsem na shounen Big 3 (Naruto, One Piece, Bleach). One Piece pořád běží —
+                a já se pořád dívám.
+            </InfoCard>
+            <InfoCard title="Hraní">
+                Hlavní způsob, jak vypnout. PlayStation 5, teď hraju Saros.
+            </InfoCard>
+            <InfoCard title="Metal & kafe & kolo">
+                Iron Maiden, Arch Enemy, Jinjer, HammerFall a spol. ve sluchátkách. Kafe čerstvě
+                namleté v ručním mlýnku a uvařené v moka konvičce. Kolo, co čeká na repas. Kočky
+                i psi vítáni.
+            </InfoCard>
+        </div>
+
+        <p class="card-body mb-4">Z Horní Radechové u Náchoda, v Podkrkonoší.</p>
+        <StatusReadout />
     </section>
 
     <CtaBand
