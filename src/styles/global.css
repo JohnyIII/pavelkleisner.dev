@@ -14,6 +14,7 @@
   --c-text: #eef1f3;
   --c-accent: #e22932;
   --c-accent-2: #61d7e8;
+  --c-accent-3: #5fb37a;
   --c-card: rgba(16, 20, 25, 0.82);
   --c-card-hover: rgba(22, 28, 35, 0.92);
   --c-primary-bg: #eef1f3;
@@ -38,6 +39,7 @@
   --c-text: #1a1c1e;
   --c-accent: #b0322d;
   --c-accent-2: #1f6268;
+  --c-accent-3: #3a5a40;
   --c-card: #ffffff;
   --c-card-hover: #fbfbf8;
   --c-primary-bg: #1a1c1e;
@@ -423,6 +425,16 @@ h3 {
 
 .page-aside:empty {
   display: none;
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 20rem;
+  aspect-ratio: 360 / 500;
+  object-fit: cover;
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
 }
 
 .page-intro:has(.page-aside:empty) {
