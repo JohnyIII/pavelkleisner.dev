@@ -4,6 +4,7 @@ import PageIntro from "@/components/PageIntro.astro";
 import SectionIntro from "@/components/SectionIntro.astro";
 import InfoCard from "@/components/InfoCard.astro";
 import CtaBand from "@/components/CtaBand.astro";
+import WarStory from "@/components/WarStory.astro";
 ---
 
 <Layout title="Pavel Kleisner - Senior Backend & Integration Engineer">
@@ -75,6 +76,22 @@ import CtaBand from "@/components/CtaBand.astro";
             </div>
         </div>
     </section>
+
+    <WarStory kicker="War story · anonymised" title="The UUID that wasn't a UUID">
+        <p class="mb-4">
+            When we rolled out the first platform version, the integration spec said the
+            <code>messageId</code> would be a UUID. One partner started failing immediately.
+            Their system was quietly parsing the ticket ID <em>out of</em> the old
+            <code>ticketId_timestamp</code> format — even though the ticket ID sat right
+            there in the message body.
+        </p>
+        <p>
+            The clean fix was on their side, but in a corporate setting that change would take
+            months. So I adapted our side back to the old shape and kept production running.
+            Sometimes the right call isn't the pure one — it's the one that doesn't break
+            someone else at 2 a.m.
+        </p>
+    </WarStory>
 
     <section class="mb-24">
         <SectionIntro title="Core stack" />
