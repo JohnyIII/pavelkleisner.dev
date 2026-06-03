@@ -821,3 +821,32 @@ h3 {
 .offclock-link:hover {
   color: var(--c-accent);
 }
+
+.status-readout {
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-card);
+  background: var(--c-card);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  max-width: 32rem;
+}
+
+.sr-row {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.sr-row:last-child {
+  border-bottom: 0;
+}
+
+.sr-key {
+  color: var(--c-accent-2);
+  min-width: 8.5rem;
+}
+
+.sr-val {
+  color: var(--c-text);
+}
