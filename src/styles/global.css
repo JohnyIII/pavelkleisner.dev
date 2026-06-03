@@ -427,6 +427,11 @@ h3 {
   display: none;
 }
 
+.page-aside:has(.hero-photo) {
+  border-left: 0;
+  padding-left: 0;
+}
+
 .hero-photo {
   width: 100%;
   max-width: 20rem;
@@ -762,6 +767,11 @@ h3 {
     border-top: 2px solid var(--c-accent);
     padding-top: 1rem;
     padding-left: 0;
+  }
+
+  .page-aside:has(.hero-photo) {
+    border-top: 0;
+    padding-top: 0;
   }
 
   .cta-band {
