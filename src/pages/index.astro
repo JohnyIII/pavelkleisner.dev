@@ -11,14 +11,12 @@ import CtaBand from "@/components/CtaBand.astro";
     <PageIntro
         eyebrow="Senior Backend & Integration Engineer"
         title="Pavel Kleisner"
-        lead="Backend, integration and release work for systems where production mistakes are expensive."
-        body="I mainly work with Kotlin, Java, Spring and PostgreSQL. In recent years my focus has been TSM/CETIN production flow: B2B behavior, data compatibility, incident analysis, new version rollout and the places where business rules meet runtime reality."
+        lead="Backend, integrations and releases — the unglamorous part where systems meet real data and have to stay up."
+        body="I work on Kotlin/Java/Spring services and PostgreSQL, mostly around TSM/CETIN production flow: B2B behaviour, data compatibility, incident analysis and rolling out new platform versions. I'd rather fix production than be right about it."
+        photo="/pavel.jpg"
+        photoAlt="Pavel Kleisner"
     >
-        <p>
-            <strong>Backend-heavy by choice.</strong> I read the frontend, database and operational
-            logs when the real cause of a production issue is spread across the system.
-        </p>
-        <div class="flex flex-wrap gap-3 mt-8">
+        <div slot="actions" class="flex flex-wrap gap-3 mt-8">
             <a href="/projects" class="btn-primary">View experience</a>
             <a href="/contact" class="btn-secondary">Contact</a>
         </div>
