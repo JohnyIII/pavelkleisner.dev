@@ -22,3 +22,13 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+.playwright-mcp/
+.gitignore
+.claude/
+.vscode/
+
+# Visual brainstorm companion
+.superpowers/
+
+# Originál fotky (obsahuje další osobu) - nedeployovat
+pavel-original.local.jpg
