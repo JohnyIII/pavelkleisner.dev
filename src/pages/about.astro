@@ -22,17 +22,17 @@ import StatusReadout from "@/components/StatusReadout.astro";
     <section class="mb-24">
         <SectionIntro title="How I think about software" />
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <InfoCard title="Small explicit changes">
-                In production systems, a precisely named business rule, isolated mapping,
-                better fallback or focused test is often safer than a large rewrite.
+            <InfoCard title="Small, explicit changes">
+                In a live system a precisely named rule, an isolated mapping or one focused
+                test usually beats a big rewrite. Less to go wrong at 2 a.m.
             </InfoCard>
-            <InfoCard title="Modern with a reason">
-                New versions, frameworks and infrastructure matter when they make
-                the system more reliable, observable or easier to change.
+            <InfoCard title="Modern when it pays off">
+                I like new versions and tools — but only when they make the system more
+                reliable, more observable or easier to change. Not for the CV.
             </InfoCard>
-            <InfoCard title="Runtime ownership">
-                The real system starts after deployment: old data, retries,
-                external contracts, logs, metrics and supportability.
+            <InfoCard title="It's not done at deploy">
+                The real system starts after deployment: old data, retries, external
+                contracts, logs, metrics and whoever has to support it.
             </InfoCard>
         </div>
     </section>
@@ -104,14 +104,33 @@ import StatusReadout from "@/components/StatusReadout.astro";
     </section>
 
     <section class="mb-24">
-        <SectionIntro title="Beyond code" />
-        <p class="max-w-4xl card-body leading-relaxed">
-            Outside of work, I enjoy music, sci-fi, fantasy and anime.
-            Side projects let me experiment, learn and explore ideas without the pressure
-            of production deadlines. I like building things end to end because it keeps
-            the whole product lifecycle visible: idea, implementation, deployment,
-            maintenance and feedback.
-        </p>
+        <SectionIntro
+            title="Off the clock"
+            body="I build things end to end partly because I genuinely enjoy this stuff. Here's the human behind the commits."
+        />
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+            <InfoCard title="Reading & audiobooks">
+                Around 125 books and counting — LitRPG (Vasily Mahanenko), a lot of Czech
+                sci-fi/fantasy (Kotleta, Sněgoňová, Starý, Kadlečková, Stehlíková), plus
+                Andy Weir, Liu Cixin, Sapkowski and Pratchett. I do most of it as audiobooks.
+            </InfoCard>
+            <InfoCard title="Anime">
+                Grew up on the shounen Big 3 (Naruto, One Piece, Bleach). One Piece is the
+                one still running — and I'm still watching.
+            </InfoCard>
+            <InfoCard title="Gaming">
+                My main way to switch off. PlayStation 5, currently playing Saros.
+            </InfoCard>
+            <InfoCard title="Metal & coffee & bikes">
+                Iron Maiden, Arch Enemy, Jinjer, HammerFall and friends in the headphones.
+                Coffee ground fresh in a hand mill and brewed in a moka pot. A bike waiting
+                for a rebuild. Cats and dogs both welcome.
+            </InfoCard>
+        </div>
+
+        <p class="card-body mb-4">From Horní Radechová near Náchod, in the Krkonoše foothills.</p>
+        <StatusReadout />
     </section>
 
     <CtaBand

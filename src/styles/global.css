@@ -849,4 +849,6 @@ h3 {
 
 .sr-val {
   color: var(--c-text);
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
