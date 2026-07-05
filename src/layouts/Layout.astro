@@ -55,12 +55,12 @@ const personSchema = {
 <html lang={lang === "cz" ? "cs" : "en"} data-theme="void">
 <head>
 	<meta charset="utf-8" />
-	{/*
+	<Fragment set:html={`<!--
 	  Hi there. Yes, this site is hand-built.
 	  Astro + TypeScript + Tailwind, hosted on Cloudflare Pages.
 	  Source: https://github.com/JohnyIII/pavelkleisner.dev
 	  -- Pavel
-	*/}
+	-->`} />
 	<script is:inline>
 		(function () {
 			try {
@@ -89,13 +89,13 @@ const personSchema = {
 	<meta property="og:title" content={pageTitle} />
 	<meta property="og:description" content={pageDescription} />
 	<meta property="og:url" content={Astro.url.href} />
-	<meta property="og:image" content="/og-image.png" />
+	<meta property="og:image" content={`${siteUrl}/og-image.png`} />
 	<meta property="og:locale" content={lang === "cz" ? "cs_CZ" : "en_US"} />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={pageTitle} />
 	<meta name="twitter:description" content={pageDescription} />
-	<meta name="twitter:image" content="/og-image.png" />
+	<meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
 
 	<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 </head>
