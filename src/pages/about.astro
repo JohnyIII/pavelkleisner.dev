@@ -86,19 +86,22 @@ import StatusReadout from "@/components/StatusReadout.astro";
         <SectionIntro title="What I deliberately avoid" />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <InfoCard title="Over-engineering">
-                I avoid adding architecture that does not reduce real complexity,
-                risk or maintenance cost.
+                Architecture that doesn't remove real complexity, risk or maintenance
+                cost. The "flexible" abstraction is usually the code everyone is
+                afraid to touch two years later.
             </InfoCard>
-            <InfoCard title="Trend-driven decisions">
-                I like modern tools, but only when they clearly improve delivery,
-                reliability or developer understanding.
+            <InfoCard title="Big-bang releases">
+                Shipping everything at once and hoping. A rollout needs an order,
+                a fallback and a way to stop halfway — otherwise it's a bet.
             </InfoCard>
             <InfoCard title="One-person architecture">
                 A system is not well designed if only one person can safely change it.
+                I've been that person — it doesn't scale, and it ruins vacations.
             </InfoCard>
             <InfoCard title="Ego-driven choices">
-                Technical decisions should serve the product and runtime behavior,
-                not personal taste.
+                Technical decisions driven by taste instead of the product. I once
+                adapted our side back to a partner's old format rather than defend
+                a technically correct spec.
             </InfoCard>
         </div>
     </section>
