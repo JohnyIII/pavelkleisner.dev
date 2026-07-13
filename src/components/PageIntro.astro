@@ -7,11 +7,12 @@ const {
     body,
     photo,
     photoAlt,
+    photoLabel,
 } = Astro.props;
 ---
 
 <section class="page-intro">
-    <div>
+    <div class="page-intro-copy">
         {eyebrow && <div class="section-label mb-4">{eyebrow}</div>}
         <h1 class="page-title">
             {title}{highlight && <> <span class="accent-text">{highlight}</span></>}
@@ -22,7 +23,11 @@ const {
     </div>
     <div class="page-aside">
         {photo
-            ? <img class="hero-photo" src={photo} alt={photoAlt ?? ""} width="360" height="500" loading="eager" />
+            ? <div class="hero-portrait">
+                <div class="portrait-orbit" aria-hidden="true"></div>
+                <img class="hero-photo" src={photo} alt={photoAlt ?? ""} width="360" height="500" loading="eager" />
+                {photoLabel && <div class="portrait-label"><span aria-hidden="true"></span>{photoLabel}</div>}
+              </div>
             : <slot />}
     </div>
 </section>

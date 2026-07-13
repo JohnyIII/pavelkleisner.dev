@@ -1,5 +1,5 @@
 export const now = {
-  playing: "Saros (PS5)",
-  reading: "Mycelium — Vilma Kadlečková",
+  playing: "007 First Light (PS5)",
+  reading: "Trhlinové války — Raymond E. Feist",
   watching: "One Piece",
 };

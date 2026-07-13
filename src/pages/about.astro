@@ -11,17 +11,18 @@ import StatusReadout from "@/components/StatusReadout.astro";
 <Layout title="About - Pavel Kleisner">
 
     <PageIntro
-        title="About"
-        highlight="me"
-        lead="Senior backend and integration engineer — Kotlin, Java, Spring, PostgreSQL and the production systems that run on them."
-        body="I'm at my best where correctness, compatibility and release safety actually matter. My job isn't only writing backend code; it's owning the place where implementation, domain behaviour, integration contracts and production releases overlap. I like to help, I keep learning, and I try not to pretend to be more than I am."
+        title="Beyond"
+        highlight="the code"
+        lead="A calm, practical engineer who still genuinely enjoys making and fixing things."
+        body="I've been at DataLite since 2017, growing from junior through senior engineer to team lead. I'm at my best where correctness, compatibility and release safety matter — where implementation meets domain behaviour, integration contracts and production. I like to help, keep learning, and never pretend to be more than I am."
         photo="/pavel.jpg"
         photoAlt="Pavel Kleisner"
+        photoLabel="Human first · engineer second"
     />
 
     <section class="mb-24">
         <SectionIntro title="How I think about software" />
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="cards-editorial">
             <InfoCard title="Small, explicit changes">
                 In a live system a precisely named rule, an isolated mapping or one focused
                 test usually beats a big rewrite. Less to go wrong at 2 a.m.
@@ -112,8 +113,8 @@ import StatusReadout from "@/components/StatusReadout.astro";
             body="I build things end to end partly because I genuinely enjoy this stuff. Here's the human behind the commits."
         />
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-            <InfoCard title="Reading & audiobooks">
+        <div class="personal-grid mb-6">
+            <InfoCard title="Reading & audiobooks" variant="personal">
                 Around 125 books and counting — LitRPG (Vasily Mahanenko), a lot of Czech
                 sci-fi/fantasy (Kotleta, Sněgoňová, Starý, Kadlečková, Stehlíková), plus
                 Andy Weir, Liu Cixin, Sapkowski and Pratchett. I do most of it as audiobooks.
@@ -123,16 +124,21 @@ import StatusReadout from "@/components/StatusReadout.astro";
                 one still running — and I'm still watching.
             </InfoCard>
             <InfoCard title="Gaming">
-                My main way to switch off. PlayStation 5, currently playing Saros.
+                My main way to switch off. PlayStation 5, currently playing 007 First Light.
             </InfoCard>
             <InfoCard title="Metal & coffee & bikes">
                 Iron Maiden, Arch Enemy, Jinjer, HammerFall and friends in the headphones.
                 Coffee ground fresh in a hand mill and brewed in a moka pot. A bike waiting
                 for a rebuild. Cats and dogs both welcome.
             </InfoCard>
+            <InfoCard title="Community" variant="personal">
+                For two years I helped with a charity ball for Charita Červený Kostelec,
+                mostly wherever another pair of hands was useful. I stopped after moving away,
+                but it remains a good memory of practical local community work.
+            </InfoCard>
         </div>
 
-        <p class="card-body mb-4">From Horní Radechová near Náchod, in the Krkonoše foothills.</p>
+        <p class="card-body mb-4">Roots in Horní Radechová near Náchod; home today is just outside Prague.</p>
         <StatusReadout />
     </section>
 
