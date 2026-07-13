@@ -7,15 +7,16 @@ import CtaBand from "@/components/CtaBand.astro";
 import WarStory from "@/components/WarStory.astro";
 ---
 
-<Layout title="Pavel Kleisner - Senior Backend & Integration Engineer">
+<Layout title="Pavel Kleisner - Senior Backend Engineer & Team Lead">
 
     <PageIntro
-        eyebrow="Senior Backend & Integration Engineer"
+        eyebrow="Senior Backend-heavy Full-stack Engineer · Team Lead"
         title="Pavel Kleisner"
-        lead="Backend, integrations and releases — the unglamorous part where systems meet real data and have to stay up."
-        body="I work on Kotlin/Java/Spring services and PostgreSQL, mostly around TSM/CETIN production flow: B2B behaviour, data compatibility, incident analysis and rolling out new platform versions. I'd rather fix production than be right about it."
+        lead="I build and steady the backend systems that keep real businesses moving."
+        body="Nine years across Kotlin, Java, Spring and PostgreSQL — from full-stack delivery to leading production rollouts, integrations and incident analysis. I like precise changes, honest communication and software that still makes sense two years later. I'd rather fix production than be right about it."
         photo="/pavel.jpg"
         photoAlt="Pavel Kleisner"
+        photoLabel="Near Prague · remote · CET"
     >
         <div slot="actions" class="flex flex-wrap gap-3 mt-8">
             <a href="/projects" class="btn-primary">View experience</a>
@@ -42,7 +43,7 @@ import WarStory from "@/components/WarStory.astro";
             </div>
             <div>
                 <div class="snapshot-key">Based in</div>
-                <div class="snapshot-value">Prague · CET</div>
+                <div class="snapshot-value">Near Prague · CET</div>
                 <div class="snapshot-detail">Open to remote collaboration</div>
             </div>
         </div>
@@ -50,7 +51,7 @@ import WarStory from "@/components/WarStory.astro";
 
     <section class="mb-24">
         <SectionIntro
-            title="Where I fit best"
+            title="What I bring to the table"
             body="Usually the value isn't another abstraction layer. It's a change that survives real data, integrations, support and the next release."
         />
         <div class="fit-grid">
@@ -121,8 +122,8 @@ import WarStory from "@/components/WarStory.astro";
             title="Experience snapshot"
             body="A quick map of the systems I've worked on. The longer version — including what I actually owned on each — lives on the projects page."
         />
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <InfoCard title="TSM / CETIN" meta="2020 - present" tag="current focus">
+        <div class="cards-editorial">
+            <InfoCard title="TSM / CETIN" meta="2020 - present" tag="current focus" variant="accent">
                 Senior backend and integration work on Kotlin/Java/Spring services, PostgreSQL-backed systems, B2B flows, PEW, NIP, change management and production rollout of new platform versions.
             </InfoCard>
             <InfoCard title="MNCP" meta="2018 - 2021" tag="full-stack">

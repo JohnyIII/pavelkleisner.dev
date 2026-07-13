@@ -9,16 +9,16 @@ import TimelineItem from "@/components/TimelineItem.astro";
 <Layout title="Projekty a zkušenosti - Pavel Kleisner">
 
     <PageIntro
-        title="Projekty &"
-        highlight="zkušenosti"
-        lead="Systémy, které zformovaly, jak pracuju."
-        body="Většina je interní nebo klientská, takže kód není veřejný. Popisuju odpovědnost, stack a typ problémů, které jsem reálně řešil — ne screenshoty kódu, který stejně nemůžu ukázat."
+        title="Postavené pro"
+        highlight="reálný svět"
+        lead="Dlouhověké platformy, produkční integrace a pár vlastních nápadů."
+        body="Většina klientských systémů je neveřejná, proto ukazuju to podstatné: co jsem měl na starosti, na jakých omezeních záleželo a co mě práce naučila. Společná linka je jednoduchá — pochopit doménu, udělat nejmenší bezpečnou změnu a zůstat i u toho, co přijde po nasazení."
     />
 
     <section class="mb-24">
         <SectionIntro title="Přehled projektů" />
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <InfoCard title="TSM platforma" tag="Produkce">
+        <div class="project-grid">
+            <InfoCard title="TSM platforma" tag="Produkce" variant="accent">
                 Seniorní backend a integrační práce na moderní service management platformě:
                 Kotlin/Java/Spring služby, PostgreSQL, B2B komunikace, procesní toky,
                 analýza incidentů a produkční rollouty verzí 2.2 a 2.4.
@@ -118,6 +118,31 @@ import TimelineItem from "@/components/TimelineItem.astro";
                     <li>Jednoduchá statická architektura, dvojjazyčný obsah a nízkoúdržbové nasazení.</li>
                 </ul>
             </TimelineItem>
+        </div>
+    </section>
+
+    <section class="mb-24">
+        <SectionIntro
+            title="Vlastní projekty"
+            body="Menší produkty mě drží u celého cyklu: nápadu, použitelného rozhraní, nasazení, dat i nepříjemných otázek, které izolovaný ticket nikdy nepoloží."
+        />
+        <div class="project-grid">
+            <InfoCard title="Incremental webová hra" tag="Ve vývoji" variant="personal">
+                TypeScript a Svelte 5 hra postavená kolem celého loopu: progrese, stav,
+                balanc, zpětná vazba a tempo dlouhých herních sezení. Zároveň praktická
+                laboratoř pro práci s AI bez odevzdání inženýrského úsudku.
+                <p class="mt-4 text-sm card-meta">Svelte 5 · TypeScript · herní systémy</p>
+            </InfoCard>
+            <InfoCard title="Plánovač rekonstrukce" tag="Self-hosted">
+                Účelová aplikace pro porovnávání nabídek, dokumenty a skici na jednom místě
+                a přehlednější rozhodování v jinak dost chaotickém reálném procesu.
+                <p class="mt-4 text-sm card-meta">Next.js · Drizzle ORM · PostgreSQL</p>
+            </InfoCard>
+            <InfoCard title="Experimenty s trading botem" tag="Výzkum">
+                Python/Freqtrade hřiště pro trend-following, EMA crossover a řízení rizika
+                přes ATR. Vzniklo pro ověřování předpokladů na datech, ne pro prodávání jistoty.
+                <p class="mt-4 text-sm card-meta">Python · Freqtrade · časové řady</p>
+            </InfoCard>
         </div>
     </section>
 

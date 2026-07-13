@@ -9,16 +9,16 @@ import TimelineItem from "@/components/TimelineItem.astro";
 <Layout title="Projects & Experience - Pavel Kleisner">
 
     <PageIntro
-        title="Projects &"
-        highlight="experience"
-        lead="The systems that shaped how I work."
-        body="Most of it is internal or client-owned, so the code isn't public. I describe the responsibility, the stack and the kind of problems I actually handled — not screenshots of code I can't show."
+        title="Built for"
+        highlight="the real world"
+        lead="Long-lived platforms, production integrations and a few ideas of my own."
+        body="Most client systems are private, so I focus on the useful part: what I owned, which constraints mattered and what the work taught me. The common thread is simple — understand the domain, make the smallest safe change and stay for what happens after deploy."
     />
 
     <section class="mb-24">
         <SectionIntro title="Project overview" />
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <InfoCard title="TSM Platform" tag="Production">
+        <div class="project-grid">
+            <InfoCard title="TSM Platform" tag="Production" variant="accent">
                 Senior backend and integration work on a modern service management platform:
                 Kotlin/Java/Spring services, PostgreSQL, B2B communication, process flows,
                 incident analysis and production rollouts of versions 2.2 and 2.4.
@@ -117,6 +117,31 @@ import TimelineItem from "@/components/TimelineItem.astro";
                     <li>Simple static architecture, bilingual content and low-maintenance deployment.</li>
                 </ul>
             </TimelineItem>
+        </div>
+    </section>
+
+    <section class="mb-24">
+        <SectionIntro
+            title="Side projects"
+            body="Smaller products keep me close to the whole loop: an idea, a usable interface, deployment, data and the awkward questions no isolated ticket ever asks."
+        />
+        <div class="project-grid">
+            <InfoCard title="Incremental web game" tag="In development" variant="personal">
+                A TypeScript and Svelte 5 game built around the full loop: progression,
+                state, balancing, feedback and long-session pacing. Also a practical lab for
+                working with AI without handing over engineering judgement.
+                <p class="mt-4 text-sm card-meta">Svelte 5 · TypeScript · game systems</p>
+            </InfoCard>
+            <InfoCard title="Home-improvement planner" tag="Self-hosted">
+                A focused app for comparing listings, keeping documents and sketches together
+                and turning a messy real-world decision into something navigable.
+                <p class="mt-4 text-sm card-meta">Next.js · Drizzle ORM · PostgreSQL</p>
+            </InfoCard>
+            <InfoCard title="Trading bot experiments" tag="Research">
+                A Python/Freqtrade strategy playground around trend following, EMA crossover
+                and ATR-based risk. Built to test assumptions against data, not to sell certainty.
+                <p class="mt-4 text-sm card-meta">Python · Freqtrade · time-series data</p>
+            </InfoCard>
         </div>
     </section>
 

@@ -7,15 +7,16 @@ import CtaBand from "@/components/CtaBand.astro";
 import WarStory from "@/components/WarStory.astro";
 ---
 
-<Layout title="Pavel Kleisner - Senior backend a integrační vývojář">
+<Layout title="Pavel Kleisner - Senior backend vývojář & Team Lead">
 
     <PageIntro
-        eyebrow="Senior Backend & Integration Engineer"
+        eyebrow="Senior Backend-heavy Full-stack Engineer · Team Lead"
         title="Pavel Kleisner"
-        lead="Backend, integrace a releasy — ta nezáživná část, kde se systém potká s reálnými daty a má zůstat naživu."
-        body="Dělám Kotlin/Java/Spring služby a PostgreSQL, hlavně kolem TSM/CETIN produkčního flow: B2B chování, datová kompatibilita, incidenty a rollout nových verzí. Radši opravím produkci, než abych měl pravdu."
+        lead="Stavím a držím v chodu backendové systémy, na kterých stojí reálný byznys."
+        body="Devět let v Kotlinu, Javě, Springu a PostgreSQL — od full-stack dodávky po vedení produkčních rolloutů, integrace a analýzu incidentů. Mám rád přesné změny, přímou komunikaci a software, který dává smysl i za dva roky. Radši opravím produkci, než abych měl pravdu."
         photo="/pavel.jpg"
         photoAlt="Pavel Kleisner"
+        photoLabel="Kousek od Prahy · remote · CET"
     >
         <div slot="actions" class="flex flex-wrap gap-3 mt-8">
             <a href="/cz/projekty" class="btn-primary">Zkušenosti</a>
@@ -42,7 +43,7 @@ import WarStory from "@/components/WarStory.astro";
             </div>
             <div>
                 <div class="snapshot-key">Působím v</div>
-                <div class="snapshot-value">Praha · CET</div>
+                <div class="snapshot-value">Kousek od Prahy · CET</div>
                 <div class="snapshot-detail">Otevřený vzdálené spolupráci</div>
             </div>
         </div>
@@ -50,7 +51,7 @@ import WarStory from "@/components/WarStory.astro";
 
     <section class="mb-24">
         <SectionIntro
-            title="Kde dávám největší smysl"
+            title="V čem jsem nejsilnější"
             body="Největší hodnota není v tom přidat další vrstvu abstrakce. Je v tom udělat změnu, která přežije data, integrace, support a další release."
         />
         <div class="fit-grid">
@@ -119,8 +120,8 @@ import WarStory from "@/components/WarStory.astro";
             title="Zkušenosti v kostce"
             body="Rychlá mapa systémů, na kterých jsem dělal. Delší verze — včetně toho, co jsem kde reálně měl na starosti — je na stránce projektů."
         />
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <InfoCard title="TSM / CETIN" meta="2020 - současnost" tag="hlavní fokus">
+        <div class="cards-editorial">
+            <InfoCard title="TSM / CETIN" meta="2020 - současnost" tag="hlavní fokus" variant="accent">
                 Seniorní backend a integrační práce na Kotlin/Java/Spring službách, PostgreSQL systémech, B2B flow, PEW, NIP, change managementu a produkčních rolloutech nových verzí.
             </InfoCard>
             <InfoCard title="MNCP" meta="2018 - 2021" tag="full-stack">

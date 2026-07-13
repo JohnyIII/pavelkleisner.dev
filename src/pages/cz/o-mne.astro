@@ -11,17 +11,18 @@ import StatusReadout from "@/components/StatusReadout.astro";
 <Layout title="O mně - Pavel Kleisner">
 
     <PageIntro
-        title="O"
-        highlight="mně"
-        lead="Senior backend a integrační vývojář — Kotlin, Java, Spring, PostgreSQL a produkční systémy, co na nich běží."
-        body="Nejlíp mi je tam, kde fakt záleží na správnosti, kompatibilitě a bezpečnosti releasů. Není to jen psaní backendu — je to vlastnictví místa, kde se potká implementace, doménové chování, integrační kontrakty a produkční nasazení. Rád pomáhám, pořád se učím a nehraju si na víc, než jsem."
+        title="Člověk"
+        highlight="za kódem"
+        lead="Klidný pragmatik, kterého pořád upřímně baví věci tvořit, opravovat a dotahovat."
+        body="V DataLite jsem od roku 2017 a vyrostl jsem tu od juniora přes seniorního vývojáře až k team leadovi. Nejlíp mi je tam, kde záleží na správnosti, kompatibilitě a bezpečnosti releasů — kde se implementace potká s doménou, integračními kontrakty a produkcí. Rád pomáhám, pořád se učím a nehraju si na víc, než jsem."
         photo="/pavel.jpg"
         photoAlt="Pavel Kleisner"
+        photoLabel="Nejdřív člověk · potom vývojář"
     />
 
     <section class="mb-24">
         <SectionIntro title="Jak přemýšlím o softwaru" />
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="cards-editorial">
             <InfoCard title="Malé, jasné změny">
                 V živém systému většinou přesně pojmenované pravidlo, izolovaný mapping nebo
                 jeden cílený test porazí velký rewrite. Míň věcí, co se ve dvě ráno rozbije.
@@ -112,8 +113,8 @@ import StatusReadout from "@/components/StatusReadout.astro";
             body="Stavím věci od začátku do konce i proto, že mě to baví. Tady je člověk za commity."
         />
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-            <InfoCard title="Čtení & audioknihy">
+        <div class="personal-grid mb-6">
+            <InfoCard title="Čtení & audioknihy" variant="personal">
                 Asi 125 knih a přibývá — LitRPG (Vasily Mahanenko), spousta české sci-fi/fantasy
                 (Kotleta, Sněgoňová, Starý, Kadlečková, Stehlíková) a k tomu Andy Weir, Liu Cixin,
                 Sapkowski a Pratchett. Většinu poslouchám jako audioknihy.
@@ -123,16 +124,21 @@ import StatusReadout from "@/components/StatusReadout.astro";
                 a já se pořád dívám.
             </InfoCard>
             <InfoCard title="Hraní">
-                Hlavní způsob, jak vypnout. PlayStation 5, teď hraju Saros.
+                Hlavní způsob, jak vypnout. PlayStation 5, teď hraju 007 First Light.
             </InfoCard>
             <InfoCard title="Metal & kafe & kolo">
                 Iron Maiden, Arch Enemy, Jinjer, HammerFall a spol. ve sluchátkách. Kafe čerstvě
                 namleté v ručním mlýnku a uvařené v moka konvičce. Kolo, co čeká na repas. Kočky
                 i psi vítáni.
             </InfoCard>
+            <InfoCard title="Pomoc, která je vidět až na místě" variant="personal">
+                Dva roky jsem pomáhal s charitativním plesem pro Charitu Červený Kostelec,
+                hlavně tam, kde se zrovna hodil další pár rukou. Po odstěhování jsem skončil,
+                ale zůstává to pro mě dobrá vzpomínka na praktickou pomoc místní komunitě.
+            </InfoCard>
         </div>
 
-        <p class="card-body mb-4">Z Horní Radechové u Náchoda, v Podkrkonoší.</p>
+        <p class="card-body mb-4">Kořeny mám v Horní Radechové u Náchoda; dnes bydlím kousek od Prahy.</p>
         <StatusReadout />
     </section>
 

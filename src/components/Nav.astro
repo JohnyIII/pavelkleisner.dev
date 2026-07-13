@@ -24,10 +24,10 @@ if (lang === "cz") {
 
 <div class="site-nav-wrap">
     <nav class="site-nav" aria-label="Primary">
-        <a href={t.routes.home} class="nav-link">{t.nav.home}</a>
-        <a href={t.routes.about} class="nav-link">{t.nav.about}</a>
-        <a href={t.routes.projects} class="nav-link">{t.nav.projects}</a>
-        <a href={t.routes.contact} class="nav-link">{t.nav.contact}</a>
+        <a href={t.routes.home} class:list={["nav-link", { active: pathname === t.routes.home }]} aria-current={pathname === t.routes.home ? "page" : undefined}>{t.nav.home}</a>
+        <a href={t.routes.about} class:list={["nav-link", { active: pathname === t.routes.about }]} aria-current={pathname === t.routes.about ? "page" : undefined}>{t.nav.about}</a>
+        <a href={t.routes.projects} class:list={["nav-link", { active: pathname === t.routes.projects }]} aria-current={pathname === t.routes.projects ? "page" : undefined}>{t.nav.projects}</a>
+        <a href={t.routes.contact} class:list={["nav-link", { active: pathname === t.routes.contact }]} aria-current={pathname === t.routes.contact ? "page" : undefined}>{t.nav.contact}</a>
     </nav>
 
     <div class="header-tools">
