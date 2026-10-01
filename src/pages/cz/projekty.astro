@@ -1,167 +1,105 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import PageIntro from "@/components/PageIntro.astro";
-import SectionIntro from "@/components/SectionIntro.astro";
-import InfoCard from "@/components/InfoCard.astro";
-import TimelineItem from "@/components/TimelineItem.astro";
 ---
 
 <Layout title="Projekty a zkušenosti - Pavel Kleisner">
 
-    <PageIntro
-        title="Postavené pro"
-        highlight="reálný svět"
-        lead="Dlouhověké platformy, produkční integrace a pár vlastních nápadů."
-        body="Většina klientských systémů je neveřejná, proto ukazuju to podstatné: co jsem měl na starosti, na jakých omezeních záleželo a co mě práce naučila. Společná linka je jednoduchá — pochopit doménu, udělat nejmenší bezpečnou změnu a zůstat i u toho, co přijde po nasazení."
-    />
-
-    <section class="mb-24">
-        <SectionIntro title="Přehled projektů" />
-        <div class="project-grid">
-            <InfoCard title="TSM platforma" tag="Produkce" variant="accent">
-                Seniorní backend a integrační práce na moderní service management platformě:
-                Kotlin/Java/Spring služby, PostgreSQL, B2B komunikace, procesní toky,
-                analýza incidentů a produkční rollouty verzí 2.2 a 2.4.
-                <p class="mt-4 text-sm card-meta">Stack: Kotlin, Java, Spring, PostgreSQL, Kafka, Kubernetes</p>
-            </InfoCard>
-
-            <InfoCard title="ZIS" tag="Enterprise">
-                Enterprise Java aplikace se ZK/ZUL UI, controllery,
-                službami, DAO vrstvou, importy, Excelem a produkčními opravami.
-                Fáze, kde jsem se naučil dodávat kompletní business funkcionalitu.
-                <p class="mt-4 text-sm card-meta">Stack: Java, ZK, ZUL, Maven, SQL</p>
-            </InfoCard>
-
-            <InfoCard title="MNCP" tag="Full-stack">
-                Full-stack práce napříč backendem, frontendem a databázovými skripty:
-                autentizace, exporty, archivy, měřící dávky, provozní opravy
-                a chování celého flow od UI po persistenci.
-                <p class="mt-4 text-sm card-meta">Stack: Kotlin, Spring, Angular, Oracle/PostgreSQL</p>
-            </InfoCard>
-
-            <InfoCard title="Nordic a vlastní věci" tag="Průběžně · nárazově">
-                Nárazová spolupráce v Django web stacku a vlastní experimenty.
-                Objemově toho dnes není moc, ale spolupráce trvá. Dobrá připomínka,
-                že inženýrské návyky mají být přenositelné napříč technologiemi
-                a ne závislé na jednom ekosystému.
-                <p class="mt-4 text-sm card-meta">Stack: Python, Django, templates, Astro, TypeScript</p>
-            </InfoCard>
+    <section class="page-intro">
+        <h1>Projekty a&nbsp;zkušenosti</h1>
+        <p class="lead">Dlouho žijící platformy, produkční integrace a&nbsp;pár vlastních nástrojů.</p>
+        <div class="body">
+            <p>Klientské systémy jsou neveřejné, takže místo screenshotů píšu, co jsem na kterém měl na starost, jaká omezení hrála roli a&nbsp;co mě ta práce naučila. Společné to má jedno: pochopit doménu, udělat nejmenší bezpečnou změnu a&nbsp;zůstat i&nbsp;u&nbsp;toho, co se děje po nasazení.</p>
         </div>
     </section>
 
-    <section class="mb-24">
-        <SectionIntro
-            title="Časová osa projektů"
-            body="Timeline ukazuje posun od dodávání kompletních funkcí přes full-stack ownership až k produkčním integracím a release ownershipu."
-        />
+    <section class="section">
+        <h2>Práce pro klienty</h2>
+        <p class="sub">Všechno v&nbsp;rámci dlouhodobé spolupráce s&nbsp;DataLite od roku 2017, nejdřív jako zaměstnanec, posledních několik let jako OSVČ.</p>
 
-        <div class="timeline space-y-4">
-            <TimelineItem title="ZIS" period="2017 - 2018">
-                <p class="mb-4">
-                    Enterprise aplikace pro CETIN provoz. Pracoval jsem na Java/ZK obrazovkách,
-                    controller-service-DAO flow, importech, Excel zpracování a produkčních defektech.
-                </p>
-                <ul class="space-y-2">
-                    <li>Dodával jsem kompletní business obrazovky od UI po persistenci.</li>
-                    <li>Práce v klasickém enterprise Java stacku se silnými procesními a datovými omezeními.</li>
-                    <li>Základ pro pozdější backendový a integrační ownership.</li>
+        <article class="project">
+            <div class="project-head"><h3>TSM / CETIN</h3><span class="when">2020 – dnes</span><span class="role">senior backend a&nbsp;integrace, team lead</span></div>
+            <div class="project-body">
+                <p>Moje hlavní dlouhodobá práce: backend a&nbsp;integrace na moderní platformě pro správu služeb telekomunikačního operátora. Pracuju blízko produkce, u&nbsp;releasů, B2B komunikace s&nbsp;partnery, procesních pravidel a&nbsp;kompatibility dat.</p>
+                <ul>
+                    <li>Vedl jsem produkční rollouty verzí 2.2 a&nbsp;2.4, na 1.5 jsem byl v&nbsp;jádru týmu.</li>
+                    <li>Integrační toky kolem ticketingu, NIP, change managementu, B2B a&nbsp;PEW.</li>
+                    <li>Analýza incidentů z&nbsp;logů, metrik a&nbsp;dat, ne záplatování naslepo.</li>
+                    <li>Jako hlavní vývojář naší části platformy hodně plánuju, vysvětluju a&nbsp;dělám code review.</li>
                 </ul>
-            </TimelineItem>
+            </div>
+            <p class="stack"><b>Stack:</b> Kotlin, Java, Spring, PostgreSQL, Kafka, Kubernetes</p>
+        </article>
 
-            <TimelineItem title="MNCP" period="2018 - 2021">
-                <p class="mb-4">
-                    Full-stack projekt kolem měření, archivů, exportů a provozních workflow.
-                    Tahle fáze mě posunula od dodávání funkcí k ownershipu chování napříč
-                    backendem, frontendem a databází.
-                </p>
-                <ul class="space-y-2">
-                    <li>Kotlin/Spring, Angular, databázové skripty a provozní věci kolem nasazení.</li>
-                    <li>Autentizace, exporty, archivní filtry a chování měřících dávek.</li>
-                    <li>Ladění problémů přes celý request a datový tok, ne jen v jedné vrstvě.</li>
+        <article class="project">
+            <div class="project-head"><h3>Nordic web</h3><span class="when">2024 – dnes</span><span class="role">podle potřeby</span></div>
+            <div class="project-body">
+                <p>Spolupráce na webovém systému v&nbsp;Djangu. Práce je teď málo, ale spolupráce trvá a&nbsp;naskočím, když je potřeba udělat konkrétní změnu.</p>
+                <ul>
+                    <li>Samoobsluha a&nbsp;chování webu v&nbsp;Pythonu, Djangu a&nbsp;šablonách.</li>
+                    <li>Cílené změny v&nbsp;existujícím kódu, bez vnucování vlastních zvyků.</li>
                 </ul>
-            </TimelineItem>
+            </div>
+            <p class="stack"><b>Stack:</b> Python, Django, šablony</p>
+        </article>
 
-            <TimelineItem title="TSM / CETIN" period="2020 - současnost">
-                <p class="mb-4">
-                    Moje hlavní dlouhodobé zaměření: backendová a integrační práce na moderní TSM platformě.
-                    Jsem blízko produkčnímu chování, releasům, B2B komunikaci, procesním pravidlům
-                    a datové kompatibilitě.
-                </p>
-                <ul class="space-y-2">
-                    <li>Produkční rollout zkušenost s verzemi TSM 2.2 a 2.4.</li>
-                    <li>Integrace kolem NIP, ticketingu, change managementu, B2B, PEW a souvisejících flow.</li>
-                    <li>Analýza incidentů přes logy, metriky a doménovou znalost místo slepého patchování.</li>
-                    <li>Moderní stack: Kotlin, Java, Spring, PostgreSQL, Kafka-style messaging a Kubernetes prostředí.</li>
+        <article class="project">
+            <div class="project-head"><h3>MNCP</h3><span class="when">2018 – 2021</span><span class="role">full-stack vývojář</span></div>
+            <div class="project-body">
+                <p>Full-stack projekt kolem měření, archivů, exportů a&nbsp;provozních workflow. Tady jsem se posunul od dodávání funkcí k&nbsp;odpovědnosti za chování napříč backendem, frontendem a&nbsp;databází.</p>
+                <ul>
+                    <li>Autentizace, opravy exportů, filtry archivů a&nbsp;chování měřicích dávek.</li>
+                    <li>Databázové skripty a&nbsp;nasazení vedle aplikačního kódu.</li>
+                    <li>Naučil jsem se sledovat chybu celým requestem a&nbsp;tokem dat, ne jen v&nbsp;jedné vrstvě.</li>
                 </ul>
-            </TimelineItem>
+            </div>
+            <p class="stack"><b>Stack:</b> Kotlin, Spring, Angular, Oracle, PostgreSQL</p>
+        </article>
 
-            <TimelineItem title="Nordic Web" period="2024 - současnost · nárazově">
-                <p class="mb-4">
-                    Pokračující nárazová spolupráce na Django web systému. Objemově toho dnes není moc,
-                    ale spolupráce trvá — naskakuju, když je potřeba udělat cílenou změnu. Hodnota
-                    je ve schopnosti vstoupit do jiného stacku a udělat přesnou změnu bez násilného
-                    přenášení známých patternů.
-                </p>
-                <ul class="space-y-2">
-                    <li>Self-service a webové chování v Python/Django/templates stacku.</li>
-                    <li>Cílené produkčně orientované změny v existujícím codebase.</li>
+        <article class="project">
+            <div class="project-head"><h3>ZIS</h3><span class="when">2017 – 2018</span><span class="role">enterprise Java</span></div>
+            <div class="project-body">
+                <p>Enterprise aplikace pro provoz CETINu. Obrazovky v&nbsp;Javě a&nbsp;ZK, vrstvy controllerů, služeb a&nbsp;DAO, importy, zpracování Excelu a&nbsp;produkční chyby.</p>
+                <ul>
+                    <li>Celé business obrazovky od UI až po persistenci.</li>
+                    <li>Klasický enterprise stack s&nbsp;přísnými procesy a&nbsp;pravidly pro data.</li>
                 </ul>
-            </TimelineItem>
+            </div>
+            <p class="stack"><b>Stack:</b> Java, ZK, ZUL, Maven, SQL</p>
+        </article>
 
-            <TimelineItem title="Osobní web a experimenty" period="průběžně">
-                <p class="mb-4">
-                    Menší vlastní projekty mi drží viditelný celý životní cyklus produktu:
-                    nápad, implementaci, nasazení, údržbu a zpětnou vazbu. Tenhle web je jeden z nich.
-                </p>
-                <ul class="space-y-2">
-                    <li>Astro, TypeScript, Tailwind CSS a Cloudflare Pages.</li>
-                    <li>Jednoduchá statická architektura, dvojjazyčný obsah a nízkoúdržbové nasazení.</li>
-                </ul>
-            </TimelineItem>
+        <p class="muted" style="margin-top:1.5rem">Před DataLite jsem byl testerem v&nbsp;GMC Software (dnes Quadient) v&nbsp;Hradci Králové: psal jsem use-casy a&nbsp;testovací scénáře a&nbsp;staral se o&nbsp;Jenkins server týmu.</p>
+    </section>
+
+    <section class="section">
+        <h2>Vlastní projekty</h2>
+        <p class="sub">Menší věci, které si sám stavím a&nbsp;provozuju, většinou spolu s&nbsp;AI agenty. Držím se díky nim u&nbsp;celé smyčky: nápad, použitelné rozhraní, data, nasazení a&nbsp;údržba.</p>
+        <div class="side">
+            <article>
+                <h3>Mapa výdejních míst</h3>
+                <p>Všechna výdejní místa a&nbsp;boxy v&nbsp;ČR na jedné mapě, zhruba 40 tisíc, denně importovaná z&nbsp;feedů dopravců a&nbsp;očištěná od duplicit.</p>
+                <p class="stack">Next.js, PostgreSQL, Drizzle, Leaflet</p>
+            </article>
+            <article>
+                <h3>Rodinný portál</h3>
+                <p>Aplikace na malém domácím serveru: jídelníček se skutečnými nutričními hodnotami, plánovač všeho kolem domu, výlety a&nbsp;seznamy na balení.</p>
+                <p class="stack">Next.js, Drizzle ORM, PostgreSQL, Raspberry Pi</p>
+            </article>
+            <article>
+                <h3>Obchodní bot</h3>
+                <p>Trend-following strategie (křížení EMA, stop podle ATR), na které ověřuju předpoklady proti tržním datům. Ne na prodej jistoty.</p>
+                <p class="stack">Python, Freqtrade</p>
+            </article>
+            <article>
+                <h3>Tenhle web</h3>
+                <p>Statický, dvojjazyčný, levný na provoz a&nbsp;snadno se mění. Zdrojový kód je na GitHubu.</p>
+                <p class="stack">Astro, TypeScript, Cloudflare Pages</p>
+            </article>
         </div>
     </section>
 
-    <section class="mb-24">
-        <SectionIntro
-            title="Vlastní projekty"
-            body="Menší produkty mě drží u celého cyklu: nápadu, použitelného rozhraní, nasazení, dat i nepříjemných otázek, které izolovaný ticket nikdy nepoloží."
-        />
-        <div class="project-grid">
-            <InfoCard title="Idle & incremental hry" tag="Ve vývoji" variant="personal">
-                Dvě idle hry v TypeScriptu a Svelte 5 — incremental odehrávající se v Petriho
-                misce a idle RPG — postavené od začátku do konce: progrese, balanc, grafika
-                a game feel. Zároveň praktická laboratoř pro práci s AI bez odevzdání
-                inženýrského úsudku.
-                <p class="mt-4 text-sm card-meta">Svelte 5 · TypeScript · Canvas · herní systémy</p>
-            </InfoCard>
-            <InfoCard title="Rodinný portál na domácím serveru" tag="Self-hosted">
-                Z plánovače rekonstrukce vyrostl self-hosted rodinný portál: jídelníček
-                s reálnými nutričními daty, projekty kolem domu, rodinné záznamy a další —
-                běží na malém serveru doma, ne v cizím cloudu. Radši si to postavím,
-                než abych si to předplácel.
-                <p class="mt-4 text-sm card-meta">Next.js · Drizzle ORM · PostgreSQL · domácí server</p>
-            </InfoCard>
-            <InfoCard title="Experimenty s trading botem" tag="Výzkum">
-                Python/Freqtrade hřiště pro trend-following, EMA crossover a řízení rizika
-                přes ATR. Vzniklo pro ověřování předpokladů na datech, ne pro prodávání jistoty.
-                <p class="mt-4 text-sm card-meta">Python · Freqtrade · časové řady</p>
-            </InfoCard>
-        </div>
-    </section>
-
-    <section class="mb-8">
-        <SectionIntro title="Přístup k projektům" />
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <InfoCard title="Konkrétní ownership">
-                Dobrý projekt je ten, kde se společně chápe runtime chování,
-                datový model, release cesta i support po nasazení.
-            </InfoCard>
-            <InfoCard title="Doména před frameworkem">
-                Stacky se mění, doméně je to jedno. Opravy, na které jsem nejvíc
-                hrdý, vznikly z pochopení, proč se systém chová tak, jak se chová —
-                ne ze znalosti nejnovějšího API.
-            </InfoCard>
-        </div>
+    <section class="cta bleed">
+        <h2>Chcete probrat projekt?</h2>
+        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
     </section>
 
 </Layout>

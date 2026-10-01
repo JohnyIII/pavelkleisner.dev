@@ -1,0 +1,15 @@
+---
+// Co zrovna hraju/čtu/sleduju. Data se mění přes `npm run now <klíč> "hodnota"`.
+import now from "@/data/now.json";
+
+const { lang = "en" } = Astro.props;
+const labels = lang === "cz"
+    ? { playing: "Hraju", reading: "Čtu", watching: "Sleduju" }
+    : { playing: "Playing", reading: "Reading", watching: "Watching" };
+---
+
+<dl class="now">
+    <div><dt>{labels.playing}</dt><dd>{now.playing}</dd></div>
+    <div><dt>{labels.reading}</dt><dd>{now.reading}</dd></div>
+    <div><dt>{labels.watching}</dt><dd>{now.watching}</dd></div>
+</dl>

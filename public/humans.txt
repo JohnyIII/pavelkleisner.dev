@@ -1,7 +1,7 @@
 /* TEAM */
 
   Owner & Engineer:   Pavel Kleisner
-  Role:               Senior Backend & Integration Engineer
+  Role:               Senior Backend-heavy Full-stack Engineer, Team Lead
   Location:           Prague, Czech Republic
   Contact:            contact [at] pavelkleisner.dev
   GitHub:             github.com/JohnyIII
@@ -14,7 +14,7 @@
   Doctype:            HTML5
   Standards:          HTML5, CSS3, ES2022
   Components:         Astro, TypeScript, Tailwind CSS
-  Fonts:              IBM Plex Sans, Rajdhani, JetBrains Mono, Source Serif 4
+  Fonts:              Source Serif 4, IBM Plex Sans, JetBrains Mono
   Hosting:            Cloudflare Pages
   Source:             github.com/JohnyIII/pavelkleisner.dev
 

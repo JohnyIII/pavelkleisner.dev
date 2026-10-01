@@ -1,158 +1,58 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import PageIntro from "@/components/PageIntro.astro";
-import SectionIntro from "@/components/SectionIntro.astro";
-import InfoCard from "@/components/InfoCard.astro";
-import TimelineItem from "@/components/TimelineItem.astro";
-import CtaBand from "@/components/CtaBand.astro";
-import StatusReadout from "@/components/StatusReadout.astro";
+import Now from "@/components/Now.astro";
 ---
 
 <Layout title="O mně - Pavel Kleisner">
 
-    <PageIntro
-        title="Člověk"
-        highlight="za kódem"
-        lead="Klidný pragmatik, kterého pořád upřímně baví věci tvořit, opravovat a dotahovat."
-        body="Od roku 2017 je DataLite mým dlouhodobým profesním partnerem; během té doby jsem vyrostl od juniora přes seniorního vývojáře až k team leadovi. Posledních několik let pracuji jako OSVČ a s DataLite spolupracuji jako externí dodavatel na klientských projektech. Nejlíp mi je tam, kde záleží na správnosti, kompatibilitě a bezpečnosti releasů — kde se implementace potká s doménou, integračními kontrakty a produkcí."
-        photo="/pavel.jpg"
-        photoAlt="Pavel Kleisner"
-        photoLabel="Nejdřív člověk · potom vývojář"
-    />
+    <section class="page-intro with-photo">
+        <div>
+            <h1>O mně</h1>
+            <p class="lead">Klidný, praktický vývojář, kterého pořád upřímně baví věci stavět a&nbsp;opravovat.</p>
+            <div class="body">
+                <p>S DataLite spolupracuju od roku 2017 a&nbsp;prošel jsem tam cestou od juniora přes seniora až k&nbsp;team leadovi. Posledních několik let pracuju jako OSVČ na jejich klientských projektech. Nejvíc jsem platný tam, kde záleží na správnosti, kompatibilitě a&nbsp;bezpečném releasu, tam, kde se kód potkává s&nbsp;pravidly domény, integračními kontrakty a&nbsp;produkcí.</p>
+                <p>Radši opravím produkci, než abych vyhrál hádku o&nbsp;tom, kdo měl pravdu, a&nbsp;od lidí kolem sebe čekám totéž: snahu práci dotáhnout a&nbsp;pořád se učit.</p>
+            </div>
+        </div>
+        <figure class="portrait">
+            <img src="/pavel.jpg" alt="Pavel Kleisner" width="600" height="750" />
+        </figure>
+    </section>
 
-    <section class="mb-24">
-        <SectionIntro title="Jak přemýšlím o softwaru" />
-        <div class="cards-editorial">
-            <InfoCard title="Malé, jasné změny">
-                V živém systému většinou přesně pojmenované pravidlo, izolovaný mapping nebo
-                jeden cílený test porazí velký rewrite. Míň věcí, co se ve dvě ráno rozbije.
-            </InfoCard>
-            <InfoCard title="Moderní, když se to vyplatí">
-                Mám rád nové verze a nástroje — ale jen když dělají systém spolehlivější,
-                přehlednější nebo snazší na změnu. Ne kvůli životopisu.
-            </InfoCard>
-            <InfoCard title="Nasazením to nekončí">
-                Skutečný systém začíná po nasazení: stará data, retry, externí kontrakty,
-                logy, metriky a ten, kdo to bude supportovat.
-            </InfoCard>
+    <section class="section">
+        <h2>Jak přemýšlím o&nbsp;softwaru</h2>
+        <div class="tiles">
+            <div class="tile"><h3>Malé, explicitní změny</h3><p>V živém systému obvykle vyhraje přesně pojmenované pravidlo, izolované mapování nebo jeden cílený test nad velkým přepisem.</p></div>
+            <div class="tile"><h3>Moderní, když se to vyplatí</h3><p>Nové verze a&nbsp;nástroje, když systém udělají spolehlivější, lépe pozorovatelný nebo snáz změnitelný. Ne kvůli životopisu.</p></div>
+            <div class="tile"><h3>Nasazením to nekončí</h3><p>Skutečný systém začíná po nasazení: stará data, retry, externí kontrakty, logy, metriky a&nbsp;ten, kdo to bude podporovat.</p></div>
+            <div class="tile"><h3>AI jako elektrické nářadí</h3><p>Agenti udělají tolik, kolik rozumně zvládnou. Pochopení, review a&nbsp;odpovědnost za to, co jde ven, zůstávají u&nbsp;mě.</p></div>
         </div>
     </section>
 
-    <section class="mb-24">
-        <SectionIntro
-            title="Profesní cesta"
-            body="Zkrácená timeline toho, jak se moje odpovědnost vyvíjela napříč projekty a stacky."
-        />
-        <div class="timeline space-y-4">
-            <TimelineItem title="2017-2018: ZIS">
-                Enterprise Java, ZK/ZUL obrazovky, controllery, služby,
-                DAO vrstvy, importy a produkční opravy. Fáze, kde jsem se naučil
-                dodávat kompletní aplikační funkcionalitu.
-            </TimelineItem>
-            <TimelineItem title="2018-2021: MNCP">
-                Full-stack práce přes Kotlin/Spring, Angular a databázové skripty.
-                Security, exporty, archivy, měřící dávky a provozní opravy
-                napříč celým flow.
-            </TimelineItem>
-            <TimelineItem title="2020-současnost: TSM">
-                Seniorní backend a integrační práce na Kotlin/Java/Spring službách,
-                PostgreSQL, integračních tocích, B2B komunikaci, analýze incidentů
-                a produkčních rolloutech nových verzí.
-            </TimelineItem>
-            <TimelineItem title="2024-současnost: Nordic / Django (nárazově)">
-                Pokračující nárazová spolupráce v Django stacku a vlastní experimenty.
-                Objem teď není velký, ale spolupráce trvá. Připomínka, že dobré inženýrské
-                návyky mají být přenositelné napříč stacky, ne závislé na jednom frameworku.
-            </TimelineItem>
+    <section class="feature bleed">
+        <div>
+            <h2>Čemu se vědomě vyhýbám</h2>
+            <p class="quote">Systém není dobře navržený, když ho bezpečně změní jen jeden člověk.</p>
+        </div>
+        <div class="prose">
+            <p><b>Over-engineering.</b> Architektuře, která neodstraní skutečnou složitost, riziko ani náklady na údržbu. Ta „flexibilní“ abstrakce bývá za dva roky kód, na který se nikdo nechce dotknout.</p>
+            <p><b>Big-bang releasy.</b> Rollout potřebuje pořadí, záložní plán a&nbsp;možnost zastavit se v&nbsp;půlce, jinak je to sázka.</p>
+            <p><b>Architektura jednoho člověka.</b> Byl jsem tím člověkem. Neškáluje to a&nbsp;kazí to dovolené.</p>
+            <p><b>Rozhodnutí podle ega.</b> Jednou jsem radši vrátil naši stranu ke starému formátu partnera, než abych obhajoval technicky správnou specifikaci.</p>
         </div>
     </section>
 
-    <section class="mb-24">
-        <SectionIntro title="Pracovní styl" />
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <InfoCard title="Architektura a odpovědnost">
-                Dobrá architektura není o složitosti nebo diagramech.
-                Je o odpovědnosti, ownershipu a pochopení míst, kde změna patří
-                a kde už škodí.
-            </InfoCard>
-            <InfoCard title="Spolupráce">
-                Nejlepší řešení vznikají spoluprací vývojářů, analytiků,
-                product ownerů a provozu. Technická rozhodnutí mají sloužit
-                produktu a lidem, kteří ho drží v chodu.
-            </InfoCard>
+    <section class="section">
+        <h2>Mimo práci</h2>
+        <div class="prose">
+            <p>Pocházím z&nbsp;Podkrkonoší a&nbsp;s&nbsp;rodinou bydlím kousek za Prahou. Hodně čtu, většinou jako audioknihy (LitRPG a&nbsp;českou sci-fi), poslouchám metal a&nbsp;kafe si melu ručně.</p>
         </div>
+        <div style="margin-top:1.5rem"><Now lang="cz" /></div>
     </section>
 
-    <section class="mb-24">
-        <SectionIntro title="Čemu se záměrně vyhýbám" />
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <InfoCard title="Over-engineering">
-                Architektura, která neubírá reálnou složitost, riziko ani náklady
-                na údržbu. Z "flexibilní" abstrakce je za dva roky většinou kód,
-                na který se všichni bojí sáhnout.
-            </InfoCard>
-            <InfoCard title="Big-bang releasy">
-                Nasadit všechno najednou a doufat. Rollout potřebuje pořadí,
-                fallback a možnost zastavit v půlce — jinak je to sázka.
-            </InfoCard>
-            <InfoCard title="Architektura pro jednoho člověka">
-                Systém není dobře navržený, pokud ho bezpečně umí měnit jen jeden
-                člověk. Byl jsem ten člověk — neškáluje to a kazí to dovolené.
-            </InfoCard>
-            <InfoCard title="Ego v technických rozhodnutích">
-                Technická rozhodnutí podle vkusu místo podle produktu. Jednou jsem
-                radši přizpůsobil naši stranu starému formátu partnera, než abych
-                obhajoval technicky správný spec.
-            </InfoCard>
-        </div>
+    <section class="cta bleed">
+        <h2>Zní to jako někdo, s&nbsp;kým byste chtěli spolupracovat?</h2>
+        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
     </section>
-
-    <section class="mb-24">
-        <SectionIntro
-            title="Mimo práci"
-            body="Stavím věci od začátku do konce i proto, že mě to baví. Tady je člověk za commity."
-        />
-
-        <div class="personal-grid mb-6">
-            <InfoCard title="Čtení & audioknihy" variant="personal">
-                Asi 125 knih a přibývá — LitRPG (Vasily Mahanenko), spousta české sci-fi/fantasy
-                (Kotleta, Sněgoňová, Starý, Kadlečková, Stehlíková) a k tomu Andy Weir, Liu Cixin,
-                Sapkowski a Pratchett. Většinu poslouchám jako audioknihy.
-            </InfoCard>
-            <InfoCard title="Anime">
-                Vyrostl jsem na shounen Big 3 (Naruto, One Piece, Bleach). One Piece pořád běží —
-                a já se pořád dívám.
-            </InfoCard>
-            <InfoCard title="Hraní">
-                Hlavní způsob, jak vypnout. PlayStation 5 — co je zrovna v konzoli,
-                ukazuje readout níže.
-            </InfoCard>
-            <InfoCard title="Tvoření & tisk">
-                Elegoo Centauri Carbon tiskne funkční díly po domě a na domácím serveru
-                běží aplikace, které stavím pro vlastní rodinu — jídelníček, projekty
-                kolem domu, fotoarchiv. Nejlepší požadavky píšou lidi, se kterými bydlíš.
-            </InfoCard>
-            <InfoCard title="Metal & kafe & kolo">
-                Iron Maiden, Arch Enemy, Jinjer, HammerFall a spol. ve sluchátkách. Kafe čerstvě
-                namleté v ručním mlýnku a uvařené v moka konvičce. Kolo, co čeká na repas. Kočky
-                i psi vítáni.
-            </InfoCard>
-            <InfoCard title="Pomoc, která je vidět až na místě" variant="personal">
-                Dva roky jsem pomáhal s charitativním plesem pro Charitu Červený Kostelec,
-                hlavně tam, kde se zrovna hodil další pár rukou. Po odstěhování jsem skončil,
-                ale zůstává to pro mě dobrá vzpomínka na praktickou pomoc místní komunitě.
-            </InfoCard>
-        </div>
-
-        <p class="card-body mb-4">Kořeny mám v Horní Radechové u Náchoda; dnes bydlím kousek od Prahy se ženou a dvěma malými dcerami.</p>
-        <StatusReadout />
-    </section>
-
-    <CtaBand
-        title="Pojďme spolupracovat"
-        body="Pokud tenhle přístup odpovídá tomu, co potřebuješ, ozvi se."
-        href="/cz/kontakt"
-        label="Kontakt"
-    />
 
 </Layout>

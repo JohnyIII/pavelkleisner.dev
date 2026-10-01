@@ -1,151 +1,106 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import PageIntro from "@/components/PageIntro.astro";
-import SectionIntro from "@/components/SectionIntro.astro";
-import InfoCard from "@/components/InfoCard.astro";
-import CtaBand from "@/components/CtaBand.astro";
-import WarStory from "@/components/WarStory.astro";
 ---
 
 <Layout title="Pavel Kleisner - Independent Senior Backend Engineer & Team Lead">
 
-    <PageIntro
-        eyebrow="Independent Senior Backend-heavy Full-stack Engineer · Team Lead"
-        title="Pavel Kleisner"
-        lead="I build and steady the backend systems that keep real businesses moving."
-        body="Nine years across Kotlin, Java, Spring and PostgreSQL — from full-stack delivery to leading production rollouts, integrations and incident analysis. I like precise changes, honest communication and software that still makes sense two years later. I'd rather fix production than be right about it."
-        photo="/pavel.jpg"
-        photoAlt="Pavel Kleisner"
-        photoLabel="Near Prague · remote · CET"
-    >
-        <div slot="actions" class="flex flex-wrap gap-3 mt-8">
-            <a href="/projects" class="btn-primary">View experience</a>
-            <a href="/contact" class="btn-secondary">Contact</a>
-        </div>
-    </PageIntro>
-
-    <section class="mb-24">
-        <div class="snapshot-list">
-            <div>
-                <div class="snapshot-key">Primary stack</div>
-                <div class="snapshot-value">Kotlin · Java · Spring</div>
-                <div class="snapshot-detail">PostgreSQL, Kafka-style messaging</div>
-            </div>
-            <div>
-                <div class="snapshot-key">Production rollouts</div>
-                <div class="snapshot-value">TSM <span class="accent-text">1.5 · 2.2 · 2.4</span></div>
-                <div class="snapshot-detail">Lead on 2.2 / 2.4, core contributor on 1.5</div>
-            </div>
-            <div>
-                <div class="snapshot-key">Experience</div>
-                <div class="snapshot-value">9+ years</div>
-                <div class="snapshot-detail">Backend, integrations, full-stack stints</div>
-            </div>
-            <div>
-                <div class="snapshot-key">Engagement</div>
-                <div class="snapshot-value">Independent · remote</div>
-                <div class="snapshot-detail">Long-term and focused contracts</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-24">
-        <SectionIntro
-            title="What I bring to the table"
-            body="Usually the value isn't another abstraction layer. It's a change that survives real data, integrations, support and the next release."
-        />
-        <div class="fit-grid">
-            <div class="fit-row">
-                <div class="fit-cat">Integrations</div>
-                <div class="fit-desc">B2B APIs, process flows, message behavior, retries, logs and failure modes that only become visible after deployment.</div>
-            </div>
-            <div class="fit-row">
-                <div class="fit-cat">Releases</div>
-                <div class="fit-desc">Rolling new versions into real environments while watching compatibility, old data and operational risk.</div>
-            </div>
-            <div class="fit-row">
-                <div class="fit-cat">Architecture</div>
-                <div class="fit-desc">Small safe changes, clearly named rules and service boundaries. No ceremony around patterns.</div>
-            </div>
-            <div class="fit-row">
-                <div class="fit-cat">Debugging</div>
-                <div class="fit-desc">Incidents through logs, metrics, databases and domain context. Not random patches around symptoms.</div>
-            </div>
-        </div>
-    </section>
-
-    <WarStory kicker="War story · anonymised" title="The UUID that wasn't a UUID">
-        <p class="mb-4">
-            When we rolled out the first platform version, the integration spec said the
-            <code>messageId</code> would be a UUID. One partner started failing immediately.
-            Their system was quietly parsing the ticket ID <em>out of</em> the old
-            <code>ticketId_timestamp</code> format — even though the ticket ID sat right
-            there in the message body.
-        </p>
-        <p>
-            The clean fix was on their side, but in a corporate setting that change would take
-            months. So I adapted our side back to the old shape and kept production running.
-            Sometimes the right call isn't the pure one — it's the one that doesn't break
-            someone else at 2 a.m.
-        </p>
-    </WarStory>
-
-    <section class="mb-24">
-        <SectionIntro title="Core stack" />
+    <section class="hero bleed">
         <div>
-            <div class="stack-group">
-                <div class="stack-label">Primary</div>
-                <div class="stack-pills">
-                    <span class="pill pill-strong">Kotlin</span>
-                    <span class="pill pill-strong">Java</span>
-                    <span class="pill pill-strong">Spring</span>
-                    <span class="pill pill-strong">PostgreSQL</span>
-                    <span class="pill pill-strong">Kafka</span>
-                </div>
+            <h1>Pavel Kleisner</h1>
+            <p class="role">Independent senior backend engineer and team lead, working remotely from near Prague.</p>
+            <p class="lead">I build and look after the backend systems that real businesses run on, and I stay around for what happens after the deploy.</p>
+            <div class="body">
+                <p>Nine years of Kotlin, Java, Spring and PostgreSQL. I started with complete features in an enterprise Java app, moved to full-stack work and today I lead production rollouts, integrations and incident analysis on a telco service platform.</p>
             </div>
-            <div class="stack-group">
-                <div class="stack-label">Also</div>
-                <div class="stack-pills">
-                    <span class="pill pill-muted">Kubernetes</span>
-                    <span class="pill pill-muted">Oracle</span>
-                    <span class="pill pill-muted">Angular</span>
-                    <span class="pill pill-muted">Python / Django</span>
-                    <span class="pill pill-muted">Astro</span>
-                    <span class="pill pill-muted">TypeScript</span>
-                </div>
+            <div class="actions">
+                <a href="/projects" class="btn primary">Experience and projects</a>
+                <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+            </div>
+        </div>
+        <figure class="portrait">
+            <img src="/pavel.jpg" alt="Pavel Kleisner" width="600" height="750" />
+            <figcaption>Near Prague, CET.</figcaption>
+        </figure>
+    </section>
+
+    <section class="section">
+        <h2>What I usually work on</h2>
+        <div class="tiles">
+            <div class="tile">
+                <h3>Integrations</h3>
+                <p>B2B APIs, message contracts, process flows, retries and the failure modes that only show up once a partner system is connected.</p>
+            </div>
+            <div class="tile">
+                <h3>Releases</h3>
+                <p>New platform versions into real environments: old data, backward compatibility, rollout order and a way back. I led the TSM 2.2 and 2.4 rollouts.</p>
+            </div>
+            <div class="tile">
+                <h3>Debugging production</h3>
+                <p>Logs, metrics, the database and domain knowledge together. I look for the cause, not for a patch that makes the symptom go quiet.</p>
+            </div>
+            <div class="tile">
+                <h3>Architecture</h3>
+                <p>Small safe changes, clearly named rules and sensible service boundaries. As little ceremony as the problem allows.</p>
             </div>
         </div>
     </section>
 
-    <section class="mb-24">
-        <SectionIntro
-            title="Experience snapshot"
-            body="A quick map of the systems I've worked on. The longer version — including what I actually owned on each — lives on the projects page."
-        />
-        <div class="cards-editorial">
-            <InfoCard title="TSM / CETIN" meta="2020 - present" tag="current focus" variant="accent">
-                Senior backend and integration work on Kotlin/Java/Spring services, PostgreSQL-backed systems, B2B flows, PEW, NIP, change management and production rollout of new platform versions.
-            </InfoCard>
-            <InfoCard title="MNCP" meta="2018 - 2021" tag="full-stack">
-                Kotlin/Spring, Angular and database work around authentication, measuring batches, archives, exports and operational fixes.
-            </InfoCard>
-            <InfoCard title="ZIS" meta="2017 - 2018" tag="foundation">
-                Enterprise Java and ZK/ZUL work across screens, controllers, services, DAO layers, imports, Excel processing and production bug fixes.
-            </InfoCard>
+    <section class="feature bleed">
+        <div>
+            <h2>How I work with AI</h2>
+            <p class="quote">AI writes a lot of code with me. It doesn't make decisions for me.</p>
+        </div>
+        <div class="prose">
+            <p>I use AI tools every day and I've put real time into using them well: agents that dig through an unfamiliar codebase, draft the boring parts, run the tests, prepare a migration or review a diff before I do. It makes me noticeably faster and lets me take on work I wouldn't have had time for.</p>
+            <p>What it doesn't change is who is responsible. I read and understand every line that goes out under my name, I know why it is there and what it touches, and when something breaks in production, the analysis and the fix are still mine.</p>
         </div>
     </section>
 
-    <section class="offclock-line mb-24">
-        <span class="offclock-kicker">Off the keyboard</span>
-        <span>I'm a gamer, a heavy reader and a metalhead from the Krkonoše foothills — these days also a dad who 3D-prints and builds apps for his own family.</span>
-        <a href="/about" class="offclock-link">More about me →</a>
+    <section class="section story">
+        <div>
+            <p class="label">A story from production</p>
+            <h2>The UUID that wasn't a UUID</h2>
+        </div>
+        <div class="prose">
+            <p>When we rolled out the first platform version, the integration spec said the <code>messageId</code> would be a UUID. One partner started failing straight away. Their system had been quietly parsing the ticket ID out of the old <code>ticketId_timestamp</code> format, even though the ticket ID sat right there in the message body.</p>
+            <p>The clean fix was on their side, but in a corporate setting that change would have taken months. So I switched our side back to the old shape and production kept running. Sometimes the right call isn't the pure one. It's the one that doesn't break someone else at 2 a.m.</p>
+        </div>
     </section>
 
-    <CtaBand
-        title="Interested in collaboration?"
-        body="If you need a senior engineer for backend systems, integrations, production releases or long-term product development, email is the fastest channel."
-        href="/contact"
-        label="Get in touch"
-    />
+    <section class="section">
+        <h2>Where I've worked</h2>
+        <ol class="timeline">
+            <li>
+                <span class="when">2020 – now</span>
+                <div class="what"><b>TSM / CETIN</b>
+                    <p>Senior backend and integration engineer, team lead. Kotlin and Java services on PostgreSQL, B2B flows, change management, incident analysis and the rollouts of versions 2.2 and 2.4.</p></div>
+            </li>
+            <li>
+                <span class="when">2018 – 2021</span>
+                <div class="what"><b>MNCP</b>
+                    <p>Full-stack engineer. Kotlin/Spring, Angular and database work: authentication, exports, archives and measurement batches.</p></div>
+            </li>
+            <li>
+                <span class="when">2017 – 2018</span>
+                <div class="what"><b>ZIS</b>
+                    <p>Enterprise Java. ZK/ZUL screens, services and DAO layers, imports, Excel processing. Where I learned to deliver a feature end to end.</p></div>
+            </li>
+        </ol>
+        <p class="muted" style="margin-top:1.2rem">All of it in a long-term collaboration with DataLite since 2017, the last several years as an independent contractor. More on the <a href="/projects">projects page</a>.</p>
+    </section>
+
+    <section class="section">
+        <h2>Stack</h2>
+        <div class="stack-rows">
+            <div><h3>Every day</h3><p>Kotlin, Java, Spring, PostgreSQL, Kafka</p></div>
+            <div><h3>Also</h3><p>Kubernetes, Oracle, Angular, Python and Django, TypeScript, Astro</p></div>
+        </div>
+    </section>
+
+    <section class="cta bleed">
+        <h2>Need a senior engineer for backend systems, integrations or production releases?</h2>
+        <p>Long-term or focused engagements, remotely from near Prague. Email is the fastest way to reach me.</p>
+        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+    </section>
 
 </Layout>

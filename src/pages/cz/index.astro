@@ -1,149 +1,106 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import PageIntro from "@/components/PageIntro.astro";
-import SectionIntro from "@/components/SectionIntro.astro";
-import InfoCard from "@/components/InfoCard.astro";
-import CtaBand from "@/components/CtaBand.astro";
-import WarStory from "@/components/WarStory.astro";
 ---
 
 <Layout title="Pavel Kleisner - Nezávislý senior backend vývojář & Team Lead">
 
-    <PageIntro
-        eyebrow="Nezávislý senior backend-heavy full-stack vývojář · Team Lead"
-        title="Pavel Kleisner"
-        lead="Stavím a držím v chodu backendové systémy, na kterých stojí reálný byznys."
-        body="Devět let v Kotlinu, Javě, Springu a PostgreSQL — od full-stack dodávky po vedení produkčních rolloutů, integrace a analýzu incidentů. Mám rád přesné změny, přímou komunikaci a software, který dává smysl i za dva roky. Radši opravím produkci, než abych měl pravdu."
-        photo="/pavel.jpg"
-        photoAlt="Pavel Kleisner"
-        photoLabel="Kousek od Prahy · remote · CET"
-    >
-        <div slot="actions" class="flex flex-wrap gap-3 mt-8">
-            <a href="/cz/projekty" class="btn-primary">Zkušenosti</a>
-            <a href="/cz/kontakt" class="btn-secondary">Kontakt</a>
-        </div>
-    </PageIntro>
-
-    <section class="mb-24">
-        <div class="snapshot-list">
-            <div>
-                <div class="snapshot-key">Hlavní stack</div>
-                <div class="snapshot-value">Kotlin · Java · Spring</div>
-                <div class="snapshot-detail">PostgreSQL, Kafka-style messaging</div>
-            </div>
-            <div>
-                <div class="snapshot-key">Produkční rollouty</div>
-                <div class="snapshot-value">TSM <span class="accent-text">1.5 · 2.2 · 2.4</span></div>
-                <div class="snapshot-detail">Hlavní vývojář u 2.2 / 2.4, podstatná součást u 1.5</div>
-            </div>
-            <div>
-                <div class="snapshot-key">Zkušenost</div>
-                <div class="snapshot-value">9+ let</div>
-                <div class="snapshot-detail">Backend, integrace, full-stack epizody</div>
-            </div>
-            <div>
-                <div class="snapshot-key">Působím v</div>
-                <div class="snapshot-value">Kousek od Prahy · CET</div>
-                <div class="snapshot-detail">Otevřený vzdálené spolupráci</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-24">
-        <SectionIntro
-            title="V čem jsem nejsilnější"
-            body="Největší hodnota není v tom přidat další vrstvu abstrakce. Je v tom udělat změnu, která přežije data, integrace, support a další release."
-        />
-        <div class="fit-grid">
-            <div class="fit-row">
-                <div class="fit-cat">Integrace</div>
-                <div class="fit-desc">B2B API, procesní toky, zprávy, retry chování, logy a chybové stavy, které začnou být důležité až po nasazení.</div>
-            </div>
-            <div class="fit-row">
-                <div class="fit-cat">Releasy</div>
-                <div class="fit-desc">Nasazování nových verzí do reálných prostředí se zaměřením na kompatibilitu, stará data a provozní rizika.</div>
-            </div>
-            <div class="fit-row">
-                <div class="fit-cat">Architektura</div>
-                <div class="fit-desc">Malé bezpečné změny, jasně pojmenovaná pravidla a hranice služeb. Bez divadla kolem patternů.</div>
-            </div>
-            <div class="fit-row">
-                <div class="fit-cat">Debugging</div>
-                <div class="fit-desc">Incidenty přes logy, metriky, databázi a doménový kontext. Ne přes náhodné patchování symptomů.</div>
-            </div>
-        </div>
-    </section>
-
-    <WarStory kicker="War story · anonymně" title="UUID, které nebylo UUID">
-        <p class="mb-4">
-            Při rolloutu první verze platformy slibovala kuchařka <code>messageId</code> jako
-            UUID. Jednomu partnerovi to začalo hned padat. Jejich systém si potichu parsoval ID
-            ticketu <em>ze</em> starého formátu <code>idTicketu_timestamp</code> — přestože ID
-            ticketu měli rovnou v těle zprávy.
-        </p>
-        <p>
-            Čistá oprava byla na jejich straně, jenže v korporátu by trvala měsíce. Tak jsem naši
-            stranu přizpůsobil zpět původnímu tvaru a nechal produkci běžet. Někdy správné řešení
-            není to čisté — je to to, které ve dvě ráno nerozbije někoho jiného.
-        </p>
-    </WarStory>
-
-    <section class="mb-24">
-        <SectionIntro title="Hlavní stack" />
+    <section class="hero bleed">
         <div>
-            <div class="stack-group">
-                <div class="stack-label">Hlavní</div>
-                <div class="stack-pills">
-                    <span class="pill pill-strong">Kotlin</span>
-                    <span class="pill pill-strong">Java</span>
-                    <span class="pill pill-strong">Spring</span>
-                    <span class="pill pill-strong">PostgreSQL</span>
-                    <span class="pill pill-strong">Kafka</span>
-                </div>
+            <h1>Pavel Kleisner</h1>
+            <p class="role">Nezávislý senior backend vývojář a&nbsp;team lead, pracuju na dálku od Prahy.</p>
+            <p class="lead">Stavím a&nbsp;držím v&nbsp;chodu backendové systémy, na kterých stojí reálný byznys. A&nbsp;zůstávám i&nbsp;u&nbsp;toho, co se děje po nasazení.</p>
+            <div class="body">
+                <p>Devět let s&nbsp;Kotlinem, Javou, Springem a&nbsp;PostgreSQL. Začínal jsem celými funkcemi v&nbsp;enterprise Javě, přes full-stack jsem se dostal k&nbsp;tomu, co dělám dnes: vedu produkční rollouty, integrace a&nbsp;analýzu incidentů na servisní platformě telekomunikačního operátora.</p>
             </div>
-            <div class="stack-group">
-                <div class="stack-label">Také</div>
-                <div class="stack-pills">
-                    <span class="pill pill-muted">Kubernetes</span>
-                    <span class="pill pill-muted">Oracle</span>
-                    <span class="pill pill-muted">Angular</span>
-                    <span class="pill pill-muted">Python / Django</span>
-                    <span class="pill pill-muted">Astro</span>
-                    <span class="pill pill-muted">TypeScript</span>
-                </div>
+            <div class="actions">
+                <a href="/cz/projekty" class="btn primary">Zkušenosti a&nbsp;projekty</a>
+                <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+            </div>
+        </div>
+        <figure class="portrait">
+            <img src="/pavel.jpg" alt="Pavel Kleisner" width="600" height="750" />
+            <figcaption>U Prahy, SEČ.</figcaption>
+        </figure>
+    </section>
+
+    <section class="section">
+        <h2>Na čem obvykle pracuju</h2>
+        <div class="tiles">
+            <div class="tile">
+                <h3>Integrace</h3>
+                <p>B2B API, kontrakty zpráv, procesní toky, retry a&nbsp;chyby, které se ukážou až ve chvíli, kdy se připojí systém partnera.</p>
+            </div>
+            <div class="tile">
+                <h3>Releasy</h3>
+                <p>Nové verze platformy do reálných prostředí: stará data, zpětná kompatibilita, pořadí rolloutu a&nbsp;cesta zpět. Vedl jsem rollouty TSM 2.2 a&nbsp;2.4.</p>
+            </div>
+            <div class="tile">
+                <h3>Ladění produkce</h3>
+                <p>Logy, metriky, databáze a&nbsp;znalost domény dohromady. Hledám příčinu, ne záplatu, po které symptom na chvíli ztichne.</p>
+            </div>
+            <div class="tile">
+                <h3>Architektura</h3>
+                <p>Malé bezpečné změny, jasně pojmenovaná pravidla a&nbsp;rozumné hranice služeb. Tolik ceremonie, kolik problém opravdu potřebuje.</p>
             </div>
         </div>
     </section>
 
-    <section class="mb-24">
-        <SectionIntro
-            title="Zkušenosti v kostce"
-            body="Rychlá mapa systémů, na kterých jsem dělal. Delší verze — včetně toho, co jsem kde reálně měl na starosti — je na stránce projektů."
-        />
-        <div class="cards-editorial">
-            <InfoCard title="TSM / CETIN" meta="2020 - současnost" tag="hlavní fokus" variant="accent">
-                Seniorní backend a integrační práce na Kotlin/Java/Spring službách, PostgreSQL systémech, B2B flow, PEW, NIP, change managementu a produkčních rolloutech nových verzí.
-            </InfoCard>
-            <InfoCard title="MNCP" meta="2018 - 2021" tag="full-stack">
-                Kotlin/Spring, Angular a databázová práce kolem autentizace, měřících dávek, archivů, exportů a provozních oprav.
-            </InfoCard>
-            <InfoCard title="ZIS" meta="2017 - 2018" tag="základ">
-                Enterprise Java a ZK/ZUL práce přes obrazovky, controllery, služby, DAO vrstvy, importy, Excel zpracování a produkční opravy.
-            </InfoCard>
+    <section class="feature bleed">
+        <div>
+            <h2>Jak pracuju s&nbsp;AI</h2>
+            <p class="quote">AI se mnou píše hodně kódu. Rozhodovat za mě nebude.</p>
+        </div>
+        <div class="prose">
+            <p>AI nástroje používám každý den a&nbsp;dal jsem si práci, abych je uměl používat pořádně: agenti mi projdou neznámý kód, napíšou nudné části, pustí testy, připraví migraci nebo projdou diff dřív než já. Jsem díky tomu znatelně rychlejší a&nbsp;stihnu práci, na kterou bych jinak neměl čas.</p>
+            <p>Na tom, kdo za výsledek odpovídá, to nic nemění. Každý řádek, který jde ven pod mým jménem, přečtu a&nbsp;rozumím mu, vím, proč tam je a&nbsp;na co sahá. A&nbsp;když se něco rozbije na produkci, analýza i&nbsp;oprava jsou pořád moje.</p>
         </div>
     </section>
 
-    <section class="offclock-line mb-24">
-        <span class="offclock-kicker">Mimo klávesnici</span>
-        <span>Hráč, čtenář a metalista z Podkrkonoší — a poslední dobou taky táta, co 3D tiskne a staví appky pro vlastní rodinu.</span>
-        <a href="/cz/o-mne" class="offclock-link">Víc o mně →</a>
+    <section class="section story">
+        <div>
+            <p class="label">Historka z&nbsp;produkce</p>
+            <h2>UUID, které nebylo UUID</h2>
+        </div>
+        <div class="prose">
+            <p>Při rolloutu první verze platformy integrační specifikace slibovala, že <code>messageId</code> bude UUID. Jeden partner začal hned padat. Jeho systém si totiž potichu parsoval ID ticketu ze starého formátu <code>ticketId_timestamp</code>, přestože to ID měl normálně v&nbsp;těle zprávy.</p>
+            <p>Čistá oprava byla na jeho straně, jenže v&nbsp;korporátu by trvala měsíce. Vrátil jsem tedy naši stranu ke starému tvaru a&nbsp;produkce jela dál. Správné rozhodnutí nebývá vždycky to nejčistší. Spíš to, které nikomu jinému nerozbije noc ve dvě ráno.</p>
+        </div>
     </section>
 
-    <CtaBand
-        title="Máš zájem o spolupráci?"
-        body="Pokud hledáš seniorního vývojáře pro backend, integrace, produkční releasy nebo dlouhodobý vývoj produktu, nejrychlejší je e-mail."
-        href="/cz/kontakt"
-        label="Napiš mi"
-    />
+    <section class="section">
+        <h2>Kde jsem pracoval</h2>
+        <ol class="timeline">
+            <li>
+                <span class="when">2020 – dnes</span>
+                <div class="what"><b>TSM / CETIN</b>
+                    <p>Senior backend a&nbsp;integrace, team lead. Služby v&nbsp;Kotlinu a&nbsp;Javě nad PostgreSQL, B2B toky, change management, analýza incidentů a&nbsp;rollouty verzí 2.2 a&nbsp;2.4.</p></div>
+            </li>
+            <li>
+                <span class="when">2018 – 2021</span>
+                <div class="what"><b>MNCP</b>
+                    <p>Full-stack vývojář. Kotlin/Spring, Angular a&nbsp;databáze: autentizace, exporty, archivy a&nbsp;měřicí dávky.</p></div>
+            </li>
+            <li>
+                <span class="when">2017 – 2018</span>
+                <div class="what"><b>ZIS</b>
+                    <p>Enterprise Java. Obrazovky v&nbsp;ZK/ZUL, služby a&nbsp;DAO vrstvy, importy, zpracování Excelu. Tady jsem se naučil dodat funkci od začátku do konce.</p></div>
+            </li>
+        </ol>
+        <p class="muted" style="margin-top:1.2rem">Všechno v&nbsp;rámci dlouhodobé spolupráce s&nbsp;DataLite od roku 2017, posledních několik let jako OSVČ. Víc na <a href="/cz/projekty">stránce projektů</a>.</p>
+    </section>
+
+    <section class="section">
+        <h2>Stack</h2>
+        <div class="stack-rows">
+            <div><h3>Každý den</h3><p>Kotlin, Java, Spring, PostgreSQL, Kafka</p></div>
+            <div><h3>Také</h3><p>Kubernetes, Oracle, Angular, Python a&nbsp;Django, TypeScript, Astro</p></div>
+        </div>
+    </section>
+
+    <section class="cta bleed">
+        <h2>Hledáte seniorního vývojáře na backend, integrace nebo produkční releasy?</h2>
+        <p>Dlouhodobě i&nbsp;na konkrétní zakázku, na dálku od Prahy. Nejrychlejší je e-mail.</p>
+        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+    </section>
 
 </Layout>
