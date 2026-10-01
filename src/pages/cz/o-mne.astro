@@ -5,54 +5,64 @@ import Now from "@/components/Now.astro";
 
 <Layout title="O mně - Pavel Kleisner">
 
-    <section class="page-intro with-photo">
+    <section class="page-head with-avatar">
+        <img class="avatar" src="/pavel.jpg" alt="Pavel Kleisner" width="300" height="300" />
         <div>
             <h1>O mně</h1>
-            <p class="lead">Klidný, praktický vývojář, kterého pořád upřímně baví věci stavět a&nbsp;opravovat.</p>
-            <div class="body">
+            <p class="sub">Klidný, praktický vývojář, kterého pořád upřímně baví věci stavět a&nbsp;opravovat.</p>
+        </div>
+    </section>
+
+    <div class="book">
+        <nav class="toc" aria-label="Na této stránce">
+            <p>Postava</p>
+            <a href="#pribeh">Příběh</a>
+            <a href="#styl">Herní styl</a>
+            <a href="#balanc">Úpravy balancu</a>
+            <a href="#offline">Offline</a>
+        </nav>
+
+        <div>
+            <section class="chapter" id="pribeh">
+                <h2>Příběh</h2>
                 <p>S DataLite spolupracuju od roku 2017 a&nbsp;prošel jsem tam cestou od juniora přes seniora až k&nbsp;team leadovi. Posledních několik let pracuju jako OSVČ na jejich klientských projektech. Nejvíc jsem platný tam, kde záleží na správnosti, kompatibilitě a&nbsp;bezpečném releasu, tam, kde se kód potkává s&nbsp;pravidly domény, integračními kontrakty a&nbsp;produkcí.</p>
                 <p>Radši opravím produkci, než abych vyhrál hádku o&nbsp;tom, kdo měl pravdu, a&nbsp;od lidí kolem sebe čekám totéž: snahu práci dotáhnout a&nbsp;pořád se učit.</p>
-            </div>
-        </div>
-        <figure class="portrait">
-            <img src="/pavel.jpg" alt="Pavel Kleisner" width="600" height="750" />
-        </figure>
-    </section>
+            </section>
 
-    <section class="section">
-        <h2>Jak přemýšlím o&nbsp;softwaru</h2>
-        <div class="tiles">
-            <div class="tile"><h3>Malé, explicitní změny</h3><p>V živém systému obvykle vyhraje přesně pojmenované pravidlo, izolované mapování nebo jeden cílený test nad velkým přepisem.</p></div>
-            <div class="tile"><h3>Moderní, když se to vyplatí</h3><p>Nové verze a&nbsp;nástroje, když systém udělají spolehlivější, lépe pozorovatelný nebo snáz změnitelný. Ne kvůli životopisu.</p></div>
-            <div class="tile"><h3>Nasazením to nekončí</h3><p>Skutečný systém začíná po nasazení: stará data, retry, externí kontrakty, logy, metriky a&nbsp;ten, kdo to bude podporovat.</p></div>
-            <div class="tile"><h3>AI jako elektrické nářadí</h3><p>Agenti udělají tolik, kolik rozumně zvládnou. Pochopení, review a&nbsp;odpovědnost za to, co jde ven, zůstávají u&nbsp;mě.</p></div>
-        </div>
-    </section>
+            <section class="chapter" id="styl">
+                <h2>Herní styl</h2>
+                <dl class="rows">
+                    <div><dt>Malé, explicitní změny</dt><dd>V živém systému obvykle vyhraje přesně pojmenované pravidlo, izolované mapování nebo jeden cílený test nad velkým přepisem. Méně věcí, co se můžou pokazit ve dvě ráno.</dd></div>
+                    <div><dt>Moderní, když se to vyplatí</dt><dd>Nové verze a&nbsp;nástroje, když systém udělají spolehlivější, lépe pozorovatelný nebo snáz změnitelný. Ne kvůli životopisu.</dd></div>
+                    <div><dt>Nasazením to nekončí</dt><dd>Skutečný systém začíná po nasazení: stará data, retry, externí kontrakty, logy, metriky a&nbsp;ten, kdo to bude podporovat.</dd></div>
+                    <div><dt>AI jako parťák</dt><dd>Agenti udělají tolik, kolik rozumně zvládnou. Pochopení, review a&nbsp;odpovědnost za to, co jde ven, zůstávají u&nbsp;mě.</dd></div>
+                </dl>
+            </section>
 
-    <section class="feature bleed">
+            <section class="chapter" id="balanc">
+                <h2><span class="badge b-boss">Nerf</span> Čemu se vědomě vyhýbám</h2>
+                <ul>
+                    <li><b>Over-engineering.</b> Ta „flexibilní“ abstrakce bývá za dva roky kód, na který se nikdo nechce dotknout.</li>
+                    <li><b>Big-bang releasy.</b> Rollout potřebuje pořadí, záložní plán a&nbsp;možnost zastavit se v&nbsp;půlce, jinak je to sázka.</li>
+                    <li><b>Architektura jednoho člověka.</b> Byl jsem tím člověkem. Neškáluje to a&nbsp;kazí to dovolené.</li>
+                    <li><b>Rozhodnutí podle ega.</b> Jednou jsem radši vrátil naši stranu ke starému formátu partnera, než abych obhajoval technicky správnou specifikaci.</li>
+                </ul>
+            </section>
+
+            <section class="chapter" id="offline">
+                <h2>Offline</h2>
+                <p>Pocházím z&nbsp;Podkrkonoší a&nbsp;s&nbsp;rodinou bydlím kousek za Prahou. Hodně čtu, většinou jako audioknihy (LitRPG a&nbsp;českou sci-fi), u&nbsp;her vypínám hlavu, poslouchám metal a&nbsp;kafe si melu ručně.</p>
+                <div style="margin-top:1.2rem"><Now lang="cz" /></div>
+            </section>
+        </div>
+    </div>
+
+    <section class="party">
         <div>
-            <h2>Čemu se vědomě vyhýbám</h2>
-            <p class="quote">Systém není dobře navržený, když ho bezpečně změní jen jeden člověk.</p>
+            <h2>Zním jako někdo do vaší party?</h2>
+            <p>Nejrychlejší je e-mail.</p>
         </div>
-        <div class="prose">
-            <p><b>Over-engineering.</b> Architektuře, která neodstraní skutečnou složitost, riziko ani náklady na údržbu. Ta „flexibilní“ abstrakce bývá za dva roky kód, na který se nikdo nechce dotknout.</p>
-            <p><b>Big-bang releasy.</b> Rollout potřebuje pořadí, záložní plán a&nbsp;možnost zastavit se v&nbsp;půlce, jinak je to sázka.</p>
-            <p><b>Architektura jednoho člověka.</b> Byl jsem tím člověkem. Neškáluje to a&nbsp;kazí to dovolené.</p>
-            <p><b>Rozhodnutí podle ega.</b> Jednou jsem radši vrátil naši stranu ke starému formátu partnera, než abych obhajoval technicky správnou specifikaci.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Mimo práci</h2>
-        <div class="prose">
-            <p>Pocházím z&nbsp;Podkrkonoší a&nbsp;s&nbsp;rodinou bydlím kousek za Prahou. Hodně čtu, většinou jako audioknihy (LitRPG a&nbsp;českou sci-fi), poslouchám metal a&nbsp;kafe si melu ručně.</p>
-        </div>
-        <div style="margin-top:1.5rem"><Now lang="cz" /></div>
-    </section>
-
-    <section class="cta bleed">
-        <h2>Zní to jako někdo, s&nbsp;kým byste chtěli spolupracovat?</h2>
-        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+        <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
     </section>
 
 </Layout>

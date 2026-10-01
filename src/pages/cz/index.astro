@@ -1,106 +1,119 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Now from "@/components/Now.astro";
+import { level, xp } from "@/data/level";
 ---
 
 <Layout title="Pavel Kleisner - Nezávislý senior backend vývojář & Team Lead">
 
-    <section class="hero bleed">
+    <section class="hero">
+        <img class="avatar" src="/pavel.jpg" alt="Pavel Kleisner" width="300" height="300" />
         <div>
+            <p class="kicker">Senior backend vývojář · team lead · <b>level {level}</b></p>
             <h1>Pavel Kleisner</h1>
-            <p class="role">Nezávislý senior backend vývojář a&nbsp;team lead, pracuju na dálku od Prahy.</p>
-            <p class="lead">Stavím a&nbsp;držím v&nbsp;chodu backendové systémy, na kterých stojí reálný byznys. A&nbsp;zůstávám i&nbsp;u&nbsp;toho, co se děje po nasazení.</p>
-            <div class="body">
-                <p>Devět let s&nbsp;Kotlinem, Javou, Springem a&nbsp;PostgreSQL. Začínal jsem celými funkcemi v&nbsp;enterprise Javě, přes full-stack jsem se dostal k&nbsp;tomu, co dělám dnes: vedu produkční rollouty, integrace a&nbsp;analýzu incidentů na servisní platformě telekomunikačního operátora.</p>
-            </div>
+            <p class="sub">Stavím a&nbsp;držím v&nbsp;chodu backendové systémy, na kterých stojí reálný byznys. A&nbsp;zůstávám i&nbsp;u&nbsp;toho, co se děje po nasazení.</p>
             <div class="actions">
-                <a href="/cz/projekty" class="btn primary">Zkušenosti a&nbsp;projekty</a>
-                <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
-            </div>
-        </div>
-        <figure class="portrait">
-            <img src="/pavel.jpg" alt="Pavel Kleisner" width="600" height="750" />
-            <figcaption>U Prahy, SEČ.</figcaption>
-        </figure>
-    </section>
-
-    <section class="section">
-        <h2>Na čem obvykle pracuju</h2>
-        <div class="tiles">
-            <div class="tile">
-                <h3>Integrace</h3>
-                <p>B2B API, kontrakty zpráv, procesní toky, retry a&nbsp;chyby, které se ukážou až ve chvíli, kdy se připojí systém partnera.</p>
-            </div>
-            <div class="tile">
-                <h3>Releasy</h3>
-                <p>Nové verze platformy do reálných prostředí: stará data, zpětná kompatibilita, pořadí rolloutu a&nbsp;cesta zpět. Vedl jsem rollouty TSM 2.2 a&nbsp;2.4.</p>
-            </div>
-            <div class="tile">
-                <h3>Ladění produkce</h3>
-                <p>Logy, metriky, databáze a&nbsp;znalost domény dohromady. Hledám příčinu, ne záplatu, po které symptom na chvíli ztichne.</p>
-            </div>
-            <div class="tile">
-                <h3>Architektura</h3>
-                <p>Malé bezpečné změny, jasně pojmenovaná pravidla a&nbsp;rozumné hranice služeb. Tolik ceremonie, kolik problém opravdu potřebuje.</p>
+                <a class="btn" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+                <a href="/cz/projekty">Celý deník questů</a>
             </div>
         </div>
     </section>
 
-    <section class="feature bleed">
+    <dl class="sheet" aria-label="Karta postavy">
+        <div><dt>Třída</dt><dd>Backend vývojář</dd></div>
+        <div><dt>Level</dt><dd>{level} let v&nbsp;produkci</dd><dd class="xp" title={`${xp} % do levelu ${level + 1}`}><span style={`width:${xp}%`}></span></dd></div>
+        <div><dt>Základna</dt><dd>U&nbsp;Prahy, na dálku</dd></div>
+        <div class="lfg"><dt>Parta</dt><dd>Volný pro zakázky</dd></div>
+    </dl>
+
+    <div class="book">
+        <nav class="toc" aria-label="Na této stránce">
+            <p>Karta postavy</p>
+            <a href="#questy">Deník questů</a>
+            <a href="#schopnosti">Schopnosti</a>
+            <a href="#partak">Parťák</a>
+            <a href="#boss">Boss fight</a>
+            <a href="#dovednosti">Strom dovedností</a>
+            <a href="#save">Rozehráno</a>
+        </nav>
+
         <div>
-            <h2>Jak pracuju s&nbsp;AI</h2>
-            <p class="quote">AI se mnou píše hodně kódu. Rozhodovat za mě nebude.</p>
-        </div>
-        <div class="prose">
-            <p>AI nástroje používám každý den a&nbsp;dal jsem si práci, abych je uměl používat pořádně: agenti mi projdou neznámý kód, napíšou nudné části, pustí testy, připraví migraci nebo projdou diff dřív než já. Jsem díky tomu znatelně rychlejší a&nbsp;stihnu práci, na kterou bych jinak neměl čas.</p>
-            <p>Na tom, kdo za výsledek odpovídá, to nic nemění. Každý řádek, který jde ven pod mým jménem, přečtu a&nbsp;rozumím mu, vím, proč tam je a&nbsp;na co sahá. A&nbsp;když se něco rozbije na produkci, analýza i&nbsp;oprava jsou pořád moje.</p>
-        </div>
-    </section>
+            <section class="chapter" id="questy">
+                <h2>Deník questů</h2>
+                <div class="quests">
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-main">Hlavní quest</span><h3>TSM / CETIN</h3><span class="when">2020 – dnes</span></div>
+                        <p class="role">Senior backend a&nbsp;integrace, team lead</p>
+                        <div class="quest-body split">
+                            <p>Služby v&nbsp;Kotlinu a&nbsp;Javě nad PostgreSQL pro servisní platformu telekomunikačního operátora: B2B toky, change management, integrace s&nbsp;partnery a&nbsp;analýza incidentů.</p>
+                            <ul class="objectives">
+                                <li>Vést produkční rollout verze 2.2</li>
+                                <li>Vést produkční rollout verze 2.4</li>
+                                <li>Jádro týmu u&nbsp;verze 1.5</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-side">Vedlejší quest</span><h3>Nordic web</h3><span class="when">2024 – dnes, podle potřeby</span></div>
+                        <p class="role">Cílené změny v&nbsp;kódu v&nbsp;Djangu, když jsou potřeba.</p>
+                    </article>
+                    <article class="quest past">
+                        <div class="quest-head"><span class="badge b-done">Splněno</span><h3>MNCP</h3><span class="when">2018 – 2021</span></div>
+                        <p class="role">Full-stack v&nbsp;Kotlinu/Springu a&nbsp;Angularu: autentizace, exporty, archivy, měřicí dávky.</p>
+                    </article>
+                    <article class="quest past">
+                        <div class="quest-head"><span class="badge b-done">Splněno</span><h3>ZIS</h3><span class="when">2017 – 2018</span></div>
+                        <p class="role">Enterprise Java a&nbsp;ZK. Tady jsem se naučil dodat funkci od začátku do konce.</p>
+                    </article>
+                </div>
+            </section>
 
-    <section class="section story">
+            <section class="chapter" id="schopnosti">
+                <h2>Schopnosti</h2>
+                <dl class="rows">
+                    <div><dt>Integrace</dt><dd>B2B API, kontrakty zpráv, retry a&nbsp;chyby, které se ukážou až ve chvíli, kdy se připojí systém partnera.</dd></div>
+                    <div><dt>Releasy</dt><dd>Nové verze platformy do reálných prostředí: stará data, zpětná kompatibilita, pořadí rolloutu a&nbsp;cesta zpět.</dd></div>
+                    <div><dt>Ladění produkce</dt><dd>Logy, metriky, databáze a&nbsp;znalost domény dohromady. Hledám příčinu, ne záplatu, po které symptom na chvíli ztichne.</dd></div>
+                    <div><dt>Architektura</dt><dd>Malé bezpečné změny, jasně pojmenovaná pravidla a&nbsp;rozumné hranice služeb. Tolik ceremonie, kolik problém opravdu potřebuje.</dd></div>
+                </dl>
+            </section>
+
+            <section class="chapter" id="partak">
+                <h2><span class="badge b-party">Parťák</span> AI v&nbsp;partě</h2>
+                <ul>
+                    <li>AI agenty používám každý den a&nbsp;naučil jsem se z&nbsp;nich dostat hodně: projdou neznámý kód, napíšou nudné části, pustí testy, připraví migraci a&nbsp;projdou diff dřív než já.</li>
+                    <li>Jsem díky tomu znatelně rychlejší a&nbsp;stihnu práci, na kterou bych jinak neměl čas.</li>
+                    <li>Ovladač ale držím já. Každý řádek, který jde ven pod mým jménem, přečtu a&nbsp;rozumím mu, a&nbsp;když se rozbije produkce, analýza i&nbsp;oprava jsou moje.</li>
+                </ul>
+            </section>
+
+            <section class="chapter" id="boss">
+                <h2><span class="badge b-boss">Boss fight</span> UUID, které nebylo UUID</h2>
+                <p>Při rolloutu první verze platformy integrační specifikace slibovala, že <code>messageId</code> bude UUID. Jeden partner začal hned padat: jeho systém si potichu parsoval ID ticketu ze starého formátu <code>ticketId_timestamp</code>, přestože to ID měl normálně v&nbsp;těle zprávy.</p>
+                <p>Čistá oprava byla na jeho straně, jenže v&nbsp;korporátu by trvala měsíce. Vrátil jsem tedy naši stranu ke starému tvaru a&nbsp;produkce jela dál. Správné rozhodnutí nebývá vždycky to nejčistší. Spíš to, které nikomu jinému nerozbije noc ve dvě ráno.</p>
+            </section>
+
+            <section class="chapter" id="dovednosti">
+                <h2>Strom dovedností</h2>
+                <dl class="skills">
+                    <div><dt>Hlavní</dt><dd>Kotlin, Java, Spring, PostgreSQL, Kafka</dd></div>
+                    <div><dt>Odemčeno také</dt><dd>Kubernetes, Oracle, Angular, Python a&nbsp;Django, TypeScript, Astro</dd></div>
+                </dl>
+            </section>
+
+            <section class="chapter" id="save">
+                <h2>Právě rozehráno</h2>
+                <Now lang="cz" />
+            </section>
+        </div>
+    </div>
+
+    <section class="party">
         <div>
-            <p class="label">Historka z&nbsp;produkce</p>
-            <h2>UUID, které nebylo UUID</h2>
+            <h2>Hledáte parťáka do party?</h2>
+            <p>Dlouhodobě i&nbsp;na konkrétní zakázku: backend, integrace a&nbsp;produkční releasy.</p>
         </div>
-        <div class="prose">
-            <p>Při rolloutu první verze platformy integrační specifikace slibovala, že <code>messageId</code> bude UUID. Jeden partner začal hned padat. Jeho systém si totiž potichu parsoval ID ticketu ze starého formátu <code>ticketId_timestamp</code>, přestože to ID měl normálně v&nbsp;těle zprávy.</p>
-            <p>Čistá oprava byla na jeho straně, jenže v&nbsp;korporátu by trvala měsíce. Vrátil jsem tedy naši stranu ke starému tvaru a&nbsp;produkce jela dál. Správné rozhodnutí nebývá vždycky to nejčistší. Spíš to, které nikomu jinému nerozbije noc ve dvě ráno.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Kde jsem pracoval</h2>
-        <ol class="timeline">
-            <li>
-                <span class="when">2020 – dnes</span>
-                <div class="what"><b>TSM / CETIN</b>
-                    <p>Senior backend a&nbsp;integrace, team lead. Služby v&nbsp;Kotlinu a&nbsp;Javě nad PostgreSQL, B2B toky, change management, analýza incidentů a&nbsp;rollouty verzí 2.2 a&nbsp;2.4.</p></div>
-            </li>
-            <li>
-                <span class="when">2018 – 2021</span>
-                <div class="what"><b>MNCP</b>
-                    <p>Full-stack vývojář. Kotlin/Spring, Angular a&nbsp;databáze: autentizace, exporty, archivy a&nbsp;měřicí dávky.</p></div>
-            </li>
-            <li>
-                <span class="when">2017 – 2018</span>
-                <div class="what"><b>ZIS</b>
-                    <p>Enterprise Java. Obrazovky v&nbsp;ZK/ZUL, služby a&nbsp;DAO vrstvy, importy, zpracování Excelu. Tady jsem se naučil dodat funkci od začátku do konce.</p></div>
-            </li>
-        </ol>
-        <p class="muted" style="margin-top:1.2rem">Všechno v&nbsp;rámci dlouhodobé spolupráce s&nbsp;DataLite od roku 2017, posledních několik let jako OSVČ. Víc na <a href="/cz/projekty">stránce projektů</a>.</p>
-    </section>
-
-    <section class="section">
-        <h2>Stack</h2>
-        <div class="stack-rows">
-            <div><h3>Každý den</h3><p>Kotlin, Java, Spring, PostgreSQL, Kafka</p></div>
-            <div><h3>Také</h3><p>Kubernetes, Oracle, Angular, Python a&nbsp;Django, TypeScript, Astro</p></div>
-        </div>
-    </section>
-
-    <section class="cta bleed">
-        <h2>Hledáte seniorního vývojáře na backend, integrace nebo produkční releasy?</h2>
-        <p>Dlouhodobě i&nbsp;na konkrétní zakázku, na dálku od Prahy. Nejrychlejší je e-mail.</p>
-        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+        <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
     </section>
 
 </Layout>

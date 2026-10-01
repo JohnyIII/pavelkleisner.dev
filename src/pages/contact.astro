@@ -4,19 +4,39 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title="Contact - Pavel Kleisner">
 
-    <section class="cta bleed" style="margin-top:0;padding-block:4rem 4.5rem">
-        <h1>Contact</h1>
-        <p style="font-family:var(--font-display);font-size:clamp(1.25rem,2.4vw,1.55rem);line-height:1.4;color:var(--on-green);max-width:40rem;margin-top:1.4rem">Backend, integrations, a release to own or a production problem to untangle? Send a short email and I'll tell you plainly whether I can help.</p>
-        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
-        <p>A few lines about the problem, the context and the expected scope are enough.</p>
-    </section>
-
-    <section class="section" style="margin-top:4rem">
-        <div class="contact-grid">
-            <div><h3>LinkedIn</h3><p>Professional background and experience.</p><p><a href="https://www.linkedin.com/in/pavel-kleisner-895989129/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pavel-kleisner-895989129</a></p></div>
-            <div><h3>GitHub</h3><p>Code and the source of this site.</p><p><a href="https://github.com/JohnyIII" target="_blank" rel="noopener noreferrer">github.com/JohnyIII</a></p></div>
-            <div><h3>Working together</h3><p>Self-employed contractor, open to long-term and focused engagements, remotely from near Prague (CET). The best fit where backend behaviour, data, external contracts and releases all matter at once.</p></div>
+    <section class="page-head">
+        <div>
+            <p class="muted" style="margin:0 0 .4rem"><span class="badge b-party">Looking for a party</span></p>
+            <h1>Contact</h1>
+            <p class="sub">Backend, integrations, a release to own or a production problem to untangle? Send a short email and I'll tell you plainly whether I can help.</p>
         </div>
     </section>
+
+    <div class="book">
+        <nav class="toc" aria-label="On this page">
+            <p>Contact</p>
+            <a href="#email">Email</a>
+            <a href="#elsewhere">Elsewhere</a>
+            <a href="#together">Working together</a>
+        </nav>
+        <div>
+            <section class="chapter" id="email">
+                <h2>Email</h2>
+                <p><a class="email-big" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a></p>
+                <p class="muted">The fastest way. A few lines about the problem, the context and the expected scope are enough.</p>
+            </section>
+            <section class="chapter" id="elsewhere">
+                <h2>Elsewhere</h2>
+                <dl class="rows">
+                    <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/pavel-kleisner-895989129/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pavel-kleisner-895989129</a>, professional background</dd></div>
+                    <div><dt>GitHub</dt><dd><a href="https://github.com/JohnyIII" target="_blank" rel="noopener noreferrer">github.com/JohnyIII</a>, code and the source of this site</dd></div>
+                </dl>
+            </section>
+            <section class="chapter" id="together">
+                <h2>Working together</h2>
+                <p>I'm a self-employed contractor, open to long-term and focused engagements, remotely from near Prague (CET). The best fit is where backend behaviour, data, external contracts and production releases all matter at once. Clear scope, real responsibility and direct communication is where I do my best work.</p>
+            </section>
+        </div>
+    </div>
 
 </Layout>

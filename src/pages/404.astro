@@ -7,9 +7,10 @@ const t = lang === "cz"
     ? {
         title: "404 - Stránka nenalezena",
         heading: "404",
+        badge: "Game over",
         sub: "Route not found in router config",
-        body: "Tahle stránka neexistuje. Možná překlep v adrese, starý odkaz, nebo jsem ji při úklidu zrefaktoroval pryč.",
-        homeLabel: "Zpět na home",
+        body: "Tenhle level neexistuje. Možná překlep v adrese, starý odkaz, nebo jsem ho při úklidu zrefaktoroval pryč.",
+        homeLabel: "Zpět na start",
         homeHref: "/cz",
         contactLabel: "Napsat",
         contactHref: "/cz/kontakt",
@@ -25,9 +26,10 @@ const t = lang === "cz"
     : {
         title: "404 - Page not found",
         heading: "404",
+        badge: "Game over",
         sub: "Route not found in router config",
-        body: "This page doesn't exist. A typo in the address, an old link, or I refactored it away while tidying up.",
-        homeLabel: "Back to home",
+        body: "This level doesn't exist. A typo in the address, an old link, or I refactored it away while tidying up.",
+        homeLabel: "Back to start",
         homeHref: "/",
         contactLabel: "Send me a note",
         contactHref: "/contact",
@@ -45,9 +47,10 @@ const t = lang === "cz"
 
 <Layout title={t.title}>
     <section class="not-found">
-        <div class="code">404</div>
-        <p class="lead" style="font-family:var(--font-display);font-size:1.4rem;margin:1rem 0">{t.body}</p>
-        <p><a href={t.homeHref} class="btn primary">{t.homeLabel}</a> &nbsp; <a href={t.contactHref}>{t.contactLabel}</a></p>
+        <p style="margin:0 0 .6rem"><span class="badge b-boss">{t.badge}</span></p>
+        <h1>404</h1>
+        <p class="sub">{t.body}</p>
+        <p><a href={t.homeHref} class="btn">{t.homeLabel}</a> &nbsp; <a href={t.contactHref}>{t.contactLabel}</a></p>
         <pre aria-label={t.stackTitle}>{t.stackLines.map((line, i) => <span class={i === 0 ? "err" : undefined}>{line + "\n"}</span>)}</pre>
     </section>
 </Layout>

@@ -4,19 +4,39 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title="Kontakt - Pavel Kleisner">
 
-    <section class="cta bleed" style="margin-top:0;padding-block:4rem 4.5rem">
-        <h1>Kontakt</h1>
-        <p style="font-family:var(--font-display);font-size:clamp(1.25rem,2.4vw,1.55rem);line-height:1.4;color:var(--on-green);max-width:40rem;margin-top:1.4rem">Backend, integrace, release, který potřebuje vlastníka, nebo zamotaný problém na produkci? Pošlete krátký e-mail a&nbsp;na rovinu vám řeknu, jestli můžu pomoct.</p>
-        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
-        <p>Stačí pár řádků o&nbsp;problému, souvislostech a&nbsp;očekávaném rozsahu.</p>
-    </section>
-
-    <section class="section" style="margin-top:4rem">
-        <div class="contact-grid">
-            <div><h3>LinkedIn</h3><p>Profesní historie a&nbsp;zkušenosti.</p><p><a href="https://www.linkedin.com/in/pavel-kleisner-895989129/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pavel-kleisner-895989129</a></p></div>
-            <div><h3>GitHub</h3><p>Kód a&nbsp;zdrojáky tohohle webu.</p><p><a href="https://github.com/JohnyIII" target="_blank" rel="noopener noreferrer">github.com/JohnyIII</a></p></div>
-            <div><h3>Spolupráce</h3><p>OSVČ, dlouhodobě i&nbsp;na konkrétní zakázku, na dálku od Prahy. Nejvíc se hodím tam, kde záleží zároveň na chování backendu, datech, externích kontraktech a&nbsp;releasech.</p></div>
+    <section class="page-head">
+        <div>
+            <p class="muted" style="margin:0 0 .4rem"><span class="badge b-party">Hledám partu</span></p>
+            <h1>Kontakt</h1>
+            <p class="sub">Backend, integrace, release, který potřebuje vlastníka, nebo zamotaný problém na produkci? Pošlete krátký e-mail a&nbsp;na rovinu vám řeknu, jestli můžu pomoct.</p>
         </div>
     </section>
+
+    <div class="book">
+        <nav class="toc" aria-label="Na této stránce">
+            <p>Kontakt</p>
+            <a href="#email">E-mail</a>
+            <a href="#jinde">Jinde</a>
+            <a href="#spoluprace">Spolupráce</a>
+        </nav>
+        <div>
+            <section class="chapter" id="email">
+                <h2>E-mail</h2>
+                <p><a class="email-big" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a></p>
+                <p class="muted">Nejrychlejší cesta. Stačí pár řádků o&nbsp;problému, souvislostech a&nbsp;očekávaném rozsahu.</p>
+            </section>
+            <section class="chapter" id="jinde">
+                <h2>Jinde</h2>
+                <dl class="rows">
+                    <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/pavel-kleisner-895989129/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pavel-kleisner-895989129</a>, profesní historie</dd></div>
+                    <div><dt>GitHub</dt><dd><a href="https://github.com/JohnyIII" target="_blank" rel="noopener noreferrer">github.com/JohnyIII</a>, kód a&nbsp;zdrojáky tohohle webu</dd></div>
+                </dl>
+            </section>
+            <section class="chapter" id="spoluprace">
+                <h2>Spolupráce</h2>
+                <p>Pracuju jako OSVČ a&nbsp;jsem otevřený dlouhodobé i&nbsp;krátké, cílené spolupráci, na dálku od Prahy. Nejvíc se hodím tam, kde záleží zároveň na chování backendu, datech, externích kontraktech a&nbsp;produkčních releasech. Jasný rozsah, skutečná odpovědnost a&nbsp;přímá komunikace, to je prostředí, kde odvedu nejlepší práci.</p>
+            </section>
+        </div>
+    </div>
 
 </Layout>

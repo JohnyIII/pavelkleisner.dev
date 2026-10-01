@@ -4,102 +4,123 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title="Projekty a zkušenosti - Pavel Kleisner">
 
-    <section class="page-intro">
-        <h1>Projekty a&nbsp;zkušenosti</h1>
-        <p class="lead">Dlouho žijící platformy, produkční integrace a&nbsp;pár vlastních nástrojů.</p>
-        <div class="body">
-            <p>Klientské systémy jsou neveřejné, takže místo screenshotů píšu, co jsem na kterém měl na starost, jaká omezení hrála roli a&nbsp;co mě ta práce naučila. Společné to má jedno: pochopit doménu, udělat nejmenší bezpečnou změnu a&nbsp;zůstat i&nbsp;u&nbsp;toho, co se děje po nasazení.</p>
+    <section class="page-head">
+        <div>
+            <h1>Deník questů</h1>
+            <p class="sub">Dlouho žijící platformy, produkční integrace a&nbsp;pár vlastních nástrojů. Klientské systémy jsou neveřejné, takže píšu, co jsem na kterém měl na starost, jaká omezení hrála roli a&nbsp;co mě ta práce naučila.</p>
         </div>
     </section>
 
-    <section class="section">
-        <h2>Práce pro klienty</h2>
-        <p class="sub">Všechno v&nbsp;rámci dlouhodobé spolupráce s&nbsp;DataLite od roku 2017, nejdřív jako zaměstnanec, posledních několik let jako OSVČ.</p>
+    <div class="book">
+        <nav class="toc" aria-label="Na této stránce">
+            <p>Deník questů</p>
+            <a href="#klienti">Hlavní a&nbsp;vedlejší questy</a>
+            <a href="#vlastni">Vlastní projekty</a>
+            <a href="#predtim">Před DataLite</a>
+        </nav>
 
-        <article class="project">
-            <div class="project-head"><h3>TSM / CETIN</h3><span class="when">2020 – dnes</span><span class="role">senior backend a&nbsp;integrace, team lead</span></div>
-            <div class="project-body">
-                <p>Moje hlavní dlouhodobá práce: backend a&nbsp;integrace na moderní platformě pro správu služeb telekomunikačního operátora. Pracuju blízko produkce, u&nbsp;releasů, B2B komunikace s&nbsp;partnery, procesních pravidel a&nbsp;kompatibility dat.</p>
-                <ul>
-                    <li>Vedl jsem produkční rollouty verzí 2.2 a&nbsp;2.4, na 1.5 jsem byl v&nbsp;jádru týmu.</li>
-                    <li>Integrační toky kolem ticketingu, NIP, change managementu, B2B a&nbsp;PEW.</li>
-                    <li>Analýza incidentů z&nbsp;logů, metrik a&nbsp;dat, ne záplatování naslepo.</li>
-                    <li>Jako hlavní vývojář naší části platformy hodně plánuju, vysvětluju a&nbsp;dělám code review.</li>
-                </ul>
-            </div>
-            <p class="stack"><b>Stack:</b> Kotlin, Java, Spring, PostgreSQL, Kafka, Kubernetes</p>
-        </article>
+        <div>
+            <section class="chapter" id="klienti">
+                <h2>Hlavní a&nbsp;vedlejší questy</h2>
+                <p class="sub">Všechno v&nbsp;rámci dlouhodobé spolupráce s&nbsp;DataLite od roku 2017, nejdřív jako zaměstnanec, posledních několik let jako OSVČ.</p>
+                <div class="quests">
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-main">Hlavní quest</span><h3>TSM / CETIN</h3><span class="when">2020 – dnes</span></div>
+                        <p class="role">Senior backend a&nbsp;integrace, team lead</p>
+                        <div class="quest-body split">
+                            <p>Backend a&nbsp;integrace na moderní platformě pro správu služeb telekomunikačního operátora. Pracuju blízko produkce, u&nbsp;releasů, B2B komunikace s&nbsp;partnery, procesních pravidel a&nbsp;kompatibility dat.</p>
+                            <ul class="objectives">
+                                <li>Vést produkční rollouty verzí 2.2 a&nbsp;2.4</li>
+                                <li>Jádro týmu u&nbsp;verze 1.5</li>
+                                <li>Integrační toky: ticketing, NIP, change management, B2B, PEW</li>
+                                <li>Analýza incidentů z&nbsp;logů, metrik a&nbsp;dat</li>
+                                <li>Plánování, vysvětlování a&nbsp;code review jako hlavní vývojář naší části platformy</li>
+                            </ul>
+                        </div>
+                        <p class="stack"><b>Stack:</b> Kotlin, Java, Spring, PostgreSQL, Kafka, Kubernetes</p>
+                    </article>
 
-        <article class="project">
-            <div class="project-head"><h3>Nordic web</h3><span class="when">2024 – dnes</span><span class="role">podle potřeby</span></div>
-            <div class="project-body">
-                <p>Spolupráce na webovém systému v&nbsp;Djangu. Práce je teď málo, ale spolupráce trvá a&nbsp;naskočím, když je potřeba udělat konkrétní změnu.</p>
-                <ul>
-                    <li>Samoobsluha a&nbsp;chování webu v&nbsp;Pythonu, Djangu a&nbsp;šablonách.</li>
-                    <li>Cílené změny v&nbsp;existujícím kódu, bez vnucování vlastních zvyků.</li>
-                </ul>
-            </div>
-            <p class="stack"><b>Stack:</b> Python, Django, šablony</p>
-        </article>
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-side">Vedlejší quest</span><h3>Nordic web</h3><span class="when">2024 – dnes, podle potřeby</span></div>
+                        <div class="quest-body split">
+                            <p>Spolupráce na webovém systému v&nbsp;Djangu. Práce je teď málo, ale spolupráce trvá a&nbsp;naskočím, když je potřeba udělat konkrétní změnu.</p>
+                            <ul class="objectives">
+                                <li>Samoobsluha a&nbsp;chování webu v&nbsp;Pythonu, Djangu a&nbsp;šablonách</li>
+                                <li>Cílené změny bez vnucování vlastních zvyků</li>
+                            </ul>
+                        </div>
+                        <p class="stack"><b>Stack:</b> Python, Django, šablony</p>
+                    </article>
 
-        <article class="project">
-            <div class="project-head"><h3>MNCP</h3><span class="when">2018 – 2021</span><span class="role">full-stack vývojář</span></div>
-            <div class="project-body">
-                <p>Full-stack projekt kolem měření, archivů, exportů a&nbsp;provozních workflow. Tady jsem se posunul od dodávání funkcí k&nbsp;odpovědnosti za chování napříč backendem, frontendem a&nbsp;databází.</p>
-                <ul>
-                    <li>Autentizace, opravy exportů, filtry archivů a&nbsp;chování měřicích dávek.</li>
-                    <li>Databázové skripty a&nbsp;nasazení vedle aplikačního kódu.</li>
-                    <li>Naučil jsem se sledovat chybu celým requestem a&nbsp;tokem dat, ne jen v&nbsp;jedné vrstvě.</li>
-                </ul>
-            </div>
-            <p class="stack"><b>Stack:</b> Kotlin, Spring, Angular, Oracle, PostgreSQL</p>
-        </article>
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-done">Splněno</span><h3>MNCP</h3><span class="when">2018 – 2021</span></div>
+                        <p class="role">Full-stack vývojář</p>
+                        <div class="quest-body split">
+                            <p>Měření, archivy, exporty a&nbsp;provozní workflow. Tady jsem se posunul od dodávání funkcí k&nbsp;odpovědnosti za chování napříč backendem, frontendem a&nbsp;databází.</p>
+                            <ul class="objectives">
+                                <li>Autentizace, opravy exportů, filtry archivů a&nbsp;měřicí dávky</li>
+                                <li>Databázové skripty a&nbsp;nasazení vedle aplikačního kódu</li>
+                                <li>Sledovat chybu celým requestem a&nbsp;tokem dat</li>
+                            </ul>
+                        </div>
+                        <p class="stack"><b>Stack:</b> Kotlin, Spring, Angular, Oracle, PostgreSQL</p>
+                    </article>
 
-        <article class="project">
-            <div class="project-head"><h3>ZIS</h3><span class="when">2017 – 2018</span><span class="role">enterprise Java</span></div>
-            <div class="project-body">
-                <p>Enterprise aplikace pro provoz CETINu. Obrazovky v&nbsp;Javě a&nbsp;ZK, vrstvy controllerů, služeb a&nbsp;DAO, importy, zpracování Excelu a&nbsp;produkční chyby.</p>
-                <ul>
-                    <li>Celé business obrazovky od UI až po persistenci.</li>
-                    <li>Klasický enterprise stack s&nbsp;přísnými procesy a&nbsp;pravidly pro data.</li>
-                </ul>
-            </div>
-            <p class="stack"><b>Stack:</b> Java, ZK, ZUL, Maven, SQL</p>
-        </article>
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-done">Splněno</span><h3>ZIS</h3><span class="when">2017 – 2018</span></div>
+                        <p class="role">Enterprise Java</p>
+                        <div class="quest-body split">
+                            <p>Enterprise aplikace pro provoz CETINu: obrazovky v&nbsp;Javě a&nbsp;ZK, vrstvy controllerů, služeb a&nbsp;DAO, importy, zpracování Excelu a&nbsp;produkční chyby.</p>
+                            <ul class="objectives">
+                                <li>Celé business obrazovky od UI až po persistenci</li>
+                                <li>Klasický enterprise stack s&nbsp;přísnými pravidly pro procesy a&nbsp;data</li>
+                            </ul>
+                        </div>
+                        <p class="stack"><b>Stack:</b> Java, ZK, ZUL, Maven, SQL</p>
+                    </article>
+                </div>
+            </section>
 
-        <p class="muted" style="margin-top:1.5rem">Před DataLite jsem byl testerem v&nbsp;GMC Software (dnes Quadient) v&nbsp;Hradci Králové: psal jsem use-casy a&nbsp;testovací scénáře a&nbsp;staral se o&nbsp;Jenkins server týmu.</p>
-    </section>
+            <section class="chapter" id="vlastni">
+                <h2>Vlastní projekty</h2>
+                <p class="sub">Menší věci, které si sám stavím a&nbsp;provozuju, většinou spolu s&nbsp;AI agenty. Držím se díky nim u&nbsp;celé smyčky: nápad, použitelné rozhraní, data, nasazení a&nbsp;údržba.</p>
+                <div class="side">
+                    <article>
+                        <h3>Mapa výdejních míst</h3>
+                        <p>Všechna výdejní místa a&nbsp;boxy v&nbsp;ČR na jedné mapě, zhruba 40 tisíc, denně importovaná z&nbsp;feedů dopravců a&nbsp;očištěná od duplicit.</p>
+                        <p class="stack"><b>Next.js, PostgreSQL, Drizzle, Leaflet</b></p>
+                    </article>
+                    <article>
+                        <h3>Rodinný portál</h3>
+                        <p>Aplikace na malém domácím serveru: jídelníček se skutečnými nutričními hodnotami, plánovač všeho kolem domu, výlety a&nbsp;seznamy na balení.</p>
+                        <p class="stack"><b>Next.js, Drizzle ORM, PostgreSQL, Raspberry Pi</b></p>
+                    </article>
+                    <article>
+                        <h3>Obchodní bot</h3>
+                        <p>Trend-following strategie (křížení EMA, stop podle ATR), na které ověřuju předpoklady proti tržním datům. Ne na prodej jistoty.</p>
+                        <p class="stack"><b>Python, Freqtrade</b></p>
+                    </article>
+                    <article>
+                        <h3>Tenhle web</h3>
+                        <p>Statický, dvojjazyčný, levný na provoz a&nbsp;snadno se mění. <a href="https://github.com/JohnyIII/pavelkleisner.dev" target="_blank" rel="noopener noreferrer">Zdrojový kód je na GitHubu</a>.</p>
+                        <p class="stack"><b>Astro, TypeScript, Cloudflare Pages</b></p>
+                    </article>
+                </div>
+            </section>
 
-    <section class="section">
-        <h2>Vlastní projekty</h2>
-        <p class="sub">Menší věci, které si sám stavím a&nbsp;provozuju, většinou spolu s&nbsp;AI agenty. Držím se díky nim u&nbsp;celé smyčky: nápad, použitelné rozhraní, data, nasazení a&nbsp;údržba.</p>
-        <div class="side">
-            <article>
-                <h3>Mapa výdejních míst</h3>
-                <p>Všechna výdejní místa a&nbsp;boxy v&nbsp;ČR na jedné mapě, zhruba 40 tisíc, denně importovaná z&nbsp;feedů dopravců a&nbsp;očištěná od duplicit.</p>
-                <p class="stack">Next.js, PostgreSQL, Drizzle, Leaflet</p>
-            </article>
-            <article>
-                <h3>Rodinný portál</h3>
-                <p>Aplikace na malém domácím serveru: jídelníček se skutečnými nutričními hodnotami, plánovač všeho kolem domu, výlety a&nbsp;seznamy na balení.</p>
-                <p class="stack">Next.js, Drizzle ORM, PostgreSQL, Raspberry Pi</p>
-            </article>
-            <article>
-                <h3>Obchodní bot</h3>
-                <p>Trend-following strategie (křížení EMA, stop podle ATR), na které ověřuju předpoklady proti tržním datům. Ne na prodej jistoty.</p>
-                <p class="stack">Python, Freqtrade</p>
-            </article>
-            <article>
-                <h3>Tenhle web</h3>
-                <p>Statický, dvojjazyčný, levný na provoz a&nbsp;snadno se mění. Zdrojový kód je na GitHubu.</p>
-                <p class="stack">Astro, TypeScript, Cloudflare Pages</p>
-            </article>
+            <section class="chapter" id="predtim">
+                <h2>Před DataLite</h2>
+                <p>Tester v&nbsp;GMC Software (dnes Quadient) v&nbsp;Hradci Králové, 2013–2014: use-casy, testovací scénáře a&nbsp;správa Jenkins serveru týmu.</p>
+            </section>
         </div>
-    </section>
+    </div>
 
-    <section class="cta bleed">
-        <h2>Chcete probrat projekt?</h2>
-        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+    <section class="party">
+        <div>
+            <h2>Chcete probrat projekt?</h2>
+            <p>Dlouhodobě i&nbsp;na konkrétní zakázku, na dálku od Prahy.</p>
+        </div>
+        <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
     </section>
 
 </Layout>

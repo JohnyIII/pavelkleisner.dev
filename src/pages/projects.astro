@@ -4,102 +4,123 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title="Projects & Experience - Pavel Kleisner">
 
-    <section class="page-intro">
-        <h1>Projects and experience</h1>
-        <p class="lead">Long-lived platforms, production integrations and a few tools of my own.</p>
-        <div class="body">
-            <p>Client systems are private, so instead of screenshots here is what I owned on each, which constraints mattered and what the work taught me. The thread through all of it: understand the domain, make the smallest safe change and stay for what happens after the deploy.</p>
+    <section class="page-head">
+        <div>
+            <h1>Quest log</h1>
+            <p class="sub">Long-lived platforms, production integrations and a few tools of my own. Client systems are private, so here is what I owned on each, which constraints mattered and what the work taught me.</p>
         </div>
     </section>
 
-    <section class="section">
-        <h2>Client work</h2>
-        <p class="sub">All through a long-term collaboration with DataLite since 2017, first as an employee, for the last several years as an independent contractor.</p>
+    <div class="book">
+        <nav class="toc" aria-label="On this page">
+            <p>Quest log</p>
+            <a href="#client">Main and side quests</a>
+            <a href="#own">Own projects</a>
+            <a href="#before">Before DataLite</a>
+        </nav>
 
-        <article class="project">
-            <div class="project-head"><h3>TSM / CETIN</h3><span class="when">2020 – now</span><span class="role">senior backend and integration engineer, team lead</span></div>
-            <div class="project-body">
-                <p>My main long-term focus: backend and integration work on a modern service management platform for a telco operator. I work close to production, on releases, B2B communication with partners, process rules and data compatibility.</p>
-                <ul>
-                    <li>Led the production rollouts of versions 2.2 and 2.4, core developer on 1.5.</li>
-                    <li>Integration flows around ticketing, NIP, change management, B2B and PEW.</li>
-                    <li>Incident analysis from logs, metrics and the data, not blind patching.</li>
-                    <li>As the main developer for our part of the platform, a lot of planning, explaining and code review.</li>
-                </ul>
-            </div>
-            <p class="stack"><b>Stack:</b> Kotlin, Java, Spring, PostgreSQL, Kafka, Kubernetes</p>
-        </article>
+        <div>
+            <section class="chapter" id="client">
+                <h2>Main and side quests</h2>
+                <p class="sub">All through a long-term collaboration with DataLite since 2017, first as an employee, for the last several years as an independent contractor.</p>
+                <div class="quests">
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-main">Main quest</span><h3>TSM / CETIN</h3><span class="when">2020 – now</span></div>
+                        <p class="role">Senior backend and integration engineer, team lead</p>
+                        <div class="quest-body split">
+                            <p>Backend and integration work on a modern service management platform for a telco operator. I work close to production, on releases, B2B communication with partners, process rules and data compatibility.</p>
+                            <ul class="objectives">
+                                <li>Lead the production rollouts of 2.2 and 2.4</li>
+                                <li>Core developer on version 1.5</li>
+                                <li>Integration flows: ticketing, NIP, change management, B2B, PEW</li>
+                                <li>Incident analysis from logs, metrics and data</li>
+                                <li>Planning, explaining and code review as the main developer for our part of the platform</li>
+                            </ul>
+                        </div>
+                        <p class="stack"><b>Stack:</b> Kotlin, Java, Spring, PostgreSQL, Kafka, Kubernetes</p>
+                    </article>
 
-        <article class="project">
-            <div class="project-head"><h3>Nordic web</h3><span class="when">2024 – now</span><span class="role">on demand</span></div>
-            <div class="project-body">
-                <p>Ad-hoc collaboration on a Django-based web system. The volume is low these days, but the engagement stays open and I jump in when there is a focused change to make.</p>
-                <ul>
-                    <li>Self-service and web behaviour in Python, Django and templates.</li>
-                    <li>Targeted changes in an existing codebase without forcing my usual patterns onto it.</li>
-                </ul>
-            </div>
-            <p class="stack"><b>Stack:</b> Python, Django, templates</p>
-        </article>
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-side">Side quest</span><h3>Nordic web</h3><span class="when">2024 – now, on demand</span></div>
+                        <div class="quest-body split">
+                            <p>Ad-hoc collaboration on a Django-based web system. The volume is low these days, but the engagement stays open and I jump in when there is a focused change to make.</p>
+                            <ul class="objectives">
+                                <li>Self-service and web behaviour in Python, Django and templates</li>
+                                <li>Targeted changes without forcing my usual patterns onto the codebase</li>
+                            </ul>
+                        </div>
+                        <p class="stack"><b>Stack:</b> Python, Django, templates</p>
+                    </article>
 
-        <article class="project">
-            <div class="project-head"><h3>MNCP</h3><span class="when">2018 – 2021</span><span class="role">full-stack engineer</span></div>
-            <div class="project-body">
-                <p>Full-stack project around measurement, archives, exports and operational workflows. This is where I moved from delivering features to owning behaviour across backend, frontend and database.</p>
-                <ul>
-                    <li>Authentication, export fixes, archive filters and measurement batch behaviour.</li>
-                    <li>Database scripts and deployment concerns alongside the application code.</li>
-                    <li>Learned to follow a bug through the whole request and data flow, not just one layer.</li>
-                </ul>
-            </div>
-            <p class="stack"><b>Stack:</b> Kotlin, Spring, Angular, Oracle, PostgreSQL</p>
-        </article>
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-done">Completed</span><h3>MNCP</h3><span class="when">2018 – 2021</span></div>
+                        <p class="role">Full-stack engineer</p>
+                        <div class="quest-body split">
+                            <p>Measurement, archives, exports and operational workflows. This is where I moved from delivering features to owning behaviour across backend, frontend and database.</p>
+                            <ul class="objectives">
+                                <li>Authentication, export fixes, archive filters and measurement batches</li>
+                                <li>Database scripts and deployment alongside the application code</li>
+                                <li>Following a bug through the whole request and data flow</li>
+                            </ul>
+                        </div>
+                        <p class="stack"><b>Stack:</b> Kotlin, Spring, Angular, Oracle, PostgreSQL</p>
+                    </article>
 
-        <article class="project">
-            <div class="project-head"><h3>ZIS</h3><span class="when">2017 – 2018</span><span class="role">enterprise Java</span></div>
-            <div class="project-body">
-                <p>An enterprise application for CETIN operations. Java and ZK screens, controller, service and DAO layers, imports, Excel processing and production defects.</p>
-                <ul>
-                    <li>Complete business screens from the UI down to persistence.</li>
-                    <li>A classic enterprise stack with strict process and data constraints.</li>
-                </ul>
-            </div>
-            <p class="stack"><b>Stack:</b> Java, ZK, ZUL, Maven, SQL</p>
-        </article>
+                    <article class="quest">
+                        <div class="quest-head"><span class="badge b-done">Completed</span><h3>ZIS</h3><span class="when">2017 – 2018</span></div>
+                        <p class="role">Enterprise Java</p>
+                        <div class="quest-body split">
+                            <p>An enterprise application for CETIN operations: Java and ZK screens, controller, service and DAO layers, imports, Excel processing and production defects.</p>
+                            <ul class="objectives">
+                                <li>Complete business screens from the UI down to persistence</li>
+                                <li>A classic enterprise stack with strict process and data rules</li>
+                            </ul>
+                        </div>
+                        <p class="stack"><b>Stack:</b> Java, ZK, ZUL, Maven, SQL</p>
+                    </article>
+                </div>
+            </section>
 
-        <p class="muted" style="margin-top:1.5rem">Before DataLite I worked as a software tester at GMC Software (now Quadient) in Hradec Králové, writing use cases and test scenarios and running the team's Jenkins server.</p>
-    </section>
+            <section class="chapter" id="own">
+                <h2>Own projects</h2>
+                <p class="sub">Smaller things I build and run myself, mostly together with AI agents. They keep me close to the whole loop: an idea, a usable interface, data, deployment and maintenance.</p>
+                <div class="side">
+                    <article>
+                        <h3>Parcel pickup map</h3>
+                        <p>Every parcel pickup point and box in the Czech Republic on one map, around 40,000 of them, imported daily from carrier feeds and deduplicated.</p>
+                        <p class="stack"><b>Next.js, PostgreSQL, Drizzle, Leaflet</b></p>
+                    </article>
+                    <article>
+                        <h3>Family portal</h3>
+                        <p>Self-hosted apps on a small home server: meal plans with real nutrition data, a planner for everything around the house, trips and packing lists.</p>
+                        <p class="stack"><b>Next.js, Drizzle ORM, PostgreSQL, Raspberry Pi</b></p>
+                    </article>
+                    <article>
+                        <h3>Trading bot</h3>
+                        <p>A trend-following strategy (EMA crossover, ATR stop) for testing assumptions against market data, not for selling certainty.</p>
+                        <p class="stack"><b>Python, Freqtrade</b></p>
+                    </article>
+                    <article>
+                        <h3>This website</h3>
+                        <p>Static, bilingual, cheap to run and easy to change. The <a href="https://github.com/JohnyIII/pavelkleisner.dev" target="_blank" rel="noopener noreferrer">source is on GitHub</a>.</p>
+                        <p class="stack"><b>Astro, TypeScript, Cloudflare Pages</b></p>
+                    </article>
+                </div>
+            </section>
 
-    <section class="section">
-        <h2>Own projects</h2>
-        <p class="sub">Smaller things I build and run myself, mostly together with AI agents. They keep me close to the whole loop: an idea, a usable interface, data, deployment and maintenance.</p>
-        <div class="side">
-            <article>
-                <h3>Parcel pickup map</h3>
-                <p>Every parcel pickup point and box in the Czech Republic on one map, around 40,000 of them, imported daily from carrier feeds and deduplicated.</p>
-                <p class="stack">Next.js, PostgreSQL, Drizzle, Leaflet</p>
-            </article>
-            <article>
-                <h3>Family portal</h3>
-                <p>Self-hosted apps on a small home server: meal plans with real nutrition data, a planner for everything around the house, trips and packing lists.</p>
-                <p class="stack">Next.js, Drizzle ORM, PostgreSQL, Raspberry Pi</p>
-            </article>
-            <article>
-                <h3>Trading bot</h3>
-                <p>A trend-following strategy (EMA crossover, ATR stop) for testing assumptions against market data, not for selling certainty.</p>
-                <p class="stack">Python, Freqtrade</p>
-            </article>
-            <article>
-                <h3>This website</h3>
-                <p>Static, bilingual, cheap to run and easy to change. The source is on GitHub.</p>
-                <p class="stack">Astro, TypeScript, Cloudflare Pages</p>
-            </article>
+            <section class="chapter" id="before">
+                <h2>Before DataLite</h2>
+                <p>Software tester at GMC Software (now Quadient) in Hradec Králové, 2013–2014: use cases, test scenarios and running the team's Jenkins server.</p>
+            </section>
         </div>
-    </section>
+    </div>
 
-    <section class="cta bleed">
-        <h2>Want to talk about a project?</h2>
-        <a class="email" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+    <section class="party">
+        <div>
+            <h2>Want to talk about a project?</h2>
+            <p>Long-term or focused contracts, remotely from near Prague.</p>
+        </div>
+        <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
     </section>
 
 </Layout>
