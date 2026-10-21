@@ -7,7 +7,8 @@ import ThemeSwitch from "@/components/ThemeSwitch.astro";
 const { lang = "en" } = Astro.props;
 const t = lang === "cz" ? cz : en;
 
-const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+// Trasy končí lomítkem jako na Cloudflare Pages; bez něj by každý odkaz prošel přesměrováním.
+const pathname = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : Astro.url.pathname + "/";
 
 const enRoutes = [en.routes.home, en.routes.about, en.routes.projects, en.routes.contact];
 const czRoutes = [cz.routes.home, cz.routes.about, cz.routes.projects, cz.routes.contact];
@@ -18,7 +19,7 @@ if (lang === "cz") {
     altHref = idx >= 0 ? enRoutes[idx] : "/";
 } else {
     const idx = enRoutes.indexOf(pathname);
-    altHref = idx >= 0 ? czRoutes[idx] : "/cz";
+    altHref = idx >= 0 ? czRoutes[idx] : "/cz/";
 }
 ---
 

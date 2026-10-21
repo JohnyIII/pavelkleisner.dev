@@ -14,12 +14,12 @@
   Doctype:            HTML5
   Standards:          HTML5, CSS3, ES2022
   Components:         Astro, TypeScript, Tailwind CSS
-  Fonts:              Source Serif 4, IBM Plex Sans, JetBrains Mono
+  Fonts:              IBM Plex Sans, JetBrains Mono
   Hosting:            Cloudflare Pages
   Source:             github.com/JohnyIII/pavelkleisner.dev
 
 
 /* THANKS */
 
-  To everyone whose log lines, EXPLAIN ANALYZE outputs and 3 a.m. incident
+  To everyone whose log lines, EXPLAIN ANALYZE outputs and incident
   retrospectives quietly taught me how production systems actually behave.

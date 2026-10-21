@@ -2,19 +2,19 @@
 import "../styles/global.css";
 import Nav from "@/components/Nav.astro";
 
-const { title, description } = Astro.props;
+const { title, description, noindex = false } = Astro.props;
 
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : Astro.url.pathname + "/";
 const lang = pathname.startsWith("/cz") ? "cz" : "en";
 
 const defaults = {
     en: {
-        title: "Pavel Kleisner - Independent Senior Backend Engineer & Team Lead",
-        description: "Independent senior backend-heavy full-stack engineer and team lead focused on Kotlin, Java, Spring, PostgreSQL, integrations, and reliable production systems.",
+        title: "Pavel Kleisner - Senior Backend Engineer, Team Lead & AI Tooling",
+        description: "Independent senior backend-heavy full-stack engineer and team lead focused on Kotlin, Java, Spring, PostgreSQL, integrations, and reliable production systems. Also builds small tools that let AI agents work with real systems.",
     },
     cz: {
-        title: "Pavel Kleisner - Nezávislý senior backend vývojář & Team Lead",
-        description: "Nezávislý senior backend-heavy full-stack vývojář a team lead zaměřený na Kotlin, Javu, Spring, PostgreSQL, integrace a spolehlivé produkční systémy.",
+        title: "Pavel Kleisner - Senior backend vývojář, team lead & AI nástroje",
+        description: "Nezávislý senior backend-heavy full-stack vývojář a team lead zaměřený na Kotlin, Javu, Spring, PostgreSQL, integrace a spolehlivé produkční systémy. Staví i malé nástroje, díky kterým můžou AI agenti pracovat s reálnými systémy.",
     },
 };
 
@@ -27,6 +27,8 @@ const labels = lang === "cz"
     : { source: "Source of this site", updated: "Updated" };
 
 const siteUrl = "https://pavelkleisner.dev";
+const pairs = [["/", "/cz/"], ["/about/", "/cz/o-mne/"], ["/projects/", "/cz/projekty/"], ["/contact/", "/cz/kontakt/"]];
+const pair = noindex ? undefined : pairs.find(([en, cs]) => en === pathname || cs === pathname);
 const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -38,6 +40,7 @@ const personSchema = {
         "Kotlin", "Java", "Spring Framework", "PostgreSQL", "Kafka",
         "System integration", "Production releases", "B2B integrations",
         "Backend architecture", "Incident analysis",
+        "AI-assisted software development", "Model Context Protocol",
     ],
     address: {
         "@type": "PostalAddress",
@@ -80,15 +83,15 @@ const personSchema = {
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<title>{pageTitle}</title>
 	<meta name="description" content={pageDescription} />
-	<link rel="canonical" href={Astro.url.href} />
-
-	<link rel="alternate" hreflang="en" href={`${siteUrl}${pathname.startsWith("/cz") ? pathname.replace(/^\/cz\/?/, "/").replace(/\/o-mne/, "/about").replace(/\/projekty/, "/projects").replace(/\/kontakt/, "/contact") : pathname}`} />
-	<link rel="alternate" hreflang="cs" href={`${siteUrl}${pathname.startsWith("/cz") ? pathname : pathname === "/" ? "/cz" : "/cz" + pathname.replace(/^\/about/, "/o-mne").replace(/^\/projects/, "/projekty").replace(/^\/contact/, "/kontakt")}`} />
+	{noindex && <meta name="robots" content="noindex" />}
+	{!noindex && <link rel="canonical" href={`${siteUrl}${pathname}`} />}
+	{pair && <link rel="alternate" hreflang="en" href={`${siteUrl}${pair[0]}`} />}
+	{pair && <link rel="alternate" hreflang="cs" href={`${siteUrl}${pair[1]}`} />}
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content={pageTitle} />
 	<meta property="og:description" content={pageDescription} />
-	<meta property="og:url" content={Astro.url.href} />
+	<meta property="og:url" content={`${siteUrl}${pathname}`} />
 	<meta property="og:image" content={`${siteUrl}/og-image.png`} />
 	<meta property="og:locale" content={lang === "cz" ? "cs_CZ" : "en_US"} />
 
@@ -104,12 +107,12 @@ const personSchema = {
 
 <header class="site-header">
 	<div class="wrap header-inner">
-		<a href={lang === "cz" ? "/cz" : "/"} class="site-mark">Pavel Kleisner</a>
+		<a href={lang === "cz" ? "/cz/" : "/"} class="site-mark">Pavel Kleisner</a>
 		<Nav lang={lang} />
 	</div>
 </header>
 
-<main id="content" class="wrap">
+<main id="content" class="wrap" tabindex="-1">
 	<slot />
 </main>
 

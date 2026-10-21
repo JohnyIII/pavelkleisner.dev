@@ -15,37 +15,36 @@ import Now from "@/components/Now.astro";
 
     <div class="book">
         <nav class="toc" aria-label="On this page">
-            <p>Character</p>
-            <a href="#backstory">Backstory</a>
-            <a href="#playstyle">Play style</a>
-            <a href="#balance">Balance changes</a>
+            <p>On this page</p>
+            <a href="#background">Background</a>
+            <a href="#how">How I work</a>
+            <a href="#avoid">What I avoid</a>
             <a href="#offline">Offline</a>
         </nav>
 
         <div>
-            <section class="chapter" id="backstory">
-                <h2>Backstory</h2>
+            <section class="chapter" id="background">
+                <h2>Background</h2>
                 <p>I've worked with DataLite since 2017 and grew there from junior through senior engineer to team lead. For the last several years I've been a self-employed contractor on their client projects. I'm at my best where correctness, compatibility and release safety matter, where the code meets domain rules, integration contracts and production.</p>
-                <p>I'd rather fix production than win an argument about it, and I expect the same from the people around me: real effort to get the work done and to keep learning.</p>
+                <p>I expect from the people around me what I try to bring myself: real effort to get the work done and to keep learning.</p>
             </section>
 
-            <section class="chapter" id="playstyle">
-                <h2>Play style</h2>
+            <section class="chapter" id="how">
+                <h2>How I work</h2>
                 <dl class="rows">
-                    <div><dt>Small, explicit changes</dt><dd>In a live system a precisely named rule, an isolated mapping or one focused test usually beats a big rewrite. Less to go wrong at 2 a.m.</dd></div>
+                    <div><dt>Small, explicit changes</dt><dd>In a live system a precisely named rule, an isolated mapping or one focused test usually beats a big rewrite.</dd></div>
                     <div><dt>Modern when it pays off</dt><dd>New versions and tools when they make the system more reliable, more observable or easier to change. Not for the CV.</dd></div>
                     <div><dt>Not done at deploy</dt><dd>The real system starts after deployment: old data, retries, external contracts, logs, metrics and whoever has to support it.</dd></div>
-                    <div><dt>AI as a companion</dt><dd>Agents do as much as they reasonably can. The understanding, the review and the responsibility for what ships stay with me.</dd></div>
+                    <div><dt>AI agents</dt><dd>They take as much of the work as they reasonably can. Reviewing it and deciding what ships is my job.</dd></div>
                 </dl>
             </section>
 
-            <section class="chapter" id="balance">
-                <h2><span class="badge b-boss">Nerfed</span> Things I deliberately avoid</h2>
+            <section class="chapter" id="avoid">
+                <h2><span class="badge b-boss">Nerfed</span> What I deliberately avoid</h2>
                 <ul>
                     <li><b>Over-engineering.</b> The "flexible" abstraction is usually the code everyone is afraid to touch two years later.</li>
                     <li><b>Big-bang releases.</b> A rollout needs an order, a fallback and a way to stop halfway, otherwise it's a bet.</li>
                     <li><b>One-person architecture.</b> I've been that person. It doesn't scale and it ruins holidays.</li>
-                    <li><b>Ego-driven choices.</b> I once switched our side back to a partner's old format rather than defend a technically correct spec.</li>
                 </ul>
             </section>
 
@@ -59,7 +58,7 @@ import Now from "@/components/Now.astro";
 
     <section class="party">
         <div>
-            <h2>Sounds like someone for your party?</h2>
+            <h2>Sounds like a good fit?</h2>
             <p>Email is the fastest way to reach me.</p>
         </div>
         <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>

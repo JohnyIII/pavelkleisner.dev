@@ -6,22 +6,23 @@ import Layout from "@/layouts/Layout.astro";
 
     <section class="page-head">
         <div>
-            <h1>Deník questů</h1>
+            <p class="muted" style="margin:0 0 .4rem"><span class="badge b-main">Deník questů</span></p>
+            <h1>Projekty a&nbsp;zkušenosti</h1>
             <p class="sub">Dlouho žijící platformy, produkční integrace a&nbsp;pár vlastních nástrojů. Klientské systémy jsou neveřejné, takže píšu, co jsem na kterém měl na starost, jaká omezení hrála roli a&nbsp;co mě ta práce naučila.</p>
         </div>
     </section>
 
     <div class="book">
         <nav class="toc" aria-label="Na této stránce">
-            <p>Deník questů</p>
-            <a href="#klienti">Hlavní a&nbsp;vedlejší questy</a>
+            <p>Na této stránce</p>
+            <a href="#klienti">Klientské projekty</a>
             <a href="#vlastni">Vlastní projekty</a>
             <a href="#predtim">Před DataLite</a>
         </nav>
 
         <div>
             <section class="chapter" id="klienti">
-                <h2>Hlavní a&nbsp;vedlejší questy</h2>
+                <h2>Klientské projekty</h2>
                 <p class="sub">Všechno v&nbsp;rámci dlouhodobé spolupráce s&nbsp;DataLite od roku 2017, nejdřív jako zaměstnanec, posledních několik let jako OSVČ.</p>
                 <div class="quests">
                     <article class="quest">
@@ -30,7 +31,8 @@ import Layout from "@/layouts/Layout.astro";
                         <div class="quest-body split">
                             <p>Backend a&nbsp;integrace na moderní platformě pro správu služeb telekomunikačního operátora. Pracuju blízko produkce, u&nbsp;releasů, B2B komunikace s&nbsp;partnery, procesních pravidel a&nbsp;kompatibility dat.</p>
                             <ul class="objectives">
-                                <li>Vést produkční rollouty verzí 2.2 a&nbsp;2.4</li>
+                                <li>Vedl jsem produkční rollout verze 2.2</li>
+                                <li>Vedu rollout verze 2.4 a&nbsp;její release dávky</li>
                                 <li>Jádro týmu u&nbsp;verze 1.5</li>
                                 <li>Integrační toky: ticketing, NIP, change management, B2B, PEW</li>
                                 <li>Analýza incidentů z&nbsp;logů, metrik a&nbsp;dat</li>
@@ -43,10 +45,9 @@ import Layout from "@/layouts/Layout.astro";
                     <article class="quest">
                         <div class="quest-head"><span class="badge b-side">Vedlejší quest</span><h3>Nordic web</h3><span class="when">2024 – dnes, podle potřeby</span></div>
                         <div class="quest-body split">
-                            <p>Spolupráce na webovém systému v&nbsp;Djangu. Práce je teď málo, ale spolupráce trvá a&nbsp;naskočím, když je potřeba udělat konkrétní změnu.</p>
+                            <p>Průběžná spolupráce na webovém systému v&nbsp;Djangu. Naskočím, když je potřeba udělat konkrétní změnu.</p>
                             <ul class="objectives">
                                 <li>Samoobsluha a&nbsp;chování webu v&nbsp;Pythonu, Djangu a&nbsp;šablonách</li>
-                                <li>Cílené změny bez vnucování vlastních zvyků</li>
                             </ul>
                         </div>
                         <p class="stack"><b>Stack:</b> Python, Django, šablony</p>
@@ -60,7 +61,7 @@ import Layout from "@/layouts/Layout.astro";
                             <ul class="objectives">
                                 <li>Autentizace, opravy exportů, filtry archivů a&nbsp;měřicí dávky</li>
                                 <li>Databázové skripty a&nbsp;nasazení vedle aplikačního kódu</li>
-                                <li>Sledovat chybu celým requestem a&nbsp;tokem dat</li>
+                                <li>Dohledání chyby celým requestem a&nbsp;tokem dat</li>
                             </ul>
                         </div>
                         <p class="stack"><b>Stack:</b> Kotlin, Spring, Angular, Oracle, PostgreSQL</p>
@@ -89,6 +90,11 @@ import Layout from "@/layouts/Layout.astro";
                         <h3>Mapa výdejních míst</h3>
                         <p>Všechna výdejní místa a&nbsp;boxy v&nbsp;ČR na jedné mapě, zhruba 40 tisíc, denně importovaná z&nbsp;feedů dopravců a&nbsp;očištěná od duplicit.</p>
                         <p class="stack"><b>Next.js, PostgreSQL, Drizzle, Leaflet</b></p>
+                    </article>
+                    <article>
+                        <h3>Výbava pro agenty</h3>
+                        <p>MCP servery, díky kterým můžou AI agenti pracovat s&nbsp;reálnými systémy: vyhledávání v&nbsp;logách Elasticsearch jen pro čtení (funkční prototyp), Jira a&nbsp;most do týmového chatu, který odesílá až po mém potvrzení. K&nbsp;tomu knihovna skillů a&nbsp;znalostní báze sdílená Claude Code a&nbsp;Codexem.</p>
+                        <p class="stack"><b>Python, FastAPI, Kotlin, Docker, MCP</b></p>
                     </article>
                     <article>
                         <h3>Rodinný portál</h3>

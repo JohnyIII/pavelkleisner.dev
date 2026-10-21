@@ -4,23 +4,28 @@ import Now from "@/components/Now.astro";
 import { level, xp } from "@/data/level";
 ---
 
-<Layout title="Pavel Kleisner - Independent Senior Backend Engineer & Team Lead">
+<Layout title="Pavel Kleisner - Senior Backend Engineer, Team Lead & AI Tooling">
 
     <section class="hero">
         <img class="avatar" src="/pavel.jpg" alt="Pavel Kleisner" width="300" height="300" />
         <div>
-            <p class="kicker">Senior backend engineer · team lead · <b>level {level}</b></p>
+            <p class="kicker">Senior backend engineer · team lead · AI tooling · <b>level {level}</b></p>
             <h1>Pavel Kleisner</h1>
-            <p class="sub">I build and look after the backend systems real businesses run on, and I stay around for what happens after the deploy.</p>
+            <p class="sub">I build and look after backend systems in Kotlin, Java, Spring and PostgreSQL: integrations, releases and production issues. I also build small tools that let AI agents work with real systems.</p>
             <div class="actions">
                 <a class="btn" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
-                <a href="/projects">Full quest log</a>
+                <a href="/projects/">Projects and experience</a>
             </div>
+            <nav class="jump" aria-label="On this page">
+                <a href="#experience">Experience</a>
+                <a href="#ai">AI tooling</a>
+                <a href="#stack">Tech stack</a>
+            </nav>
         </div>
     </section>
 
     <dl class="sheet" aria-label="Character sheet">
-        <div><dt>Class</dt><dd>Backend engineer</dd></div>
+        <div><dt>Class</dt><dd>Backend engineer / AI tooling</dd></div>
         <div><dt>Level</dt><dd>{level} years in production</dd><dd class="xp" title={`${xp} % to level ${level + 1}`}><span style={`width:${xp}%`}></span></dd></div>
         <div><dt>Home base</dt><dd>Near Prague, remote</dd></div>
         <div class="lfg"><dt>Party status</dt><dd>Open to contracts</dd></div>
@@ -28,18 +33,18 @@ import { level, xp } from "@/data/level";
 
     <div class="book">
         <nav class="toc" aria-label="On this page">
-            <p>Character sheet</p>
-            <a href="#quests">Quest log</a>
-            <a href="#abilities">Abilities</a>
-            <a href="#companion">Companion</a>
-            <a href="#boss">Boss fight</a>
-            <a href="#skills">Skill tree</a>
-            <a href="#save">Current save</a>
+            <p>On this page</p>
+            <a href="#experience">Experience</a>
+            <a href="#skills">What I do</a>
+            <a href="#ai">AI tooling</a>
+            <a href="#story">From production</a>
+            <a href="#stack">Tech stack</a>
+            <a href="#now">Right now</a>
         </nav>
 
         <div>
-            <section class="chapter" id="quests">
-                <h2>Quest log</h2>
+            <section class="chapter" id="experience">
+                <h2>Experience</h2>
                 <div class="quests">
                     <article class="quest">
                         <div class="quest-head"><span class="badge b-main">Main quest</span><h3>TSM / CETIN</h3><span class="when">2020 – now</span></div>
@@ -47,15 +52,15 @@ import { level, xp } from "@/data/level";
                         <div class="quest-body split">
                             <p>Kotlin and Java services on PostgreSQL for a telco operator's service platform: B2B flows, change management, partner integrations and incident analysis.</p>
                             <ul class="objectives">
-                                <li>Lead the 2.2 production rollout</li>
-                                <li>Lead the 2.4 production rollout</li>
+                                <li>Led the 2.2 production rollout</li>
+                                <li>Leading the 2.4 rollout and its release batches</li>
                                 <li>Core developer on version 1.5</li>
                             </ul>
                         </div>
                     </article>
                     <article class="quest">
                         <div class="quest-head"><span class="badge b-side">Side quest</span><h3>Nordic web</h3><span class="when">2024 – now, on demand</span></div>
-                        <p class="role">Focused changes in a Django codebase when they're needed.</p>
+                        <p class="role">Ongoing work on a Django web application, focused changes when they're needed.</p>
                     </article>
                     <article class="quest past">
                         <div class="quest-head"><span class="badge b-done">Completed</span><h3>MNCP</h3><span class="when">2018 – 2021</span></div>
@@ -68,41 +73,45 @@ import { level, xp } from "@/data/level";
                 </div>
             </section>
 
-            <section class="chapter" id="abilities">
-                <h2>Abilities</h2>
+            <section class="chapter" id="skills">
+                <h2>What I do</h2>
                 <dl class="rows">
                     <div><dt>Integrations</dt><dd>B2B APIs, message contracts, retries and the failure modes that only show up once a partner system is connected.</dd></div>
                     <div><dt>Releases</dt><dd>New platform versions into real environments: old data, backward compatibility, rollout order and a way back.</dd></div>
-                    <div><dt>Debugging production</dt><dd>Logs, metrics, the database and domain knowledge together. I look for the cause, not for a patch that makes the symptom go quiet.</dd></div>
-                    <div><dt>Architecture</dt><dd>Small safe changes, clearly named rules and sensible service boundaries. As little ceremony as the problem allows.</dd></div>
+                    <div><dt>Debugging production</dt><dd>Logs, metrics, the database and domain knowledge together, until the cause is clear.</dd></div>
+                    <div><dt>Architecture</dt><dd>Small safe changes, clearly named rules and sensible service boundaries.</dd></div>
                 </dl>
             </section>
 
-            <section class="chapter" id="companion">
-                <h2><span class="badge b-party">Companion</span> AI in the party</h2>
-                <ul>
-                    <li>I use AI agents every day and I've learned to get a lot out of them: exploring an unfamiliar codebase, drafting the boring parts, running tests, preparing migrations and reviewing a diff before I do.</li>
-                    <li>It makes me noticeably faster and lets me take on work I wouldn't have had time for.</li>
-                    <li>It doesn't take the controller. I read and understand every line that ships under my name, and when production breaks, the analysis and the fix are mine.</li>
-                </ul>
+            <section class="chapter" id="ai">
+                <h2><span class="badge b-party">Companion</span> AI tooling</h2>
+                <p>I use AI agents every day and build small tools that let them work with real systems. They explore unfamiliar code, draft routine parts, run tests and review a diff before I do.</p>
+                <dl class="rows">
+                    <div><dt>Own MCP servers</dt><dd>Read-only log search over Elasticsearch with server-side guards and an audit log (working prototype), a Jira server, and a team-chat bridge that only sends a message after I confirm the draft.</dd></div>
+                    <div><dt>Skills and shared context</dt><dd>One knowledge base for Claude Code and Codex, and a library of repeatable workflows: preparing a release batch, scanning container images, fixing a ticket in an isolated branch.</dd></div>
+                    <div><dt>Ground rules</dt><dd>Agents only read production data, I push to git myself, every data fix ships with a revert script, and credentials reach MCP servers through environment variables or a separate form, never through the chat.</dd></div>
+                    <div><dt>Side projects</dt><dd>Built mostly by agents. That's where I learn what they can be trusted with.</dd></div>
+                </dl>
+                <p style="margin-top:1.2rem">I review every change before it ships, check its behaviour with tests or in the running app, and I'm accountable for the result.</p>
             </section>
 
-            <section class="chapter" id="boss">
+            <section class="chapter" id="story">
                 <h2><span class="badge b-boss">Boss fight</span> The UUID that wasn't a UUID</h2>
                 <p>When we rolled out the first platform version, the integration spec said the <code>messageId</code> would be a UUID. One partner started failing straight away: their system had been quietly parsing the ticket ID out of the old <code>ticketId_timestamp</code> format, even though the ticket ID sat right there in the message body.</p>
-                <p>The clean fix was on their side, but in a corporate setting it would have taken months. So I switched our side back to the old shape and production kept running. Sometimes the right call isn't the pure one. It's the one that doesn't break someone else at 2 a.m.</p>
+                <p>The clean fix was on their side, but in a corporate setting it would have taken months. So I switched our side back to the old format and production kept running.</p>
             </section>
 
-            <section class="chapter" id="skills">
-                <h2>Skill tree</h2>
+            <section class="chapter" id="stack">
+                <h2>Tech stack</h2>
                 <dl class="skills">
                     <div><dt>Main</dt><dd>Kotlin, Java, Spring, PostgreSQL, Kafka</dd></div>
-                    <div><dt>Also unlocked</dt><dd>Kubernetes, Oracle, Angular, Python and Django, TypeScript, Astro</dd></div>
+                    <div><dt>AI tooling</dt><dd>Claude Code, Codex, MCP servers, agent skills</dd></div>
+                    <div><dt>Also</dt><dd>Kubernetes, Oracle, Angular, Python and Django, TypeScript, Astro</dd></div>
                 </dl>
             </section>
 
-            <section class="chapter" id="save">
-                <h2>Current save</h2>
+            <section class="chapter" id="now">
+                <h2>Right now</h2>
                 <Now lang="en" />
             </section>
         </div>
@@ -110,8 +119,8 @@ import { level, xp } from "@/data/level";
 
     <section class="party">
         <div>
-            <h2>Looking for a party member?</h2>
-            <p>Long-term or focused contracts on backend systems, integrations and production releases.</p>
+            <h2>Need a backend engineer?</h2>
+            <p>Long-term or focused contracts: backend systems, integrations, production releases and tooling for AI agents.</p>
         </div>
         <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
     </section>

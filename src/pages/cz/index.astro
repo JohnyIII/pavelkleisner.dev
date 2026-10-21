@@ -4,23 +4,28 @@ import Now from "@/components/Now.astro";
 import { level, xp } from "@/data/level";
 ---
 
-<Layout title="Pavel Kleisner - Nezávislý senior backend vývojář & Team Lead">
+<Layout title="Pavel Kleisner - Senior backend vývojář, team lead & AI nástroje">
 
     <section class="hero">
         <img class="avatar" src="/pavel.jpg" alt="Pavel Kleisner" width="300" height="300" />
         <div>
-            <p class="kicker">Senior backend vývojář · team lead · <b>level {level}</b></p>
+            <p class="kicker">Senior backend vývojář · team lead · AI nástroje · <b>level {level}</b></p>
             <h1>Pavel Kleisner</h1>
-            <p class="sub">Stavím a&nbsp;držím v&nbsp;chodu backendové systémy, na kterých stojí reálný byznys. A&nbsp;zůstávám i&nbsp;u&nbsp;toho, co se děje po nasazení.</p>
+            <p class="sub">Stavím a&nbsp;držím v&nbsp;chodu backendové systémy v&nbsp;Kotlinu, Javě, Springu a&nbsp;PostgreSQL: integrace, releasy a&nbsp;produkční problémy. Stavím i&nbsp;malé nástroje, díky kterým můžou AI agenti pracovat s&nbsp;reálnými systémy.</p>
             <div class="actions">
                 <a class="btn" href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
-                <a href="/cz/projekty">Celý deník questů</a>
+                <a href="/cz/projekty/">Projekty a&nbsp;zkušenosti</a>
             </div>
+            <nav class="jump" aria-label="Na této stránce">
+                <a href="#zkusenosti">Zkušenosti</a>
+                <a href="#ai">AI nástroje</a>
+                <a href="#technologie">Technologie</a>
+            </nav>
         </div>
     </section>
 
     <dl class="sheet" aria-label="Karta postavy">
-        <div><dt>Třída</dt><dd>Backend vývojář</dd></div>
+        <div><dt>Třída</dt><dd>Backend vývojář / AI nástroje</dd></div>
         <div><dt>Level</dt><dd>{level} let v&nbsp;produkci</dd><dd class="xp" title={`${xp} % do levelu ${level + 1}`}><span style={`width:${xp}%`}></span></dd></div>
         <div><dt>Základna</dt><dd>U&nbsp;Prahy, na dálku</dd></div>
         <div class="lfg"><dt>Parta</dt><dd>Volný pro zakázky</dd></div>
@@ -28,18 +33,18 @@ import { level, xp } from "@/data/level";
 
     <div class="book">
         <nav class="toc" aria-label="Na této stránce">
-            <p>Karta postavy</p>
-            <a href="#questy">Deník questů</a>
-            <a href="#schopnosti">Schopnosti</a>
-            <a href="#partak">Parťák</a>
-            <a href="#boss">Boss fight</a>
-            <a href="#dovednosti">Strom dovedností</a>
-            <a href="#save">Rozehráno</a>
+            <p>Na této stránce</p>
+            <a href="#zkusenosti">Zkušenosti</a>
+            <a href="#co-delam">Co dělám</a>
+            <a href="#ai">AI nástroje</a>
+            <a href="#pribeh">Příběh z&nbsp;praxe</a>
+            <a href="#technologie">Technologie</a>
+            <a href="#ted">Právě teď</a>
         </nav>
 
         <div>
-            <section class="chapter" id="questy">
-                <h2>Deník questů</h2>
+            <section class="chapter" id="zkusenosti">
+                <h2>Zkušenosti</h2>
                 <div class="quests">
                     <article class="quest">
                         <div class="quest-head"><span class="badge b-main">Hlavní quest</span><h3>TSM / CETIN</h3><span class="when">2020 – dnes</span></div>
@@ -47,15 +52,15 @@ import { level, xp } from "@/data/level";
                         <div class="quest-body split">
                             <p>Služby v&nbsp;Kotlinu a&nbsp;Javě nad PostgreSQL pro servisní platformu telekomunikačního operátora: B2B toky, change management, integrace s&nbsp;partnery a&nbsp;analýza incidentů.</p>
                             <ul class="objectives">
-                                <li>Vést produkční rollout verze 2.2</li>
-                                <li>Vést produkční rollout verze 2.4</li>
+                                <li>Vedl jsem produkční rollout verze 2.2</li>
+                                <li>Vedu rollout verze 2.4 a&nbsp;její release dávky</li>
                                 <li>Jádro týmu u&nbsp;verze 1.5</li>
                             </ul>
                         </div>
                     </article>
                     <article class="quest">
                         <div class="quest-head"><span class="badge b-side">Vedlejší quest</span><h3>Nordic web</h3><span class="when">2024 – dnes, podle potřeby</span></div>
-                        <p class="role">Cílené změny v&nbsp;kódu v&nbsp;Djangu, když jsou potřeba.</p>
+                        <p class="role">Průběžná spolupráce na webové aplikaci v&nbsp;Djangu, cílené změny podle potřeby.</p>
                     </article>
                     <article class="quest past">
                         <div class="quest-head"><span class="badge b-done">Splněno</span><h3>MNCP</h3><span class="when">2018 – 2021</span></div>
@@ -68,41 +73,45 @@ import { level, xp } from "@/data/level";
                 </div>
             </section>
 
-            <section class="chapter" id="schopnosti">
-                <h2>Schopnosti</h2>
+            <section class="chapter" id="co-delam">
+                <h2>Co dělám</h2>
                 <dl class="rows">
                     <div><dt>Integrace</dt><dd>B2B API, kontrakty zpráv, retry a&nbsp;chyby, které se ukážou až ve chvíli, kdy se připojí systém partnera.</dd></div>
                     <div><dt>Releasy</dt><dd>Nové verze platformy do reálných prostředí: stará data, zpětná kompatibilita, pořadí rolloutu a&nbsp;cesta zpět.</dd></div>
-                    <div><dt>Ladění produkce</dt><dd>Logy, metriky, databáze a&nbsp;znalost domény dohromady. Hledám příčinu, ne záplatu, po které symptom na chvíli ztichne.</dd></div>
-                    <div><dt>Architektura</dt><dd>Malé bezpečné změny, jasně pojmenovaná pravidla a&nbsp;rozumné hranice služeb. Tolik ceremonie, kolik problém opravdu potřebuje.</dd></div>
+                    <div><dt>Ladění produkce</dt><dd>Logy, metriky, databáze a&nbsp;znalost domény dohromady, dokud není jasná příčina.</dd></div>
+                    <div><dt>Architektura</dt><dd>Malé bezpečné změny, jasně pojmenovaná pravidla a&nbsp;rozumné hranice služeb.</dd></div>
                 </dl>
             </section>
 
-            <section class="chapter" id="partak">
-                <h2><span class="badge b-party">Parťák</span> AI v&nbsp;partě</h2>
-                <ul>
-                    <li>AI agenty používám každý den a&nbsp;naučil jsem se z&nbsp;nich dostat hodně: projdou neznámý kód, napíšou nudné části, pustí testy, připraví migraci a&nbsp;projdou diff dřív než já.</li>
-                    <li>Jsem díky tomu znatelně rychlejší a&nbsp;stihnu práci, na kterou bych jinak neměl čas.</li>
-                    <li>Ovladač ale držím já. Každý řádek, který jde ven pod mým jménem, přečtu a&nbsp;rozumím mu, a&nbsp;když se rozbije produkce, analýza i&nbsp;oprava jsou moje.</li>
-                </ul>
+            <section class="chapter" id="ai">
+                <h2><span class="badge b-party">Parťák</span> AI nástroje</h2>
+                <p>AI agenty používám každý den a&nbsp;stavím malé nástroje, díky kterým můžou pracovat s&nbsp;reálnými systémy. Projdou neznámý kód, napíšou rutinní části, pustí testy a&nbsp;projdou diff dřív než já.</p>
+                <dl class="rows">
+                    <div><dt>Vlastní MCP servery</dt><dd>Vyhledávání v&nbsp;logách Elasticsearch jen pro čtení se serverovými kontrolami a&nbsp;auditním logem (funkční prototyp), server pro Jiru a&nbsp;most do týmového chatu, který zprávu odešle až po mém potvrzení.</dd></div>
+                    <div><dt>Skilly a&nbsp;sdílený kontext</dt><dd>Jedna znalostní báze pro Claude Code i&nbsp;Codex a&nbsp;knihovna opakovatelných postupů: příprava release dávky, sken kontejnerových obrazů, oprava tiketu v&nbsp;izolované větvi.</dd></div>
+                    <div><dt>Pravidla</dt><dd>Agenti produkční data jen čtou, do gitu pushuju sám, každý datový fix má revert skript a&nbsp;přihlašovací údaje dostávají MCP servery přes proměnné prostředí nebo samostatný formulář, nikdy přes chat.</dd></div>
+                    <div><dt>Vlastní projekty</dt><dd>Staví je převážně agenti. Na nich se učím, v&nbsp;čem jim jde věřit.</dd></div>
+                </dl>
+                <p style="margin-top:1.2rem">Každou změnu před nasazením zkontroluju, ověřím její chování testy nebo v&nbsp;běžící aplikaci a&nbsp;za výsledek odpovídám já.</p>
             </section>
 
-            <section class="chapter" id="boss">
+            <section class="chapter" id="pribeh">
                 <h2><span class="badge b-boss">Boss fight</span> UUID, které nebylo UUID</h2>
                 <p>Při rolloutu první verze platformy integrační specifikace slibovala, že <code>messageId</code> bude UUID. Jeden partner začal hned padat: jeho systém si potichu parsoval ID ticketu ze starého formátu <code>ticketId_timestamp</code>, přestože to ID měl normálně v&nbsp;těle zprávy.</p>
-                <p>Čistá oprava byla na jeho straně, jenže v&nbsp;korporátu by trvala měsíce. Vrátil jsem tedy naši stranu ke starému tvaru a&nbsp;produkce jela dál. Správné rozhodnutí nebývá vždycky to nejčistší. Spíš to, které nikomu jinému nerozbije noc ve dvě ráno.</p>
+                <p>Čistá oprava byla na jeho straně, jenže v&nbsp;korporátu by trvala měsíce. Vrátil jsem tedy naši stranu ke starému formátu a&nbsp;produkce jela dál.</p>
             </section>
 
-            <section class="chapter" id="dovednosti">
-                <h2>Strom dovedností</h2>
+            <section class="chapter" id="technologie">
+                <h2>Technologie</h2>
                 <dl class="skills">
                     <div><dt>Hlavní</dt><dd>Kotlin, Java, Spring, PostgreSQL, Kafka</dd></div>
-                    <div><dt>Odemčeno také</dt><dd>Kubernetes, Oracle, Angular, Python a&nbsp;Django, TypeScript, Astro</dd></div>
+                    <div><dt>AI nástroje</dt><dd>Claude Code, Codex, MCP servery, skilly pro agenty</dd></div>
+                    <div><dt>Další</dt><dd>Kubernetes, Oracle, Angular, Python a&nbsp;Django, TypeScript, Astro</dd></div>
                 </dl>
             </section>
 
-            <section class="chapter" id="save">
-                <h2>Právě rozehráno</h2>
+            <section class="chapter" id="ted">
+                <h2>Právě teď</h2>
                 <Now lang="cz" />
             </section>
         </div>
@@ -110,8 +119,8 @@ import { level, xp } from "@/data/level";
 
     <section class="party">
         <div>
-            <h2>Hledáte parťáka do party?</h2>
-            <p>Dlouhodobě i&nbsp;na konkrétní zakázku: backend, integrace a&nbsp;produkční releasy.</p>
+            <h2>Hledáte backend vývojáře?</h2>
+            <p>Dlouhodobě i&nbsp;na konkrétní zakázku: backend, integrace, produkční releasy a&nbsp;nástroje pro AI agenty.</p>
         </div>
         <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
     </section>

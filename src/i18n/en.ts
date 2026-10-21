@@ -7,8 +7,8 @@ export default {
     },
     routes: {
         home: "/",
-        about: "/about",
-        projects: "/projects",
-        contact: "/contact",
+        about: "/about/",
+        projects: "/projects/",
+        contact: "/contact/",
     },
 };

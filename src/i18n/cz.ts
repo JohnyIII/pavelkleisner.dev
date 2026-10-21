@@ -6,9 +6,9 @@ export default {
         contact: "Kontakt",
     },
     routes: {
-        home: "/cz",
-        about: "/cz/o-mne",
-        projects: "/cz/projekty",
-        contact: "/cz/kontakt",
+        home: "/cz/",
+        about: "/cz/o-mne/",
+        projects: "/cz/projekty/",
+        contact: "/cz/kontakt/",
     },
 };

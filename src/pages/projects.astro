@@ -6,22 +6,23 @@ import Layout from "@/layouts/Layout.astro";
 
     <section class="page-head">
         <div>
-            <h1>Quest log</h1>
+            <p class="muted" style="margin:0 0 .4rem"><span class="badge b-main">Quest log</span></p>
+            <h1>Projects and experience</h1>
             <p class="sub">Long-lived platforms, production integrations and a few tools of my own. Client systems are private, so here is what I owned on each, which constraints mattered and what the work taught me.</p>
         </div>
     </section>
 
     <div class="book">
         <nav class="toc" aria-label="On this page">
-            <p>Quest log</p>
-            <a href="#client">Main and side quests</a>
+            <p>On this page</p>
+            <a href="#client">Client work</a>
             <a href="#own">Own projects</a>
             <a href="#before">Before DataLite</a>
         </nav>
 
         <div>
             <section class="chapter" id="client">
-                <h2>Main and side quests</h2>
+                <h2>Client work</h2>
                 <p class="sub">All through a long-term collaboration with DataLite since 2017, first as an employee, for the last several years as an independent contractor.</p>
                 <div class="quests">
                     <article class="quest">
@@ -30,7 +31,8 @@ import Layout from "@/layouts/Layout.astro";
                         <div class="quest-body split">
                             <p>Backend and integration work on a modern service management platform for a telco operator. I work close to production, on releases, B2B communication with partners, process rules and data compatibility.</p>
                             <ul class="objectives">
-                                <li>Lead the production rollouts of 2.2 and 2.4</li>
+                                <li>Led the 2.2 production rollout</li>
+                                <li>Leading the 2.4 rollout and its release batches</li>
                                 <li>Core developer on version 1.5</li>
                                 <li>Integration flows: ticketing, NIP, change management, B2B, PEW</li>
                                 <li>Incident analysis from logs, metrics and data</li>
@@ -43,10 +45,9 @@ import Layout from "@/layouts/Layout.astro";
                     <article class="quest">
                         <div class="quest-head"><span class="badge b-side">Side quest</span><h3>Nordic web</h3><span class="when">2024 – now, on demand</span></div>
                         <div class="quest-body split">
-                            <p>Ad-hoc collaboration on a Django-based web system. The volume is low these days, but the engagement stays open and I jump in when there is a focused change to make.</p>
+                            <p>Ongoing collaboration on a Django-based web system. I pick up focused changes when they're needed.</p>
                             <ul class="objectives">
-                                <li>Self-service and web behaviour in Python, Django and templates</li>
-                                <li>Targeted changes without forcing my usual patterns onto the codebase</li>
+                                <li>Self-service features and web behaviour in Python, Django and templates</li>
                             </ul>
                         </div>
                         <p class="stack"><b>Stack:</b> Python, Django, templates</p>
@@ -60,7 +61,7 @@ import Layout from "@/layouts/Layout.astro";
                             <ul class="objectives">
                                 <li>Authentication, export fixes, archive filters and measurement batches</li>
                                 <li>Database scripts and deployment alongside the application code</li>
-                                <li>Following a bug through the whole request and data flow</li>
+                                <li>Tracing bugs through the whole request and data flow</li>
                             </ul>
                         </div>
                         <p class="stack"><b>Stack:</b> Kotlin, Spring, Angular, Oracle, PostgreSQL</p>
@@ -89,6 +90,11 @@ import Layout from "@/layouts/Layout.astro";
                         <h3>Parcel pickup map</h3>
                         <p>Every parcel pickup point and box in the Czech Republic on one map, around 40,000 of them, imported daily from carrier feeds and deduplicated.</p>
                         <p class="stack"><b>Next.js, PostgreSQL, Drizzle, Leaflet</b></p>
+                    </article>
+                    <article>
+                        <h3>Agent toolkit</h3>
+                        <p>MCP servers that let AI agents work with real systems: read-only log search over Elasticsearch (working prototype), Jira and a team-chat bridge that sends only after I confirm. Plus a skill library and a knowledge base shared by Claude Code and Codex.</p>
+                        <p class="stack"><b>Python, FastAPI, Kotlin, Docker, MCP</b></p>
                     </article>
                     <article>
                         <h3>Family portal</h3>
