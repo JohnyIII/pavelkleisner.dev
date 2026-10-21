@@ -1,0 +1,5 @@
+# Krátké odkazy na AI sekci. LinkedIn z URL maže #kotvu, přesměrování ji vrátí zpět.
+/ai /#ai 301
+/ai/ /#ai 301
+/cz/ai /cz/#ai 301
+/cz/ai/ /cz/#ai 301
