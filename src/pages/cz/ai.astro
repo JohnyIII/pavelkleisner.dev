@@ -1,4 +1,27 @@
 ---
-import AiLink from "@/components/AiLink.astro";
+import Layout from "@/layouts/Layout.astro";
+import AiSection from "@/components/AiSection.astro";
 ---
-<AiLink lang="cz" />
+
+<Layout title="Jak pracuju s AI agenty - Pavel Kleisner" description="MCP servery, skilly a pravidla, se kterými nechávám AI agenty pracovat s reálnými systémy.">
+
+    <section class="page-head with-avatar">
+        <img class="avatar" src="/pavel.jpg" alt="Pavel Kleisner" width="300" height="300" />
+        <div>
+            <h1>Jak pracuju s&nbsp;AI agenty</h1>
+            <p class="sub">Jsem senior backend vývojář a&nbsp;team lead (Kotlin, Java, Spring, PostgreSQL). Tady je, jak používám AI agenty a&nbsp;jaké nástroje si k&nbsp;nim stavím.</p>
+        </div>
+    </section>
+
+    <AiSection lang="cz" />
+    <p class="muted">Víc o&nbsp;mně: <a href="/cz/">profil</a> · <a href="/cz/projekty/">projekty a&nbsp;zkušenosti</a></p>
+
+    <section class="party">
+        <div>
+            <h2>Chcete nasadit AI agenty na svoje systémy?</h2>
+            <p>Backend, integrace, produkční releasy a&nbsp;nástroje pro AI agenty.</p>
+        </div>
+        <a href="mailto:contact@pavelkleisner.dev">contact@pavelkleisner.dev</a>
+    </section>
+
+</Layout>

@@ -9,8 +9,6 @@ export default defineConfig({
   site: 'https://pavelkleisner.dev',
   integrations: [
     sitemap({
-      // /ai/ a /cz/ai/ jsou jen sdílitelné odkazy na sekci, ne samostatné stránky
-      filter: (page) => !/\/ai\/$/.test(page),
       i18n: {
         defaultLocale: 'en',
         locales: {

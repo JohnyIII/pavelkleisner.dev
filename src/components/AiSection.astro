@@ -1,0 +1,30 @@
+---
+// Sekce o práci s AI agenty. Sdílí ji úvod i samostatná stránka /ai/, kterou jde odkázat z LinkedInu.
+const { lang = "en" } = Astro.props;
+---
+
+{lang === "cz" ? (
+    <section class="chapter" id="ai">
+        <h2><span class="badge b-party">Parťák</span> AI nástroje</h2>
+        <p>AI agenty používám každý den a&nbsp;stavím malé nástroje, díky kterým můžou pracovat s&nbsp;reálnými systémy. Projdou neznámý kód, napíšou rutinní části, pustí testy a&nbsp;projdou diff dřív než já.</p>
+        <dl class="rows">
+            <div><dt>Vlastní MCP servery</dt><dd>Vyhledávání v&nbsp;logách Elasticsearch jen pro čtení se serverovými kontrolami a&nbsp;auditním logem (funkční prototyp), server pro Jiru a&nbsp;most do týmového chatu, který zprávu odešle až po mém potvrzení.</dd></div>
+            <div><dt>Skilly a&nbsp;sdílený kontext</dt><dd>Jedna znalostní báze pro Claude Code i&nbsp;Codex a&nbsp;knihovna opakovatelných postupů: příprava release dávky, sken kontejnerových obrazů, oprava tiketu v&nbsp;izolované větvi.</dd></div>
+            <div><dt>Pravidla</dt><dd>Agenti produkční data jen čtou, do gitu pushuju sám, každý datový fix má revert skript a&nbsp;přihlašovací údaje dostávají MCP servery přes proměnné prostředí nebo samostatný formulář, nikdy přes chat.</dd></div>
+            <div><dt>Vlastní projekty</dt><dd>Staví je převážně agenti. Na nich se učím, v&nbsp;čem jim jde věřit.</dd></div>
+        </dl>
+        <p style="margin-top:1.2rem">Každou změnu před nasazením zkontroluju, ověřím její chování testy nebo v&nbsp;běžící aplikaci a&nbsp;za výsledek odpovídám já.</p>
+    </section>
+) : (
+    <section class="chapter" id="ai">
+        <h2><span class="badge b-party">Companion</span> AI tooling</h2>
+        <p>I use AI agents every day and build small tools that let them work with real systems. They explore unfamiliar code, draft routine parts, run tests and review a diff before I do.</p>
+        <dl class="rows">
+            <div><dt>Own MCP servers</dt><dd>Read-only log search over Elasticsearch with server-side guards and an audit log (working prototype), a Jira server, and a team-chat bridge that only sends a message after I confirm the draft.</dd></div>
+            <div><dt>Skills and shared context</dt><dd>One knowledge base for Claude Code and Codex, and a library of repeatable workflows: preparing a release batch, scanning container images, fixing a ticket in an isolated branch.</dd></div>
+            <div><dt>Ground rules</dt><dd>Agents only read production data, I push to git myself, every data fix ships with a revert script, and credentials reach MCP servers through environment variables or a separate form, never through the chat.</dd></div>
+            <div><dt>Side projects</dt><dd>Built mostly by agents. That's where I learn what they can be trusted with.</dd></div>
+        </dl>
+        <p style="margin-top:1.2rem">I review every change before it ships, check its behaviour with tests or in the running app, and I'm accountable for the result.</p>
+    </section>
+)}

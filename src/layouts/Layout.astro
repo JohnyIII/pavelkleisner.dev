@@ -27,7 +27,7 @@ const labels = lang === "cz"
     : { source: "Source of this site", updated: "Updated" };
 
 const siteUrl = "https://pavelkleisner.dev";
-const pairs = [["/", "/cz/"], ["/about/", "/cz/o-mne/"], ["/projects/", "/cz/projekty/"], ["/contact/", "/cz/kontakt/"]];
+const pairs = [["/", "/cz/"], ["/about/", "/cz/o-mne/"], ["/projects/", "/cz/projekty/"], ["/contact/", "/cz/kontakt/"], ["/ai/", "/cz/ai/"]];
 const pair = noindex ? undefined : pairs.find(([en, cs]) => en === pathname || cs === pathname);
 const personSchema = {
     "@context": "https://schema.org",

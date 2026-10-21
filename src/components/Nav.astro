@@ -10,8 +10,9 @@ const t = lang === "cz" ? cz : en;
 // Trasy končí lomítkem jako na Cloudflare Pages; bez něj by každý odkaz prošel přesměrováním.
 const pathname = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : Astro.url.pathname + "/";
 
-const enRoutes = [en.routes.home, en.routes.about, en.routes.projects, en.routes.contact];
-const czRoutes = [cz.routes.home, cz.routes.about, cz.routes.projects, cz.routes.contact];
+// /ai/ není v menu, ale přepínač jazyka má vést na protějšek
+const enRoutes = [en.routes.home, en.routes.about, en.routes.projects, en.routes.contact, "/ai/"];
+const czRoutes = [cz.routes.home, cz.routes.about, cz.routes.projects, cz.routes.contact, "/cz/ai/"];
 
 let altHref: string;
 if (lang === "cz") {

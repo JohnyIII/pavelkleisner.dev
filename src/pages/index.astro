@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Now from "@/components/Now.astro";
+import AiSection from "@/components/AiSection.astro";
 import { level, xp } from "@/data/level";
 ---
 
@@ -83,17 +84,7 @@ import { level, xp } from "@/data/level";
                 </dl>
             </section>
 
-            <section class="chapter" id="ai">
-                <h2><span class="badge b-party">Companion</span> AI tooling</h2>
-                <p>I use AI agents every day and build small tools that let them work with real systems. They explore unfamiliar code, draft routine parts, run tests and review a diff before I do.</p>
-                <dl class="rows">
-                    <div><dt>Own MCP servers</dt><dd>Read-only log search over Elasticsearch with server-side guards and an audit log (working prototype), a Jira server, and a team-chat bridge that only sends a message after I confirm the draft.</dd></div>
-                    <div><dt>Skills and shared context</dt><dd>One knowledge base for Claude Code and Codex, and a library of repeatable workflows: preparing a release batch, scanning container images, fixing a ticket in an isolated branch.</dd></div>
-                    <div><dt>Ground rules</dt><dd>Agents only read production data, I push to git myself, every data fix ships with a revert script, and credentials reach MCP servers through environment variables or a separate form, never through the chat.</dd></div>
-                    <div><dt>Side projects</dt><dd>Built mostly by agents. That's where I learn what they can be trusted with.</dd></div>
-                </dl>
-                <p style="margin-top:1.2rem">I review every change before it ships, check its behaviour with tests or in the running app, and I'm accountable for the result.</p>
-            </section>
+            <AiSection lang="en" />
 
             <section class="chapter" id="story">
                 <h2><span class="badge b-boss">Boss fight</span> The UUID that wasn't a UUID</h2>
