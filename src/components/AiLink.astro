@@ -1,0 +1,48 @@
+---
+// Sdílitelný odkaz na AI sekci. LinkedIn maže #kotvu a bere cíl z og:url, proto má odkaz vlastní
+// stránku s vlastním og:url; návštěvníka hned přesměruje na sekci, vyhledávače ji neindexují.
+const { lang = "en" } = Astro.props;
+const siteUrl = "https://pavelkleisner.dev";
+const t = lang === "cz"
+    ? {
+        self: "/cz/ai/",
+        target: "/cz/#ai",
+        title: "Jak pracuju s AI agenty - Pavel Kleisner",
+        description: "MCP servery, skilly a pravidla, se kterými nechávám AI agenty pracovat s reálnými systémy.",
+        link: "Pokračovat na sekci AI nástroje",
+        htmlLang: "cs",
+        locale: "cs_CZ",
+    }
+    : {
+        self: "/ai/",
+        target: "/#ai",
+        title: "How I work with AI agents - Pavel Kleisner",
+        description: "MCP servers, skills and the ground rules I use to let AI agents work with real systems.",
+        link: "Continue to the AI tooling section",
+        htmlLang: "en",
+        locale: "en_US",
+    };
+---
+<!doctype html>
+<html lang={t.htmlLang}>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="color-scheme" content="light dark" />
+	<meta name="robots" content="noindex" />
+	<title>{t.title}</title>
+	<meta name="description" content={t.description} />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content={t.title} />
+	<meta property="og:description" content={t.description} />
+	<meta property="og:url" content={`${siteUrl}${t.self}`} />
+	<meta property="og:image" content={`${siteUrl}/og-image.png`} />
+	<meta property="og:locale" content={t.locale} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta http-equiv="refresh" content={`0; url=${t.target}`} />
+	<script is:inline define:vars={{ target: t.target }}>location.replace(target);</script>
+</head>
+<body style="font-family: system-ui, sans-serif; padding: 2rem;">
+	<a href={t.target}>{t.link}</a>
+</body>
+</html>
